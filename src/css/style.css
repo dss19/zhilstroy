@@ -4011,4 +4011,141 @@ html {
     margin-left: auto !important;
   }
 }
+.main {
+  position: relative;
+}
+
+.main-video img {
+  display: block;
+}
+
+.main-logo {
+  position: absolute;
+  top: 47px;
+  left: 210px;
+  width: 396px;
+  height: 60px;
+}
+
+.main-menu {
+  position: fixed;
+  height: 30px;
+  top: 80px;
+  right: 210px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.main-menu__text {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Room Bold', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+}
+
+.main-menu__btn {
+  position: relative;
+  width: 40px;
+  height: 6px;
+  background: #ffffff;
+  margin-left: 21px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-menu__btn:before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 40px;
+  height: 6px;
+  background: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-menu__btn:after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 40px;
+  height: 6px;
+  background: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-menu:hover .main-menu__btn {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.main-link {
+  position: absolute;
+  top: 552px;
+  right: 210px;
+  width: 312px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 24px 32px 27px;
+}
+
+.main-link__subtitle {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Room Thin', sans-serif;
+  font-weight: normal;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.main-link__title {
+  font-size: 24px;
+  font-family: 'Room Bold', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.main-link__btn {
+  width: 238px;
+  padding: 17px 24px;
+  background: #7491D0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-link__btn svg {
+  width: 22px;
+  height: 26px;
+  margin-right: 20px;
+}
+
+.main-link__btn span {
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Room Thin', sans-serif;
+  font-weight: normal;
+}
+
+.main-block {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 91.5%;
+  height: 76px;
+  background: #ffffff;
+}
 /*# sourceMappingURL=style.css.map */

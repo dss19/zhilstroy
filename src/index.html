@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,39 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Компания "Жилстрой"</title>
 </head>
+
 <body>
-  <svg class="logo">
-    <use xlink:href="sprite.svg#logo"></use>
-  </svg>
-  
+  <main class="main">
+    <div class="main-video">
+      <img src="img/bg-main.jpg" alt="">      
+    </div>    
+    <svg class="main-logo">
+      <use xlink:href="sprite.svg#logo-long"></use>
+    </svg>
+    <div class="main-menu d-flex">
+      <span class="main-menu__text">меню</span>
+      <span class="main-menu__btn"></span>
+    </div>
+    <div class="main-text">
+      <!-- непонятно, кнопка или просто текст? -->
+    </div>
+    <div class="main-link d-flex flex-column">
+      <span class="main-link__subtitle">Видеоролик</span>
+      <span class="main-link__title">О группе компаний</span>
+      <div class="main-link__btn d-flex align-items-center">
+        <svg class="play">
+          <use xlink:href="sprite.svg#play"></use>
+        </svg>
+        <span>Смотреть видео</span>
+      </div>
+    </div>
+    <div class="main-block"></div>
+  </main>
+
+
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
