@@ -14,9 +14,46 @@ a
   -webkit-tap-highlight-color: transparent
 img      
   max-width: 100%
-.container-shot
-  width: 944px
+.container-short
+  width: 100%
+  max-width: 944px
   padding: 0
   margin: 0 auto
-     
+.container-large
+  width: 100%
+  max-width: 1584px
+  padding: 0
+  margin: 0 auto
+.section
+  &-name
+    font-size: 10px
+    text-transform: uppercase
+    +bold
+    letter-spacing: 1.5px
+    line-height: 16px
+    color: $black-color       
+  &-title
+    position: relative
+    font-size: 48px
+    line-height: 56px
+    letter-spacing: 0.5px
+    +bold
+    color: $black-color
+    margin: 40px 0 24px 47px
+    &:before
+      position: absolute
+      content: ''
+      right: 100%
+      width: 50px
+      height: 4px
+      transform: rotate(-15deg)
+      background: $black-color       
+  &-subtitle
+    display: block
+    font-size: 15px
+    line-height: 20px
+    letter-spacing: 0.16px
+    +robo  
+    color: $black-color
+    margin-bottom: 30px       
      
