@@ -1,0 +1,77 @@
+.about
+  background: $main-color
+  &-name 
+    font-size: 10px
+    text-transform: uppercase
+    +bold
+    letter-spacing: 1.5px
+    line-height: 16px
+    color: $black-color
+  &-title
+    position: relative
+    width: 462px
+    font-size: 48px
+    line-height: 56px
+    letter-spacing: 0.5px
+    +bold
+    color: $black-color
+    margin-top: 40px
+    margin-left: 47px
+    margin-bottom: 30px
+    &:before
+      position: absolute
+      content: ''
+      right: 100%
+      width: 50px
+      height: 4px
+      transform: rotate(-15deg)
+      background: $black-color
+  &-subtitle
+    display: block
+    font-size: 15px
+    line-height: 20px
+    letter-spacing: 0.16px
+    +robo  
+    color: $black-color
+    margin-bottom: 30px
+  &-logo     
+    width: 161px
+    height: 80px    
+  &-item
+    display: flex
+    height: 400px
+    padding: 68px 0 0
+    border-left: 1px solid #E4ECF8
+    &:last-child
+      border-right: 1px solid #E4ECF8
+
+    &-inner
+      margin: 0 auto
+      width: 197px 
+    &__text
+      display: flex
+      width: 197px
+      margin: 35px 0 16px
+      +robo
+      font-size: 14px
+      line-height: 20px
+      letter-spacing: 0.16px
+      color: #8B919F
+    &__link            
+      font-size: 15px
+      letter-spacing: 0.16px
+      +robo
+      color: #2A7EF9
+  &-temp
+    max-width: 1869px    
+    margin: 0 24px
+    img 
+      display: block    
+
+
+
+
+     
+
+
+  
