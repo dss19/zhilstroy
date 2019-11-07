@@ -7,11 +7,12 @@
     padding-top: 112px
   &-subtitle
     margin-bottom: 64px
-  &-detail 
+  &-detail
+    position: relative
+    margin-bottom: 100px 
     &-item
       margin-bottom: 56px
-      &:last-child
-        margin-bottom: 0 
+       
       &__value
         +reg 
         font-size: 96px
@@ -20,11 +21,95 @@
         color: $red-color
         margin-right: 24px
       &__desc
-        +robo 
+        +robot 
         font-size: 14px
         line-height: 22px
         letter-spacing: 0.1px
         color: $black-color
-  &-area
-    background: #E4ECF8
-    width: 100%        
+    &-area
+      position: absolute
+      top: 0      
+      left: calc(100% + 2px);
+      width: calc(50vw + 39%)
+      background: #E4ECF8      
+      height: 320px
+      padding: 49px 0 0 81px
+      overflow: hidden
+      &__number
+        display: block
+        font-size: 112px
+        line-height: 112px
+        letter-spacing: 2px
+        +bold
+        color: $red-color
+        margin-bottom: 20px
+      &__text
+        display: inline-block
+        font-size: 27px
+        line-height: 30px
+        color: $grey-color
+        +bold
+        vertical-align: top
+        margin-right: 26px
+      &__index
+        display: inline-block
+        font-size: 344px        
+        letter-spacing: 2px
+        +bold 
+        color: $main-color
+        transform: translateY(-74px)
+        sup 
+          font-size: 58%
+          top: -0.7em
+  &-header
+    margin-bottom: 24px
+  &-subheader
+    margin-bottom: 40px
+  &-block
+    margin-bottom: 24px
+    &__img
+      img 
+        display: block
+    &-info
+      padding: 12px 0 0 46px 
+      &__name
+        display: block
+        font-size: 34px
+        line-height: 44px
+        +bold 
+        margin-bottom: 16px
+      &__time, &__adress
+        display: block
+        font-size: 10px
+        line-height: 16px
+        letter-spacing: 1.5px
+        color: $grey-color
+        text-transform: uppercase
+        +bold
+      &__year, &__place 
+        display: block 
+        font-size: 15px
+        line-height: 20px
+        +robot
+        letter-spacing: 0.16px
+        color: $black-color
+        margin-bottom: 8px       
+      &__place        
+        margin-bottom: 16px
+      &__link
+        display: flex
+        width: 240px
+        font-size: 14px
+        line-height: 16px
+        letter-spacing: 0.75px
+        +bold
+        text-transform: uppercase
+        color: $red-color
+        border: 1px solid $grey-color
+        border-radius: 4px
+        padding: 16px 0
+        text-align: center
+        justify-content: center
+        align-items: center
+        margin-bottom: 8px
+

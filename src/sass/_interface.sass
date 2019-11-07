@@ -53,7 +53,38 @@ img
     font-size: 15px
     line-height: 20px
     letter-spacing: 0.16px
-    +robo  
+    +robot  
     color: $black-color
-    margin-bottom: 30px       
+    margin-bottom: 30px
+  &-header
+    &__lines
+      position: relative
+      display: block
+      width: 40px
+      height: 4px
+      transform: rotate(-15deg)
+      background: $black-color
+      &:before
+        position: absolute
+        content: ''
+        left: 2px
+        bottom: 8px
+        width: 40px
+        height: 4px        
+        background: $black-color
+    &__text
+      font-size: 34px
+      +bold 
+      color: $black-color
+      padding-left: 50px
+  &-subheader
+    font-size: 15px
+    line-height: 20px
+    letter-spacing: 0.16px
+    +robot  
+    color: $black-color
+
+
+
+
      
