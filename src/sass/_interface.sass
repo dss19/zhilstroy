@@ -20,10 +20,17 @@ img
   padding: 0
   margin: 0 auto
 .container-large
+  position: relative
   width: 100%
   max-width: 1584px
   padding: 0
   margin: 0 auto
+  &__logo
+    position: absolute
+    left: 0
+    top: 0
+    width: 241px
+    height: 120px
 .section
   &-name
     font-size: 10px
@@ -83,6 +90,37 @@ img
     letter-spacing: 0.16px
     +robot  
     color: $black-color
+  &-chapter
+    &__lines
+      position: relative
+      display: inline-block
+      width: 22px
+      height: 4px
+      transform: rotate(-15deg)
+      background: $black-color
+      &:before
+        position: absolute
+        content: ''
+        left: 2px
+        bottom: 8px
+        width: 22px
+        height: 4px        
+        background: $black-color
+      &:after
+        position: absolute
+        content: ''
+        left: -2px
+        top: 8px
+        width: 22px
+        height: 4px        
+        background: $black-color
+    &__text
+      font-size: 24px
+      +bold 
+      color: $black-color
+      padding-left: 24px
+      line-height: 30px    
+
 
 
 
