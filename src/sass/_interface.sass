@@ -21,7 +21,7 @@ img
   margin: 0 auto
 .container-large
   position: relative
-  width: 100%
+  width: 82.5vw
   max-width: 1584px
   padding: 0
   margin: 0 auto
@@ -32,6 +32,11 @@ img
     width: 241px
     height: 120px
 .section
+  padding-top: 24px
+  &-wrap
+    background: $main-color 
+    margin: 0 24px
+    padding: 112px 0 96px 
   &-name
     font-size: 10px
     text-transform: uppercase
@@ -119,7 +124,58 @@ img
       +bold 
       color: $black-color
       padding-left: 24px
-      line-height: 30px    
+      line-height: 30px
+  &-bottom
+    height: 200px
+  &-call 
+    &__name
+      font-size: 14px
+      line-height: 16px
+      letter-spacing: 0.75px
+      text-transform: uppercase
+      +reg
+      color: $main-color
+      opacity: 0.8
+    &__text
+      font-size: 34px
+      line-height: 44px
+      +bold
+      color: $main-color
+  &-phone
+    display: flex
+    justify-content: center
+    font-size: 34px
+    line-height: 44px
+    +bold
+    color: $main-color
+  &-buttons
+    display: flex
+    justify-content: flex-end
+    &-btn
+      display: inline-block
+      width: 224px 
+      font-size: 14px
+      line-height: 16px
+      text-transform: uppercase
+      +bold
+      padding: 24px 0
+      text-align: center
+      border-radius: 4px
+      &_red
+        color: $red-color
+        background: $main-color
+      &_green
+        color: $green-color
+        background: $main-color  
+      &_white
+        color: $main-color
+        border: 1px solid rgba($main-color, 0.5)
+        margin-left: 17px      
+.black-line
+  width: 100%
+  height: 8px
+  background: $black-color
+            
 
 
 

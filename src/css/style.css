@@ -68,7 +68,7 @@ img {
 
 .container-large {
   position: relative;
-  width: 100%;
+  width: 82.5vw;
   max-width: 1584px;
   padding: 0;
   margin: 0 auto;
@@ -80,6 +80,16 @@ img {
   top: 0;
   width: 241px;
   height: 120px;
+}
+
+.section {
+  padding-top: 24px;
+}
+
+.section-wrap {
+  background: #ffffff;
+  margin: 0 24px;
+  padding: 112px 0 96px;
 }
 
 .section-name {
@@ -199,6 +209,87 @@ img {
   color: #000000;
   padding-left: 24px;
   line-height: 30px;
+}
+
+.section-bottom {
+  height: 200px;
+}
+
+.section-call__name {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  font-family: 'Room Thin', sans-serif;
+  font-weight: normal;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.section-call__text {
+  font-size: 34px;
+  line-height: 44px;
+  font-family: 'Room Bold', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.section-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 34px;
+  line-height: 44px;
+  font-family: 'Room Bold', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.section-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.section-buttons-btn {
+  display: inline-block;
+  width: 224px;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-family: 'Room Bold', sans-serif;
+  font-weight: bold;
+  padding: 24px 0;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.section-buttons-btn_red {
+  color: #A90F3D;
+  background: #ffffff;
+}
+
+.section-buttons-btn_green {
+  color: #009944;
+  background: #ffffff;
+}
+
+.section-buttons-btn_white {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-left: 17px;
+}
+
+.black-line {
+  width: 100%;
+  height: 8px;
+  background: #000000;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -4371,13 +4462,6 @@ html {
 
 .development {
   background: #A90F3D;
-  padding-top: 24px;
-}
-
-.development-wrap {
-  background: #ffffff;
-  margin: 0 24px;
-  padding: 112px 0 96px;
 }
 
 .development-subtitle {
@@ -4473,7 +4557,7 @@ html {
   margin-bottom: 24px;
 }
 
-.development-block:last-child {
+.development-block_last {
   margin-bottom: 100px;
 }
 
@@ -4610,73 +4694,46 @@ html {
   text-align: center;
 }
 
-.development-bottom {
-  height: 200px;
+.industry {
+  background: #009944;
 }
 
-.development-call__name {
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.75px;
-  text-transform: uppercase;
+.industry-subtitle {
+  margin-bottom: 40px;
+}
+
+.industry-img {
+  margin-bottom: 56px;
+}
+
+.industry-img img {
+  display: block;
+}
+
+.industry-numbers-item__count {
+  display: block;
+  margin-bottom: 16px;
   font-family: 'Room Thin', sans-serif;
   font-weight: normal;
-  color: #ffffff;
-  opacity: 0.8;
+  font-size: 96px;
+  line-height: 64px;
+  letter-spacing: 2px;
+  color: #009944;
 }
 
-.development-call__text {
-  font-size: 34px;
-  line-height: 44px;
-  font-family: 'Room Bold', sans-serif;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.development-phone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 34px;
-  line-height: 44px;
-  font-family: 'Room Bold', sans-serif;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.development-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.development-buttons-btn {
-  display: inline-block;
-  width: 224px;
+.industry-numbers-item__text {
+  display: block;
+  font-family: 'Roboto Medium', sans-serif;
+  font-weight: normal;
   font-size: 14px;
-  line-height: 16px;
-  text-transform: uppercase;
-  font-family: 'Room Bold', sans-serif;
-  font-weight: bold;
-  padding: 24px 0;
-  text-align: center;
-  border-radius: 4px;
+  line-height: 22px;
+  color: #000000;
 }
 
-.development-buttons-btn_white {
-  color: #A90F3D;
-  background: #ffffff;
-}
-
-.development-buttons-btn_red {
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  margin-left: 17px;
+.industry-liebherr {
+  display: block;
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+  width: 128px;
 }
 /*# sourceMappingURL=style.css.map */
