@@ -275,6 +275,11 @@ img {
   background: #ffffff;
 }
 
+.section-buttons-btn_blue {
+  color: #2F2482;
+  background: #ffffff;
+}
+
 .section-buttons-btn_green {
   color: #009944;
   background: #ffffff;
@@ -4735,5 +4740,120 @@ html {
   -webkit-transform: translateY(-12px);
           transform: translateY(-12px);
   width: 128px;
+}
+
+.etalon {
+  background: #2F2482;
+}
+
+.etalon-subtitle {
+  margin-bottom: 120px;
+}
+
+.etalon-block {
+  position: relative;
+  background: #E4ECF8;
+  margin-bottom: 64px;
+}
+
+.etalon-block:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 100%;
+  width: calc(50vw - 50% - 33px);
+  height: 100%;
+  background: #E4ECF8;
+}
+
+.etalon-block:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 100%;
+  width: 88px;
+  height: 100%;
+  background: #E4ECF8;
+}
+
+.etalon-img {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+
+.etalon-img img {
+  display: block;
+}
+
+.etalon-numbers {
+  padding: 60px 0 0;
+}
+
+.etalon-numbers__title {
+  font-size: 20px;
+  line-height: 32px;
+  font-family: 'Roboto Medium', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.16px;
+  color: #8B919F;
+  margin-bottom: 40px;
+}
+
+.etalon-numbers-value {
+  margin-bottom: 22px;
+}
+
+.etalon-numbers-value__count {
+  font-family: 'Room Thin', sans-serif;
+  font-weight: normal;
+  font-size: 96px;
+  line-height: 80px;
+  letter-spacing: 2px;
+  color: #2F2482;
+  margin-right: 22px;
+}
+
+.etalon-numbers-value-info__icon {
+  font-family: 'Room Thin', sans-serif;
+  font-weight: normal;
+  font-size: 48px;
+  color: #2F2482;
+}
+
+.etalon-numbers-value-info__text {
+  font-family: 'Roboto Medium', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.1px;
+  color: #000000;
+}
+
+.etalon-numbers-value-info__svg {
+  width: 38px;
+  height: 41px;
+}
+
+.etalon-works__title {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.16px;
+  font-family: 'Roboto Medium', sans-serif;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+.etalon-works-item__svg {
+  display: block;
+  width: 91px;
+}
+
+.etalon-works-item__text {
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.1px;
+  font-family: 'Roboto Medium', sans-serif;
+  font-weight: normal;
 }
 /*# sourceMappingURL=style.css.map */
