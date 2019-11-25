@@ -1,54 +1,21 @@
+   
 .main
   position: relative
   &-video
-    img 
-      display: block   
-  &-logo   
-    position: absolute
-    top: 47px
-    left: 210px
-    width: 396px
-    height: 60px   
-  &-menu
-    position: fixed
-    height: 30px
-    top: 80px
-    right: 210px
-    align-items: center
-    cursor: pointer
-    &__text
-      color: $main-color
-      text-transform: uppercase
-      +bold
-      font-size: 14px
-      letter-spacing: 0.75px
-    &__btn
-      position: relative
-      width: 40px
-      height: 6px
-      background: $main-color
-      margin-left: 21px
-      transition: 0.3s
-      &:before
-        content: ''
-        position: absolute
-        top: 12px
-        left: 0
-        width: 40px
-        height: 6px
-        background: $main-color
-        transition: 0.3s
-      &:after
-        content: ''
-        position: absolute
-        bottom: 12px
-        left: 0
-        width: 40px
-        height: 6px
-        background: $main-color
-        transition: 0.3s
-    &:hover &__btn
-      transform: rotate(-15deg)
+    position: relative
+    width: 100%
+    &-cover
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%      
+      background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 91.89%)
+      opacity: 0.35
+      img 
+        width: 100%
+        overflow: hidden        
+        opacity: 0.2       
   &-link 
     position: absolute
     bottom: 136px
@@ -92,7 +59,7 @@
     margin: 0 auto
     left: 0
     right: 0
-    width: 91.5%
+    width: 92%
     height: 76px
     background: $main-color          
 

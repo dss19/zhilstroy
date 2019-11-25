@@ -13,15 +13,30 @@
   <!-- Главная -->
   <main class="main">
     <div class="main-video">
-      <img src="img/bg-main.jpg" alt="">
+      <video loop autoplay playsinline width="100%">
+        <source src="img/video/31.mp4" type='video/mp4'>
+      </video>
+      <div class="main-video-cover">
+        <img src="img/video/cover.png" alt="полоски">
+      </div>  
     </div>
-    <svg class="main-logo">
-      <use xlink:href="sprite.svg#logo-long"></use>
-    </svg>
-    <div class="main-menu d-flex">
-      <span class="main-menu__text">меню</span>
-      <span class="main-menu__btn"></span>
-    </div>
+    <header class="header d-flex justify-content-between align-items-center">
+      <svg class="header-logo">
+        <use xlink:href="sprite.svg#logo-long"></use>
+      </svg>
+      <div class="header-menu">
+        <span class="header-menu-btn"></span>      
+        <div class="header-menu-text">меню</div>      
+        <ul class="header-menu-nav d-flex m-0">
+          <li><a href="#" class="header-menu__link">группа<br>компаний</a></li>
+          <li><a href="#" class="header-menu__link">жилстрой<br>девелопмент</a></li>
+          <li><a href="#" class="header-menu__link">жилстрой<br>индустрия</a></li>
+          <li><a href="#" class="header-menu__link">эталон<br>жилстрой</a></li>
+          <li><a href="#" class="header-menu__link">контакты</a></li>          
+        </ul>        
+      </div>
+      <div class="cover"></div>       
+    </header>
     <div class="main-text">
       <!-- непонятно, кнопка или просто текст? -->
     </div>
@@ -113,8 +128,8 @@
                 <span class="development-detail-item__desc">успешных<br>девелоперских<br>проектов</span>
               </div>
               <div class="development-detail-item d-flex">
-                <span class="development-detail-item__value">4</span>
-                <span class="development-detail-item__desc">объекта<br>на стадии<br>строительства</span>
+                <span class="development-detail-item__value">18</span>
+                <span class="development-detail-item__desc">объектов<br>на стадии<br>строительства</span>
               </div>
               <div class="development-detail-item d-flex">
                 <span class="development-detail-item__value">3</span>
@@ -139,28 +154,14 @@
           </div>
           <div class="development-block d-flex">
             <div class="development-block__img col-8 p-0">
-              <img src="img/dev/duet.jpg" alt="дуэт">
+              <img src="img/dev/ilmari.jpg" alt="илмари">
             </div>
             <div class="development-block-info col-4">
-              <span class="development-block-info__name">ЖК «Дуэт»</span>
+              <span class="development-block-info__name">ЖК «Илмари»</span>
               <span class="development-block-info__time">сроки строительства</span>
               <span class="development-block-info__year">2018 - 2021</span>
               <span class="development-block-info__adress">адрес</span>
-              <span class="development-block-info__place">г. Пенза, ул. Рахманинова, 8-8 А</span>
-              <a href="#" class="development-block-info__link">Подробнее</a>
-              <a href="#" class="development-block-info__link">Перейти на сайт</a>
-            </div>
-          </div>
-          <div class="development-block d-flex">
-            <div class="development-block__img col-8 p-0">
-              <img src="img/dev/vertical.jpg" alt="вертикать">
-            </div>
-            <div class="development-block-info col-4">
-              <span class="development-block-info__name">ЖК «Вертикаль»</span>
-              <span class="development-block-info__time">сроки строительства</span>
-              <span class="development-block-info__year">2018 - 2021</span>
-              <span class="development-block-info__adress">адрес</span>
-              <span class="development-block-info__place">г. Пенза, ул. Богданова, 14</span>
+              <span class="development-block-info__place">г. Пенза, ул. Высокая, 17</span>
               <a href="#" class="development-block-info__link">Подробнее</a>
               <a href="#" class="development-block-info__link">Перейти на сайт</a>
             </div>
@@ -179,20 +180,34 @@
               <a href="#" class="development-block-info__link">Перейти на сайт</a>
             </div>
           </div>
-          <div class="development-block development-block_last d-flex">
+          <div class="development-block d-flex">
             <div class="development-block__img col-8 p-0">
-              <img src="img/dev/ilmari.jpg" alt="илмари">
+              <img src="img/dev/duet.jpg" alt="дуэт">
             </div>
             <div class="development-block-info col-4">
-              <span class="development-block-info__name">ЖК «Илмари»</span>
+              <span class="development-block-info__name">ЖК «Дуэт»</span>
               <span class="development-block-info__time">сроки строительства</span>
               <span class="development-block-info__year">2018 - 2021</span>
               <span class="development-block-info__adress">адрес</span>
-              <span class="development-block-info__place">г. Пенза, ул. Высокая, 17</span>
+              <span class="development-block-info__place">г. Пенза, ул. Рахманинова, 8-8 А</span>
               <a href="#" class="development-block-info__link">Подробнее</a>
               <a href="#" class="development-block-info__link">Перейти на сайт</a>
             </div>
           </div>
+          <div class="development-block development-block_last d-flex">
+            <div class="development-block__img col-8 p-0">
+              <img src="img/dev/vertical.jpg" alt="вертикать">
+            </div>
+            <div class="development-block-info col-4">
+              <span class="development-block-info__name">ЖК «Вертикаль»</span>
+              <span class="development-block-info__time">сроки строительства</span>
+              <span class="development-block-info__year">2018 - 2021</span>
+              <span class="development-block-info__adress">адрес</span>
+              <span class="development-block-info__place">г. Пенза, ул. Богданова, 14</span>
+              <a href="#" class="development-block-info__link">Подробнее</a>
+              <a href="#" class="development-block-info__link">Перейти на сайт</a>
+            </div>
+          </div>         
           <div class="development-header development-social section-header">
             <span class="section-header__lines"></span>
             <span class="section-header__text">Подрядные и социальные проекты</span>

@@ -4,6 +4,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   font-weight: bold;
   font-style: normal;
   font-display: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
@@ -20,6 +22,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
@@ -28,6 +31,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
@@ -97,6 +101,7 @@ img {
   text-transform: uppercase;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   letter-spacing: 1.5px;
   line-height: 16px;
   color: #000000;
@@ -109,6 +114,7 @@ img {
   letter-spacing: 0.5px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   color: #000000;
   margin: 40px 0 24px 47px;
 }
@@ -129,8 +135,9 @@ img {
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0.16px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   color: #000000;
   margin-bottom: 30px;
 }
@@ -159,6 +166,7 @@ img {
   font-size: 34px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   color: #000000;
   padding-left: 50px;
 }
@@ -167,8 +175,9 @@ img {
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0.16px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   color: #000000;
 }
 
@@ -206,6 +215,7 @@ img {
   font-size: 24px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   color: #000000;
   padding-left: 24px;
   line-height: 30px;
@@ -222,6 +232,7 @@ img {
   text-transform: uppercase;
   font-family: 'Room Thin', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
   opacity: 0.8;
 }
@@ -231,6 +242,7 @@ img {
   line-height: 44px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
 }
 
@@ -245,6 +257,7 @@ img {
   line-height: 44px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
 }
 
@@ -265,6 +278,7 @@ img {
   text-transform: uppercase;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   padding: 24px 0;
   text-align: center;
   border-radius: 4px;
@@ -4265,65 +4279,58 @@ html {
     margin-left: auto !important;
   }
 }
-.main {
-  position: relative;
-}
-
-.main-video img {
-  display: block;
-}
-
-.main-logo {
+.header {
   position: absolute;
-  top: 47px;
-  left: 210px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 47px 210px 0;
+  z-index: 1;
+}
+
+.header-logo {
   width: 396px;
   height: 60px;
 }
 
-.main-menu {
-  position: fixed;
-  height: 30px;
-  top: 80px;
-  right: 210px;
+.header-menu {
+  position: relative;
+  width: 40px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 16px;
   cursor: pointer;
-}
-
-.main-menu__text {
   color: #ffffff;
-  text-transform: uppercase;
-  font-family: 'Room Bold', sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 0.75px;
 }
 
-.main-menu__btn {
+.header-menu_scr {
+  position: fixed;
+  top: 10px;
+  right: 210px;
+  color: #000000;
+  z-index: 10;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-animation: abc 1s forwards;
+          animation: abc 1s forwards;
+}
+
+.header-menu-btn {
   position: relative;
+  display: block;
+  background: #ffffff;
   width: 40px;
   height: 6px;
-  background: #ffffff;
-  margin-left: 21px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
-.main-menu__btn:before {
-  content: '';
-  position: absolute;
-  top: 12px;
-  left: 0;
-  width: 40px;
-  height: 6px;
-  background: #ffffff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.main-menu__btn:after {
+.header-menu-btn:before {
   content: '';
   position: absolute;
   bottom: 12px;
@@ -4331,13 +4338,204 @@ html {
   width: 40px;
   height: 6px;
   background: #ffffff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.main-menu:hover .main-menu__btn {
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+.header-menu-btn:after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 40px;
+  height: 6px;
+  background: #ffffff;
+  -webkit-transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.header-menu-btn_close {
+  height: 0;
+}
+
+.header-menu-btn_close:before {
+  bottom: -3px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.header-menu-btn_close:after {
+  top: -3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.header-menu-btn_scr {
+  background: #000000;
+}
+
+.header-menu-btn_scr:after, .header-menu-btn_scr:before {
+  background: #000000;
+}
+
+.header-menu-text {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  margin-right: 21px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Room Bold', sans-serif;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.header-menu-text_vis {
+  opacity: 0;
+  display: none;
+}
+
+.header-menu-text_scr {
+  display: none;
+}
+
+.header-menu-nav {
+  position: absolute;
+  top: 0;
+  right: 200%;
+  list-style: none;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding-top: 8px;
+}
+
+.header-menu-nav li {
+  cursor: default;
+}
+
+.header-menu-nav li a {
+  cursor: default;
+}
+
+.header-menu-nav_vis {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header-menu-nav_vis li {
+  cursor: pointer;
+}
+
+.header-menu-nav_vis li a {
+  cursor: pointer;
+}
+
+.header-menu__link {
+  color: inherit;
+  font-family: 'Room Bold', sans-serif;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-right: 56px;
+  letter-spacing: 0.75px;
+}
+
+.cover {
+  width: 100%;
+  height: 100px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14);
+          box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14);
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.cover_vis {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  z-index: 9;
+}
+
+@-webkit-keyframes abc {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes abc {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+.main {
+  position: relative;
+}
+
+.main-video {
+  position: relative;
+  width: 100%;
+}
+
+.main-video-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(91.89%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 91.89%);
+  opacity: 0.35;
+}
+
+.main-video-cover img {
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.2;
 }
 
 .main-link {
@@ -4357,6 +4555,7 @@ html {
   text-transform: uppercase;
   font-family: 'Room Thin', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
   margin-bottom: 10px;
 }
@@ -4365,6 +4564,7 @@ html {
   font-size: 24px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
   margin-bottom: 32px;
 }
@@ -4390,6 +4590,7 @@ html {
   color: #ffffff;
   font-family: 'Room Thin', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 .main-block {
@@ -4398,7 +4599,7 @@ html {
   margin: 0 auto;
   left: 0;
   right: 0;
-  width: 91.5%;
+  width: 92%;
   height: 76px;
   background: #ffffff;
 }
@@ -4440,8 +4641,9 @@ html {
   display: flex;
   width: 197px;
   margin: 35px 0 16px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.16px;
@@ -4451,8 +4653,9 @@ html {
 .about-item__link {
   font-size: 15px;
   letter-spacing: 0.16px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   color: #2A7EF9;
 }
 
@@ -4485,6 +4688,7 @@ html {
 .development-detail-item__value {
   font-family: 'Room Thin', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   font-size: 96px;
   line-height: 64px;
   letter-spacing: 2px;
@@ -4493,8 +4697,9 @@ html {
 }
 
 .development-detail-item__desc {
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.1px;
@@ -4506,7 +4711,7 @@ html {
   top: 0;
   left: calc(100% + 2px);
   width: calc(50vw + 39%);
-  background: #E4ECF8;
+  background-image: url(../img/dev/beton.jpg);
   height: 320px;
   padding: 49px 0 0 81px;
   overflow: hidden;
@@ -4519,6 +4724,7 @@ html {
   letter-spacing: 2px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   color: #A90F3D;
   margin-bottom: 20px;
 }
@@ -4530,6 +4736,7 @@ html {
   color: #8B919F;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   vertical-align: top;
   margin-right: 26px;
 }
@@ -4540,6 +4747,7 @@ html {
   letter-spacing: 2px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
   -webkit-transform: translateY(-74px);
           transform: translateY(-74px);
@@ -4580,6 +4788,7 @@ html {
   line-height: 44px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   margin-bottom: 16px;
 }
 
@@ -4592,14 +4801,16 @@ html {
   text-transform: uppercase;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
 
 .development-block-info__year, .development-block-info__place {
   display: block;
   font-size: 15px;
   line-height: 20px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   letter-spacing: 0.16px;
   color: #000000;
   margin-bottom: 8px;
@@ -4619,6 +4830,7 @@ html {
   letter-spacing: 0.75px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
   color: #A90F3D;
   border: 1px solid rgba(139, 145, 159, 0.36);
@@ -4654,6 +4866,7 @@ html {
   line-height: 44px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
 
 .development-sale-desc__subtitle {
@@ -4662,6 +4875,7 @@ html {
   letter-spacing: 0.15px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   margin-bottom: 28px;
 }
 
@@ -4670,6 +4884,7 @@ html {
   line-height: 16px;
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
   color: #8B919F;
   letter-spacing: 1.5px;
@@ -4678,8 +4893,9 @@ html {
 .development-sale-desc__description, .development-sale-desc__property, .development-sale-desc__site {
   font-size: 15px;
   line-height: 20px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   letter-spacing: 0.16px;
   margin-bottom: 24px;
 }
@@ -4687,6 +4903,7 @@ html {
 .development-sale-desc__btn {
   font-family: 'Room Bold', sans-serif;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.75px;
@@ -4720,6 +4937,7 @@ html {
   margin-bottom: 16px;
   font-family: 'Room Thin', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   font-size: 96px;
   line-height: 64px;
   letter-spacing: 2px;
@@ -4728,8 +4946,9 @@ html {
 
 .industry-numbers-item__text {
   display: block;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   font-size: 14px;
   line-height: 22px;
   color: #000000;
@@ -4792,8 +5011,9 @@ html {
 .etalon-numbers__title {
   font-size: 20px;
   line-height: 32px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   letter-spacing: 0.16px;
   color: #8B919F;
   margin-bottom: 40px;
@@ -4806,6 +5026,7 @@ html {
 .etalon-numbers-value__count {
   font-family: 'Room Thin', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   font-size: 96px;
   line-height: 80px;
   letter-spacing: 2px;
@@ -4816,13 +5037,15 @@ html {
 .etalon-numbers-value-info__icon {
   font-family: 'Room Thin', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   font-size: 48px;
   color: #2F2482;
 }
 
 .etalon-numbers-value-info__text {
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.1px;
@@ -4838,8 +5061,9 @@ html {
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0.16px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
   color: #000000;
   margin-bottom: 50px;
 }
@@ -4853,7 +5077,8 @@ html {
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.1px;
-  font-family: 'Roboto Medium', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
 }
 /*# sourceMappingURL=style.css.map */
