@@ -30,11 +30,62 @@
       letter-spacing: 0.16px
       +robo
       color: #2A7EF9
-  &-temp
-    max-width: 1869px    
-    margin: 48px 24px 40px
-    img 
-      display: block    
+  &-old 
+    position: relative   
+    width: 100%        
+    height: 240px    
+    margin: 48px 0 40px
+    padding: 0 24px
+    &-img
+      position: absolute
+      top: 0
+      left: 24px
+      right: 24px
+      height: 100%
+      overflow: hidden
+      
+      &__img 
+        transform: translateY(-125px)      
+    &-element
+      position: absolute
+      left: 24.2%
+      top: 0
+      height: 100%
+      overflow: hidden
+      &__item
+        width: 296px
+        height: 487px
+        transform: translateY(-124px)
+    &__cover
+      position: absolute
+      top: 0
+      left: 24px
+      bottom: 0
+      right: 24px            
+      background: rgba(#38589E, 0.8)    
+    &-text
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 26.6%      
+      color: $main-color      
+      &__years
+        +bold 
+        font-size: 112px
+        line-height: 112px
+        letter-spacing: 2px
+        margin-right: 21px
+      &__desc
+        +bold 
+        font-size: 24px
+        line-height: 38px      
+        
+
+        
+
+           
+      
+        
 
 
 

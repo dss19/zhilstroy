@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Компания "Жилстрой"</title>
 </head>
@@ -13,49 +14,51 @@
   <!-- Главная -->
   <main class="main">
     <div class="main-video">
-      <video loop autoplay playsinline width="100%">
+      <video autoplay="true" loop="true" muted="muted" playsinline width="100%">
         <source src="img/video/31.mp4" type='video/mp4'>
       </video>
       <div class="main-video-cover">
         <img src="img/video/cover.png" alt="полоски">
-      </div>  
+      </div>
     </div>
     <header class="header d-flex justify-content-between align-items-center">
       <svg class="header-logo">
         <use xlink:href="sprite.svg#logo-long"></use>
       </svg>
       <div class="header-menu">
-        <span class="header-menu-btn"></span>      
-        <div class="header-menu-text">меню</div>      
+        <span class="header-menu-btn"></span>
+        <div class="header-menu-text">меню</div>
         <ul class="header-menu-nav d-flex m-0">
-          <li><a href="#" class="header-menu__link">группа<br>компаний</a></li>
-          <li><a href="#" class="header-menu__link">жилстрой<br>девелопмент</a></li>
-          <li><a href="#" class="header-menu__link">жилстрой<br>индустрия</a></li>
-          <li><a href="#" class="header-menu__link">эталон<br>жилстрой</a></li>
-          <li><a href="#" class="header-menu__link">контакты</a></li>          
-        </ul>        
+          <li><a href="#about" class="header-menu__link">группа<br>компаний</a></li>
+          <li><a href="#development" class="header-menu__link">жилстрой<br>девелопмент</a></li>
+          <li><a href="#industry" class="header-menu__link">жилстрой<br>индустрия</a></li>
+          <li><a href="#etalon" class="header-menu__link">эталон<br>жилстрой</a></li>
+          <li><a href="#contacts" class="header-menu__link">контакты</a></li>
+        </ul>
       </div>
-      <div class="cover"></div>       
+      <div class="cover"></div>
     </header>
     <div class="main-text">
-      <!-- непонятно, кнопка или просто текст? -->
+      <h1 class="main-text-title">Создавая основы<br>комфортной жизни,</h1>
+      <span class="main-text-typed" id="typed"></span>
     </div>
     <div class="main-link d-flex flex-column">
       <span class="main-link__subtitle">Видеоролик</span>
       <span class="main-link__title">О группе компаний</span>
-      <div class="main-link__btn d-flex align-items-center">
+      <a data-fancybox href="https://www.youtube.com/watch?v=nlaeyW9QK0U"
+        class="main-link__btn d-flex align-items-center">
         <svg class="play">
           <use xlink:href="sprite.svg#play"></use>
         </svg>
         <span>Смотреть видео</span>
-      </div>
+      </a>
     </div>
     <div class="main-block"></div>
   </main>
   <!-- /Главная -->
 
   <!-- О группе компаний -->
-  <section class="about">
+  <section class="about" id="about">
     <div class="container-short">
       <span class="about-name section-name">о группе компаний</span>
       <h2 class="about-title section-title">Объединяем силы, повышаем качество</h2>
@@ -101,26 +104,41 @@
         </div>
       </div>
     </div>
-    <div class="about-temp">
-      <img src="img/30years.jpg" alt="">
+    <div class="about-old">
+      <div class="about-old-img">
+        <img class="about-old-img__img" src="img/city.jpg" alt="город">
+      </div>
+      <div class="about-old-element">
+        <svg class="about-old-element__item">
+          <use xlink:href="sprite.svg#union"></use>
+        </svg>
+      </div>
+      <div class="about-old__cover"></div>
+      <div class="about-old-text d-flex align-items-center">
+        <span class="about-old-text__years">30</span>
+        <span class="about-old-text__desc">лет на рынке недвижимости<br>Пензенской области</span>
+      </div>
     </div>
   </section>
   <!-- /О группе компаний -->
 
   <!-- Девелопмент -->
-  <section class="development section">
+  <section class="development section" id="development">
     <div class="development-wrap section-wrap">
       <div class="container-large">
         <svg class="container-large__logo">
           <use xlink:href="sprite.svg#logo-dev"></use>
         </svg>
         <div class="container-short">
-          <span class="development-name section-name">надежный ГЕНЕРАЛЬНЫЙ ПОДРЯДЧИК</span>
-          <h2 class="development-title section-title col-8 p-0">Строим и гордимся</h2>
-          <span class="development-subtitle section-subtitle col-8 p-0">Мы строим и наконец когда-нибудь построим. Мы
-            строим и
-            наконец когда-нибудь построим. Мы строим и наконец когда-нибудь построим. Мы строим и наконец когда-нибудь
-            построим. Мы строим и наконец когда-нибудь построим. Мы строим и наконец когда-нибудь построим.</span>
+          <span class="development-name section-name">надежная девелоперская коспания</span>
+          <h2 class="development-title section-title col-10 p-0">Строим и гордимся</h2>
+          <span class="development-subtitle section-subtitle col-10 p-0">«Жилстрой Девелопмент» — крупная девелоперская
+            компания, работающая на рынке Пензы
+            и Пензенской области с 1989 года. Мы специализируемся на строительстве жилых комплексов комфорт-
+            и бизнес-класса, а также производственных, административных, торговых зданий и комплексов, объектов
+            социально-бытового и инженерного обеспечения.
+            Наши преимущества — многолетний опыт и непрерывное развитие, финансовая устойчивость, четкое соблюдение
+            сроков передачи объектов и социальная ответственность.</span>
           <div class="development-numbers d-flex">
             <div class="development-detail col-4 p-0 d-flex flex-column">
               <div class="development-detail-item d-flex">
@@ -162,7 +180,42 @@
               <span class="development-block-info__year">2018 - 2021</span>
               <span class="development-block-info__adress">адрес</span>
               <span class="development-block-info__place">г. Пенза, ул. Высокая, 17</span>
-              <a href="#" class="development-block-info__link">Подробнее</a>
+              <div class="social-product">
+                <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-6" data-type="image"
+                  class="development-block-info__link">Подробнее</a>
+                <div class="d-none">
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-6" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-6" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-6" data-type="image"></a>
+                  <div class="social-product-form">
+                    <div class="product-block d-flex align-items-center">
+                      <span class="product-name">ЖК «Илмари»</span>
+                      <span class="product-line"></span>
+                      <span class="product-houses">3 жилых дома</span>
+                      <span class="product-dot"></span>
+                      <span class="product-numbers">30000 м<sup>2</sup></span>
+                      <span class="product-slash"></span>
+                      <div class="fancybox-infobar">
+                        <span class="fancybox-infobar-index" data-fancybox-index></span>
+                        <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                      </div>
+                    </div>
+                    <div class="product-info d-flex justify-content-between">
+                      <div class="product-info-about">
+                        <span class="development-block-info__time">сроки строительства</span>
+                        <span class="development-block-info__year">2018 - 2021</span>
+                        <span class="development-block-info__adress">адрес</span>
+                        <span class="development-block-info__place">г. Пенза, ул. Богданова, 14</span>
+                      </div>
+                      <div class="product-info-text">
+                        Уникальный 5-этажный жилой комплекс, спроектированный финским архитектурным бюро №1 в России.
+                        1-я очередь, состоящая из 4 домов, строится по новой финансовой схеме эскроу-счетов, что вдвойне
+                        безопасно для дольщиков.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <a href="#" class="development-block-info__link">Перейти на сайт</a>
             </div>
           </div>
@@ -176,7 +229,42 @@
               <span class="development-block-info__year">2018 - 2021</span>
               <span class="development-block-info__adress">адрес</span>
               <span class="development-block-info__place">г. Пенза, ул. Соборная, 1</span>
-              <a href="#" class="development-block-info__link">Подробнее</a>
+              <div class="social-product">
+                <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-7" data-type="image"
+                  class="development-block-info__link">Подробнее</a>
+                <div class="d-none">
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-7" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-7" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-7" data-type="image"></a>
+                  <div class="social-product-form">
+                    <div class="product-block d-flex align-items-center">
+                      <span class="product-name">ЖК «Весна»</span>
+                      <span class="product-line"></span>
+                      <span class="product-houses">3 жилых дома</span>
+                      <span class="product-dot"></span>
+                      <span class="product-numbers">30000 м<sup>2</sup></span>
+                      <span class="product-slash"></span>
+                      <div class="fancybox-infobar">
+                        <span class="fancybox-infobar-index" data-fancybox-index></span>
+                        <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                      </div>
+                    </div>
+                    <div class="product-info d-flex justify-content-between">
+                      <div class="product-info-about">
+                        <span class="development-block-info__time">сроки строительства</span>
+                        <span class="development-block-info__year">2018 - 2021</span>
+                        <span class="development-block-info__adress">адрес</span>
+                        <span class="development-block-info__place">г. Пенза, ул. Соборная, 1</span>
+                      </div>
+                      <div class="product-info-text">
+                        Уникальный 5-этажный жилой комплекс, спроектированный финским архитектурным бюро №1 в России.
+                        1-я очередь, состоящая из 4 домов, строится по новой финансовой схеме эскроу-счетов, что вдвойне
+                        безопасно для дольщиков.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <a href="#" class="development-block-info__link">Перейти на сайт</a>
             </div>
           </div>
@@ -190,7 +278,42 @@
               <span class="development-block-info__year">2018 - 2021</span>
               <span class="development-block-info__adress">адрес</span>
               <span class="development-block-info__place">г. Пенза, ул. Рахманинова, 8-8 А</span>
-              <a href="#" class="development-block-info__link">Подробнее</a>
+              <div class="social-product">
+                <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-8" data-type="image"
+                  class="development-block-info__link">Подробнее</a>
+                <div class="d-none">
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-8" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-8" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-8" data-type="image"></a>
+                  <div class="social-product-form">
+                    <div class="product-block d-flex align-items-center">
+                      <span class="product-name">ЖК «Дуэт»</span>
+                      <span class="product-line"></span>
+                      <span class="product-houses">5 жилых домов</span>
+                      <span class="product-dot"></span>
+                      <span class="product-numbers">20000 м<sup>2</sup></span>
+                      <span class="product-slash"></span>
+                      <div class="fancybox-infobar">
+                        <span class="fancybox-infobar-index" data-fancybox-index></span>
+                        <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                      </div>
+                    </div>
+                    <div class="product-info d-flex justify-content-between">
+                      <div class="product-info-about">
+                        <span class="development-block-info__time">сроки строительства</span>
+                        <span class="development-block-info__year">2018 - 2021</span>
+                        <span class="development-block-info__adress">адрес</span>
+                        <span class="development-block-info__place">г. Пенза, ул. Рахманинова, 8-8 А</span>
+                      </div>
+                      <div class="product-info-text">
+                        Уникальный 5-этажный жилой комплекс, спроектированный финским архитектурным бюро №1 в России.
+                        1-я очередь, состоящая из 4 домов, строится по новой финансовой схеме эскроу-счетов, что вдвойне
+                        безопасно для дольщиков.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <a href="#" class="development-block-info__link">Перейти на сайт</a>
             </div>
           </div>
@@ -204,10 +327,45 @@
               <span class="development-block-info__year">2018 - 2021</span>
               <span class="development-block-info__adress">адрес</span>
               <span class="development-block-info__place">г. Пенза, ул. Богданова, 14</span>
-              <a href="#" class="development-block-info__link">Подробнее</a>
+              <div class="social-product">
+                <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-9" data-type="image"
+                  class="development-block-info__link">Подробнее</a>
+                <div class="d-none">
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-9" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-9" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-9" data-type="image"></a>
+                  <div class="social-product-form">
+                    <div class="product-block d-flex align-items-center">
+                      <span class="product-name">ЖК «Вертикаль»</span>
+                      <span class="product-line"></span>
+                      <span class="product-houses">5 жилых домов</span>
+                      <span class="product-dot"></span>
+                      <span class="product-numbers">20000 м<sup>2</sup></span>
+                      <span class="product-slash"></span>
+                      <div class="fancybox-infobar">
+                        <span class="fancybox-infobar-index" data-fancybox-index></span>
+                        <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                      </div>
+                    </div>
+                    <div class="product-info d-flex justify-content-between">
+                      <div class="product-info-about">
+                        <span class="development-block-info__time">сроки строительства</span>
+                        <span class="development-block-info__year">2018 - 2021</span>
+                        <span class="development-block-info__adress">адрес</span>
+                        <span class="development-block-info__place">г. Пенза, ул. Богданова, 14</span>
+                      </div>
+                      <div class="product-info-text">
+                        Уникальный 5-этажный жилой комплекс, спроектированный финским архитектурным бюро №1 в России.
+                        1-я очередь, состоящая из 4 домов, строится по новой финансовой схеме эскроу-счетов, что вдвойне
+                        безопасно для дольщиков.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <a href="#" class="development-block-info__link">Перейти на сайт</a>
             </div>
-          </div>         
+          </div>
           <div class="development-header development-social section-header">
             <span class="section-header__lines"></span>
             <span class="section-header__text">Подрядные и социальные проекты</span>
@@ -219,7 +377,190 @@
           </div>
         </div>
         <div class="development-gallery d-flex">
-          <!-- галерея с картинками и описанием -->
+          <div class="social-product">
+            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-1" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/sobor.jpg" alt="собор">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">Кафедральный собор</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-1" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-1" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">Спасский кафедральный собор</span>
+                  <span class="product-line"></span>
+                  <span class="product-numbers">20000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__time">сроки строительства</span>
+                    <span class="development-block-info__year">2013 - 2020</span>
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, ул. Советская, 1</span>
+                  </div>
+                  <div class="product-info-text">
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-2" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/filarmonia.jpg" alt="филармония">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">Новая филармония</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-2" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-2" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">Новая филармония</span>
+                  <span class="product-line"></span>
+                  <span class="product-numbers">15000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__time">сроки строительства</span>
+                    <span class="development-block-info__year">2014 - 2016</span>
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, ул. Суворова, 166</span>
+                  </div>
+                  <div class="product-info-text">
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-3" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/antonova.jpg" alt="филармония">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">ЖК на ул. Антонова, 28</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-3" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-3" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-3" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">ЖК на ул. Антонова, 28</span>
+                  <span class="product-line"></span>
+                  <span class="product-numbers">30000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__time">сроки строительства</span>
+                    <span class="development-block-info__year">2014 - 2016</span>
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, ул. Антонова, 28</span>
+                  </div>
+                  <div class="product-info-text">
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/school.jpg" alt="филармония">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">Школа №66 в Пензе</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">Школа №66 в Пензе</span>
+                  <span class="product-line"></span>
+                  <span class="product-numbers">10000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__time">сроки строительства</span>
+                    <span class="development-block-info__year">2014 - 2016</span>
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, ул. Антонова, 82</span>
+                  </div>
+                  <div class="product-info-text">
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/zavod.jpg" alt="филармония">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">Завод по убою и переработке индейки в Нижнем Ломове</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">Завод по убою и переработке индейки в Нижнем Ломове</span>
+                  <span class="product-line"></span>
+                  <span class="product-numbers">100000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__time">сроки строительства</span>
+                    <span class="development-block-info__year">2012 - 2016</span>
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">Пензенская обл., с. Нижний ломов</span>
+                  </div>
+                  <div class="product-info-text">
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="container-short">
@@ -261,7 +602,213 @@
       </div>
       <div class="container-large">
         <div class="development-gallery d-flex">
-          <!-- галерея с картинками и описанием -->
+          <div class="social-product">
+            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-12" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/masterdom.jpg" alt="Мастердом">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">ТЦ «МастерДом», ул. Совхозная, 15</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-12" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-12" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-12" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">ТЦ «МастерДом»</span>
+                  <span class="product-line"></span>
+                  <span class="product-houses"></span>
+                  <span class="product-dot"></span>
+                  <span class="product-numbers">30000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, ул. Совхозная, 15</span>
+                  </div>
+                  <div class="product-info-text">
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-10" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/dellin.jpg" alt="собор">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">СК «Деловые линии», ул. Совхозная, 15 з<br>(2 склада)</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-10" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-10" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">СК «Деловые линии»</span>
+                  <span class="product-line"></span>
+                  <span class="product-houses">2 склада</span>
+                  <span class="product-dot"></span>
+                  <span class="product-numbers">4628 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, ул. Совхозная, 15 з</span>
+                  </div>
+                  <div class="product-info-text">
+                    Охраняемая территория, круглосуточный доступ в помещение. Удобное территориальное расположение — в
+                    черте города, близость к трассе М5. Отдельно стоящий склад, площадью более 4600 метров со встроенным
+                    двухэтажным АБК (площадью 400 кв. м.), все коммуникакции, высота потолков — 10 м., нагрузка на пол —
+                    5 тонн/кв.м., 13 ворот, из которых 10 оборудованы докшелтерами и докревеллерами. Офисные помещения
+                    (АБК) — отапливаемые. Есть возможность сделать склад отапливаемым. Разворотная площадка — 30 метров.
+                    Охраняемая территория, круглосуточный доступ в помещение. Удобное территориальное расположение — в
+                    черте города, близость к трассе М5. Отдельно стоящий склад, площадью более 4600 метров со встроенным
+                    двухэтажным АБК (площадью 400 кв. м.), все коммуникакции, высота потолков — 10 м., нагрузка на пол —
+                    5 тонн/кв.м., 13 ворот, из которых 10 оборудованы докшелтерами и докревеллерами. Офисные помещения
+                    (АБК) — отапливаемые. Есть возможность сделать склад отапливаемым. Разворотная площадка — 30 метров.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-11" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/kvmetr.jpg" alt="квадратный метр">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">«Квадратный метр» по ул. Мира, 7 и пр. Победы, 23 (2
+                магазина)</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-11" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-11" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">«Квадратный метр»</span>
+                  <span class="product-line"></span>
+                  <span class="product-houses"></span>
+                  <span class="product-dot"></span>
+                  <span class="product-numbers">15000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, Мира, 7 и пр. Победы, 23</span>
+                  </div>
+                  <div class="product-info-text">
+                    Охраняемая территория, круглосуточный доступ в помещение. Удобное территориальное расположение — в
+                    черте города, близость к трассе М5. Отдельно стоящий склад, площадью более 4600 метров со встроенным
+                    двухэтажным АБК (площадью 400 кв. м.), все коммуникакции, высота потолков — 10 м., нагрузка на пол —
+                    5 тонн/кв.м., 13 ворот, из которых 10 оборудованы докшелтерами и докревеллерами. Офисные помещения
+                    (АБК) — отапливаемые. Есть возможность сделать склад отапливаемым. Разворотная площадка — 30 метров.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-13" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/ekomebel.jpg" alt="«ЭкономМебель»">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">ТЦ «ЭкономМебель», пр. Строителей, 38</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-13" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-13" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-13" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">ТЦ «ЭкономМебель»</span>
+                  <span class="product-line"></span>
+                  <span class="product-houses"></span>
+                  <span class="product-dot"></span>
+                  <span class="product-numbers">10000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, пр. Строителей, 38</span>
+                  </div>
+                  <div class="product-info-text">
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/atak.jpg" alt="Атак">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">ТЦ «АТАК», пр. Строителей, 67</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block d-flex align-items-center">
+                  <span class="product-name">ТЦ «АТАК»</span>
+                  <span class="product-line"></span>
+                  <span class="product-houses"></span>
+                  <span class="product-dot"></span>
+                  <span class="product-numbers">10000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info d-flex justify-content-between">
+                  <div class="product-info-about">
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, пр. Строителей, 67</span>
+                  </div>
+                  <div class="product-info-text">
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
+                    конструктивного бетона.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -273,8 +820,8 @@
         </div>
         <a href="tel:+78412233923" class="section-phone col-4 p-0">+7 (8412) 23-39-23</a>
         <div class="section-buttons col-4 p-0">
-          <a href="#" class="section-buttons-btn section-buttons-btn_red">обратный звонок</a>
-          <a href="#" class="section-buttons-btn section-buttons-btn_white">контакты</a>
+          <a data-fancybox="modal" data-src="#callback-modal" href="javascript:;" class="section-buttons-btn section-buttons-btn_red">обратный звонок</a>
+          <a href="#contacts" class="section-buttons-btn section-buttons-btn_white scroll-link">контакты</a>
         </div>
       </div>
     </div>
@@ -283,7 +830,7 @@
   <!-- /Девелопмент -->
 
   <!-- Индустрия -->
-  <section class="industry section">
+  <section class="industry section" id="industry">
     <div class="industry-wrap section-wrap">
       <div class="container-large">
         <svg class="container-large__logo">
@@ -291,56 +838,127 @@
         </svg>
         <div class="container-short">
           <span class="industry-name section-name">ПРОИЗВОДСТВО БЕТОНА И ЖБИ</span>
-          <h2 class="industry-title section-title">Производим бетон с 1985 года</h2>
-          <span class="industry-subtitle section-subtitle">ООО «Жилстрой Индустрия» — лидер производства товарного
+          <h2 class="industry-title section-title col-10">Производим бетон и не только...</h2>
+          <span class="industry-subtitle section-subtitle col-10">ООО «Жилстрой Индустрия» — лидер производства
+            товарного
             бетона и строительного раствора в г. Пензе с 1985 года. Неизменной основой политики компании является
             ориентация предприятия на потребителя. Современная установка Liebherr по производству раствора и бетона,
             высококвалифицированные кадры, наличие собственной лаборатории, строгий контроль входных материалов и
-            готовой продукции обеспечиваюти вашу уверенность в высочайшем качества производимой нами продукции.
-            Индивидуальный подход к ценообразованию и адаптивная кредитная политика дают вам возможность оптимизировать
-            ваши затраты.</span>
-          <div class="industry-img col-12 p-0">
-            <img src="img/ind/ind1.jpg" alt="завод">
+            готовой продукции обеспечивают уверенность в высочайшем качества производимой нами продукции. Индивидуальный
+            подход к ценообразованию и адаптивная кредитная политика дают нашим клиентам возможность оптимизировать свои
+            затраты.</span>
+          <div class="industry-desc d-flex">
+            <div class="industry-img col-9 p-0">
+              <img src="img/ind/ind1.jpg" alt="завод">
+            </div>
+            <div class="industry-desc-text col-3 d-flex flex-column">
+              <span class="industry-desc-text__title">Наша<br>продукция:</span>
+              <span class="industry-desc-text__subtitle">9 видов сертифицированного товарного бетона, супербетон (по
+                запатентованной рецептуре завода на основе известнякового щебня), строительные растворы, инертные
+                материалы</span>
+              <span class="industry-desc-text__subtitle">Плиты перекрытий, ФБС, фундаментные сваи, кольца, лотки,
+                днища</span>
+              <span class="industry-desc-text__subtitle">Эксклюзивные ЖБ-изделия любой формы по чертежам заказчика и по
+                ГОСТу</span>
+              <svg class="industry-desc-text__arrow">
+                <use xlink:href="sprite.svg#arrow-right"></use>
+              </svg>
+            </div>
           </div>
           <div class="industry-numbers d-flex">
-            <div class="industry-numbers-item col-3 p-0">
-              <span class="industry-numbers-item__count">9</span>
-              <span class="industry-numbers-item__text">видов<br>сертифицированного<br>товарного бетона</span>
+            <div class="industry-detail col-4 p-0 d-flex flex-column">
+              <div class="industry-detail-item d-flex">
+                <span class="industry-detail-item__value">4</span>
+                <span class="industry-detail-item__desc">зоны погрузки<br>готовой<br>продукции</span>
+              </div>
+              <div class="industry-detail-item d-flex">
+                <span class="industry-detail-item__value">8</span>
+                <span class="industry-detail-item__desc">длинномеров<br>для доставки<br>ЖБИ</span>
+              </div>
+              <div class="industry-detail-item d-flex">
+                <span class="industry-detail-item__value">16</span>
+                <span class="industry-detail-item__desc">автобетоносмесителей<br>(крупнейший парк<br>в Пензе)</span>
+              </div>
+              <div class="industry-detail-area">
+                <span class="industry-detail-area__number">4 000 000</span>
+                <span class="industry-detail-area__text">построенно<br>из наших<br>материалов<br>за 10 лет</span>
+                <span class="industry-detail-area__index">М<sup>2</sup></span>
+              </div>
             </div>
-            <div class="industry-numbers-item col-3 p-0">
-              <span class="industry-numbers-item__count">16</span>
-              <span class="industry-numbers-item__text">крупнейший парк<br>автобетоносмесителей<br>в Пензе</span>
-            </div>
-            <div class="industry-numbers-item col-3 p-0">
-              <span class="industry-numbers-item__count">4</span>
-              <span class="industry-numbers-item__text">зоны погрузки<br>готовой продукции</span>
-            </div>
-            <div class="industry-numbers-item col-3 p-0">
-              <svg class="industry-liebherr" viewBox="0 0 128 80" fill="none" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="80">
-                  <rect width="128" height="80" fill="#C4C4C4" />
-                </mask>
-                <g mask="url(#mask0)">
-                  <rect x="-12" y="-4" width="129" height="77" fill="url(#pattern0)" />
-                  <rect y="56" width="126" height="26" fill="url(#pattern1)" />
-                </g>
-                <defs>
-                  <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0" transform="scale(0.00775194 0.012987)" />
-                  </pattern>
-                  <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image1" transform="scale(0.00793651 0.0384615)" />
-                  </pattern>
-                  <image id="image0" width="129" height="77"
-                    xlink:href="data:image/png;base64,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" />
-                  <image id="image1" width="126" height="26"
-                    xlink:href="data:image/png;base64,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" />
-                </defs>
+          </div>
+          <div class="industry-header section-header">
+            <span class="section-header__lines"></span>
+            <span class="section-header__text d-block">Масштабное современное производство<br>на высоких
+              мощностях</span>
+          </div>
+          <div class="industry-subheader section-subheader col-10 p-0">Залог успеха ООО «Жилстрой Индустрия» — это наши
+            люди, опыт и новейшие технологии. Мощности немецкой установки Liebherr по производству раствора и бетона
+            позволяют отправлять полностью загруженный автобетоносмеситель каждые 3 минуты. Линия безопалубочного
+            формования WiTech производит прочные, легкие, идеальные по геометрии плиты для строительства помещений
+            большой площади. Собственная лаборатория позволяет проводить строгий контроль входных материалов и готовой
+            продукции в 16 этапов, с 3-ступенчатым контролем качества, включая ежедневный контроль всей производимой
+            продукции.
+          </div>
+          <div class="industry-works d-flex">
+            <div class="industry-items col-4 p-0">
+              <svg class="industry-items__svg">
+                <use xlink:href="sprite.svg#lieb"></use>
               </svg>
-              <span class="industry-numbers-item__text">линия безопалубочного<br>формования,
-                современная<br>производственная установка</span>
+              <img src="img/ind/lieb.jpg" alt="liebherr" class="industry-items__img d-block">
+              <span class="industry-items__text">Новейший немецкий<br>бетонный завод -<br>Liebherr GmbH</span>
             </div>
+            <div class="industry-items col-4 p-0">
+              <svg class="industry-items__svg">
+                <use xlink:href="sprite.svg#witech"></use>
+              </svg>
+              <img src="img/ind/witech.jpg" alt="witech" class="industry-items__img d-block">
+              <span class="industry-items__text">Линия безопалубочного<br>формования WiTech<br>Weiler Italia</span>
+            </div>
+            <div class="industry-items col-4 p-0">
+              <svg class="industry-items__svg">
+                <use xlink:href="sprite.svg#zavod"></use>
+              </svg>
+              <span class="industry-items__numbers d-block">14000т ЦЕМЕНТА</span>
+              <span class="industry-items__text">Крупнейший цементный<br>склад в Пензе, позволяет<br>хранить 1400 тонн
+                цемента</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="industry-block d-flex">
+        <div class="industry-block-inner d-flex align-items-center">
+          <div class="industry-block-text">
+            <div class="industry-block-value d-flex align-items-center">
+              <div class="industry-block-value__count">2000</div>
+              <div class="industry-block-value-info">
+                <div class="industry-block-value-info__icon">М<sup>3</sup></div>
+                <div class="industry-block-value-info__text">бетона с доставкой в сутки</div>
+              </div>
+            </div>
+            <div class="industry-block-value d-flex align-items-center">
+              <div class="industry-block-value__count">100000</div>
+              <div class="industry-block-value-info">
+                <div class="industry-block-value-info__icon">М<sup>3</sup></div>
+                <div class="industry-block-value-info__text">ЖБИ в год</div>
+              </div>
+            </div>
+            <div class="industry-block-value d-flex align-items-center">
+              <div class="industry-block-value__count">150000</div>
+              <div class="industry-block-value-info">
+                <div class="industry-block-value-info__icon">М<sup>2</sup></div>
+                <div class="industry-block-value-info__text">ППН в год</div>
+              </div>
+            </div>
+            <div class="industry-block-value d-flex align-items-center">
+              <div class="industry-block-value__count">150</div>
+              <div class="industry-block-value-info">
+                <div class="industry-block-value-info__icon">КМ</div>
+                <div class="industry-block-value-info__text">фундаментных свай в год</div>
+              </div>
+            </div>
+          </div>
+          <div class="industry-block-img">
+            <img src="img/ind/zavod.jpg" alt="zavod" class="d-block">
           </div>
         </div>
       </div>
@@ -354,7 +972,12 @@
         <a href="tel:+78412233923" class="section-phone col-4 p-0">+7 (8412) 23-39-23</a>
         <div class="section-buttons col-4 p-0">
           <a href="#" class="section-buttons-btn section-buttons-btn_green">обратный звонок</a>
-          <a href="#" class="section-buttons-btn section-buttons-btn_white">контакты</a>
+          <a href="#" class="section-buttons-btn section-buttons-btn_white site-btn">сайт компании
+            <!-- <svg class="site-link">
+              <use xlink:href="sprite.svg#site"></use>
+            </svg> -->
+          </a>
+          <a href="#contacts" class="section-buttons-btn section-buttons-btn_white scroll-link">контакты</a>
         </div>
       </div>
     </div>
@@ -363,7 +986,7 @@
   <!-- /Индустрия -->
 
   <!-- Эталон -->
-  <section class="section etalon">
+  <section class="section etalon" id="etalon">
     <div class="section-wrap">
       <div class="container-large">
         <svg class="container-large__logo">
@@ -371,61 +994,78 @@
         </svg>
         <div class="container-short">
           <span class="etalon-name section-name">УПРАВЛЯЮЩАЯ КОМПАНИЯ ЖКХ</span>
-          <h2 class="etalon-title section-title">Генерируем комфорт</h2>
-          <span class="etalon-subtitle section-subtitle">«Жилстрой Эталон» — управляющая компания, специализирующаяся
+          <h2 class="etalon-title section-title col-10 p-0">Создаем комфорт</h2>
+          <span class="etalon-subtitle section-subtitle col-10">«Жилстрой Эталон» — управляющая компания,
+            специализирующаяся
             на сервисе и эксплуатации жилых домов. Мы предоставляем весь спектр коммунальных услуги, без перебоев, с
             удобными способами оплаты. Предотвращаем технические проблемы и аварийные ситуации, а также круглосуточно
             решаем вопросы жителей по телефону и онлайн. Сажаем деревья, строим детские и спортивные площадки,
             поддерживаем дома в чистоте и технически исправном состоянии.
           </span>
-          <div class="etalon-block d-flex">
-            <div class="etalon-numbers col-6">
-              <p class="etalon-numbers__title">Под нашей заботой:</p>
-              <div class="etalon-numbers-value d-flex">
-                <div class="etalon-numbers-value__count">17700</div>
-                <div class="etalon-numbers-value-info">
-                  <div class="etalon-numbers-value-info__icon">М<sup>2</sup></div>
-                  <div class="etalon-numbers-value-info__text">обслуживаемого<br>жилья</div>
-                </div>
+        </div>
+      </div>
+      <div class="etalon-block d-flex">
+        <div class="etalon-block-inner d-flex align-items-center">
+          <div class="etalon-block-text">
+            <p class="etalon-block__title">Под нашей заботой:</p>
+            <div class="etalon-block-value d-flex align-items-center">
+              <div class="etalon-block-value__count">35400</div>
+              <div class="etalon-block-value-info">
+                <div class="etalon-block-value-info__icon">М<sup>2</sup></div>
+                <div class="etalon-block-value-info__text">обслуживаемого<br>жилья</div>
               </div>
-              <div class="etalon-numbers-family d-flex align-items-center">
-                <div class="etalon-numbers-value__count">330</div>
-                <div class="etalon-numbers-value__info">                  
-                  <svg class="etalon-numbers-value-info__svg">
+            </div>
+            <div class="etalon-block-value d-flex align-items-center">
+              <div class="etalon-block-value__count">16800</div>
+              <div class="etalon-block-value-info">
+                <div class="etalon-block-value-info__icon">М<sup>2</sup></div>
+                <div class="etalon-block-value-info__text">в коммерческом<br>управлении</div>
+              </div>
+            </div>
+            <div class="etalon-block-value d-flex align-items-center">
+              <div class="etalon-block-value__count">660</div>
+              <div class="etalon-block-value-info">
+                <div class="etalon-block-value-info__icon">
+                  <svg class="etalon-block-value-info__svg">
                     <use xlink:href="sprite.svg#family"></use>
-                  </svg>                  
-                  <div class="etalon-numbers-value-info__text">счастливых семей</div>
+                  </svg>
                 </div>
-              </div>
-            </div>
-            <div class="etalon-img col-6 p-0">
-              <img src="img/etl/etl1.jpg" alt="дом">
-            </div>
-          </div>
-          <div class="etalon-works">
-            <div class="etalon-works__title">Выполняеми работы, необходимые для надлежащего содержания многоквартирных домов:</div>
-            <div class="etalon-works-items d-flex">
-              <div class="etalon-works-item col-4 p-0">
-                <svg class="etalon-works-item__svg">
-                  <use xlink:href="sprite.svg#house"></use>
-                </svg>
-                <span class="etalon-works-item__text">Работы по содержанию<br>несущих и ненесущих<br>конструкций</span>
-              </div>
-              <div class="etalon-works-item col-4 p-0">
-                <svg class="etalon-works-item__svg">
-                  <use xlink:href="sprite.svg#pipe"></use>
-                </svg>
-                <span class="etalon-works-item__text">Работы по содержанию<br>оборудования и систем<br>инженерно-технического<br>обеспечения</span>
-              </div>
-              <div class="etalon-works-item col-4 p-0">
-                <svg class="etalon-works-item__svg">
-                  <use xlink:href="sprite.svg#sport"></use>
-                </svg>
-                <span class="etalon-works-item__text">Работы и услуги<br>по содержанию иного<br>общедомового имущества</span>
+                <div class="etalon-block-value-info__text">счастливых семей</div>
               </div>
             </div>
           </div>
-        </div>        
+          <div class="etalon-block-img">
+            <img src="img/etl/etl1.jpg" alt="zavod" class="d-block">
+          </div>
+        </div>
+      </div>
+      <div class="container-short">
+        <div class="etalon-works">
+          <div class="etalon-works__title">Выполняеми работы, необходимые для надлежащего содержания многоквартирных
+            домов:</div>
+          <div class="etalon-works-items d-flex">
+            <div class="etalon-works-item col-4 p-0">
+              <svg class="etalon-works-item__svg">
+                <use xlink:href="sprite.svg#house"></use>
+              </svg>
+              <span class="etalon-works-item__text">Работы по содержанию<br>несущих и ненесущих<br>конструкций</span>
+            </div>
+            <div class="etalon-works-item col-4 p-0">
+              <svg class="etalon-works-item__svg">
+                <use xlink:href="sprite.svg#pipe"></use>
+              </svg>
+              <span class="etalon-works-item__text">Работы по содержанию<br>оборудования и
+                систем<br>инженерно-технического<br>обеспечения</span>
+            </div>
+            <div class="etalon-works-item col-4 p-0">
+              <svg class="etalon-works-item__svg">
+                <use xlink:href="sprite.svg#sport"></use>
+              </svg>
+              <span class="etalon-works-item__text">Работы и услуги<br>по содержанию иного<br>общедомового
+                имущества</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container-large">
@@ -437,7 +1077,7 @@
         <a href="tel:+78412233923" class="section-phone col-4 p-0">+7 (8412) 23-39-23</a>
         <div class="section-buttons col-4 p-0">
           <a href="#" class="section-buttons-btn section-buttons-btn_blue">обратный звонок</a>
-          <a href="#" class="section-buttons-btn section-buttons-btn_white">контакты</a>
+          <a href="#contacts" class="section-buttons-btn section-buttons-btn_white scroll-link">контакты</a>
         </div>
       </div>
     </div>
@@ -445,8 +1085,242 @@
   </section>
   <!-- /Эталон -->
 
+  <!-- Footer -->
+  <footer class="footer section" id="contacts">
+    <div class="container-short">
+      <h2 class="footer-title section-title">Контакты</h2>
+      <ul class="footer-tabs d-flex p-0">
+        <li><a class="footer-tabs-link footer-tabs-link_gr active-link" href="#group">Группа компаний</a></li>
+        <li><a class="footer-tabs-link footer-tabs-link_dev" href="#dev">Жилстрой девелопмент</a></li>
+        <li><a class="footer-tabs-link footer-tabs-link_ind" href="#ind">Жилстрой индустрия</a></li>
+        <li><a class="footer-tabs-link footer-tabs-link_etl" href="#etl">Эталон Жилстрой</a></li>
+      </ul>
+    </div>
+    <div class="footer-map">
+      <script type="text/javascript" charset="utf-8" async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d275ebc84851a7322ba8600ea095d25f4d7c611487ed49592bfd539e983e9ce&amp;width=100%25&amp;lang=ru_RU&amp;scroll=false">
+      </script>
+    </div>
+    <div class="container-short">
+      <div class="footer-header section-header">
+        <span class="section-header__lines"></span>
+        <span class="section-header__text d-block">Ответим на все ваши вопросы</span>
+      </div>
+      <div class="footer-wrap d-flex">
+        <div class="form footer-form col-7 p-0">
+          <form>
+            <div class="select">
+              <select name="company" class="select-company">
+                <option value="Группа компаний" class="select-option select-company-option">Группа компаний</option>
+                <option value="Жилстрой девелопмент" class="select-option select-company-option">Жилстрой девелопмент
+                </option>
+                <option value="Жилстрой индустрия" class="select-option select-company-option">Жилстрой индустрия
+                </option>
+                <option value="Эталон Жилстрой" class="select-option select-company-option">Эталон Жилстрой</option>
+              </select>
+              <span class="input__label focused-label select-label">К кому выхотите обратиться?</span>
+            </div>
+            <div class="input">
+              <input type="text" name="name" class="input__field" required>
+              <label for="name" class="input__label">Имя и фамилия</label>
+            </div>
+            <div class="input">
+              <input type="tel" name="phone" class="input__field" required>
+              <label for="phone" class="input__label">Телефон</label>
+            </div>
+            <div class="input">
+              <input type="email" name="email" class="input__field">
+              <label for="email" class="input__label">Электронная почта</label>
+            </div>
+            <div class="input textarea">
+              <textarea name="message" class="input__field input__textarea" required></textarea>
+              <label for="message" class="input__label">Ваше сообщение</label>
+            </div>
+            <div class="input file">
+              <input type="file" id="file" multiple class="input__file">
+              <label for="file" class="file-label">прикрепить файл</label>
+            </div>
+            <div class="input-submit d-flex align-items-center">
+              <input type="submit" class="input-btn input-btn_light" value="отправить">
+              <span class="input-polici input-polici_light">Нажимая кнопку, я соглашаюсь с <span>условиями</span>
+                обработки персональных данных</span>
+            </div>
+          </form>
+        </div>
+        <div class="footer-block col-5">
+          <div id="group" class="footer-block-inner d-flex flex-column faded in active-block">
+            <div class="footer-tabs-info">
+              <div class="footer-tabs-icon">
+                <svg class="footer-tabs-logo">
+                  <use xlink:href="sprite.svg#logo-group"></use>
+                </svg>
+              </div>
+              <div class="footer-tabs-contacts">
+                <p class="footer-tabs-adress">адрес</p>
+                <p class="footer-tabs-location">440007<br>г. Пенза, ул. Измайлова, 34</p>
+                <p class="footer-tabs-phone">телефон</p>
+                <a href="tel:+78412552380" class="footer-tabs-number d-block">+7 (8412) 55-23-80</a>
+                <p class="footer-tabs-boss">руководство</p>
+              </div>
+            </div>
+            <div class="footer-block-foto">
+              <img src="img/footer/director1.jpg" class="d-block" alt="И.А.Акчурин">
+              <div class="footer-block-foto-names">
+                <p class="footer-block-foto-names__fullname">Ильдар<br>Анвярович<br>Акчурин</p>
+                <p class="footer-block-foto-names__place">управляющий партнер</p>
+              </div>
+            </div>
+            <div class="footer-block-foto">
+              <img src="img/footer/director2.jpg" class="d-block" alt="М.А.Акчурин">
+              <div class="footer-block-foto-names">
+                <p class="footer-block-foto-names__fullname">Марат<br>Анвярович<br>Акчурин</p>
+                <p class="footer-block-foto-names__place">управляющий партнер</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="dev" class="footer-block-inner d-flex flex-column faded">
+            <div class="footer-tabs-info">
+              <div class="footer-tabs-icon">
+                <svg class="footer-tabs-logo">
+                  <use xlink:href="sprite.svg#logo-dev"></use>
+                </svg>
+              </div>
+              <div class="footer-tabs-contacts">
+                <p class="footer-tabs-adress">адрес</p>
+                <p class="footer-tabs-location">440015<br>г. Пенза, ул. Байдукова, 102Б</p>
+                <p class="footer-tabs-phone">телефон</p>
+                <a href="tel:+78412233923" class="footer-tabs-number d-block">+7 (8412) 23-39-23</a>
+                <p class="footer-tabs-boss">руководство</p>
+              </div>
+            </div>
+            <div class="footer-block-foto">
+              <img src="img/footer/director5.jpg" class="d-block" alt="С.А.Масляков">
+              <div class="footer-block-foto-names">
+                <p class="footer-block-foto-names__fullname">Станислав<br>Анатольевич<br>Масляков</p>
+                <p class="footer-block-foto-names__place">Директор</p>
+              </div>
+            </div>
+          </div>
+          <div id="ind" class="footer-block-inner d-flex flex-column faded">
+            <div class="footer-tabs-info">
+              <div class="footer-tabs-icon">
+                <svg class="footer-tabs-logo">
+                  <use xlink:href="sprite.svg#logo-ind"></use>
+                </svg>
+              </div>
+              <div class="footer-tabs-contacts">
+                <p class="footer-tabs-adress">адрес</p>
+                <p class="footer-tabs-location">440015<br>г. Пенза, ул. Байдукова, 102Б</p>
+                <p class="footer-tabs-phone">телефон</p>
+                <a href="tel:+78412237723" class="footer-tabs-number d-block">+7 (8412) 23-77-23</a>
+                <p class="footer-tabs-boss">руководство</p>
+              </div>
+            </div>
+            <div class="footer-block-foto">
+              <img src="img/footer/director4.jpg" class="d-block" alt="Д.А.Колгушкин">
+              <div class="footer-block-foto-names">
+                <p class="footer-block-foto-names__fullname">Дмитрий<br>Александрович<br>Колгушкин</p>
+                <p class="footer-block-foto-names__place">Директор</p>
+              </div>
+            </div>
+          </div>
+          <div id="etl" class="footer-block-inner d-flex flex-column faded">
+            <div class="footer-tabs-info">
+              <div class="footer-tabs-icon">
+                <svg class="footer-tabs-logo">
+                  <use xlink:href="sprite.svg#logo-etl"></use>
+                </svg>
+              </div>
+              <div class="footer-tabs-contacts">
+                <p class="footer-tabs-adress">адрес</p>
+                <p class="footer-tabs-location">440060<br>г. Пенза, пр-т. Строителей, 38</p>
+                <p class="footer-tabs-phone">телефон</p>
+                <a href="tel:+79022088787" class="footer-tabs-number d-block">+7 (902) 208-87-87</a>
+                <p class="footer-tabs-boss">руководство</p>
+              </div>
+            </div>
+            <div class="footer-block-foto">
+              <img src="img/footer/director3.jpg" class="d-block" alt="К.А.Соколовский">
+              <div class="footer-block-foto-names">
+                <p class="footer-block-foto-names__fullname">Кирилл<br>Александрович<br>Соколовский</p>
+                <p class="footer-block-foto-names__place">Директор</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyrights">
+      <div class="footer-copyrights-btn d-flex justify-content-center align-items-center">
+        <svg class="footer-copyrights-button">
+          <use xlink:href="sprite.svg#top-btn"></use>
+        </svg>
+      </div>
+      <div class="container-short">
+        <div class="footer-links d-flex">
+          <a href="#development" class="footer-link d-block">Жилстрой Девелопмент</a>
+          <a href="#industry" class="footer-link d-block">Жилстрой Индустрия</a>
+          <a href="#etalon" class="footer-link d-block">Эталон Жилстрой</a>
+        </div>
+        <div class="footer-rights d-flex justify-content-between">
+          <span class="footer-rights-text">© Группа компаний «Жилстрой»</span>
+          <a href="https://7pap.ru/" target="_blank" class="footer-rights-webmaster">Сделано в студии СЕМЬ ПАП!</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /Footer -->
+
+  <!-- Модальное окно "Обратный звонок" -->
+  <div id="callback-modal" class="callback">    
+    <div class="callback-header section-header">
+      <span class="section-header__lines"></span>
+      <span class="section-header__text d-block">Заказать звонок</span>
+    </div>
+    <form>
+      <div class="select">
+        <select name="company" class="select-company">
+          <option value="Группа компаний" class="select-option select-company-option">Группа компаний</option>
+          <option value="Жилстрой девелопмент" class="select-option select-company-option">Жилстрой девелопмент
+          </option>
+          <option value="Жилстрой индустрия" class="select-option select-company-option">Жилстрой индустрия
+          </option>
+          <option value="Эталон Жилстрой" class="select-option select-company-option">Эталон Жилстрой</option>
+        </select>
+        <span class="input__label focused-label select-label">К кому выхотите обратиться?</span>
+      </div>
+      <div class="input">
+        <input type="text" name="name" class="input__field" required>
+        <label for="name" class="input__label">Имя и фамилия</label>
+      </div>
+      <div class="input">
+        <input type="tel" name="phone" class="input__field" required>
+        <label for="phone" class="input__label">Телефон</label>
+      </div>
+      <p class="callback-text">Мы работаем: пн-пт, с 10:00 до 19:00.<br>Когда вам позвонить?</p>
+      <div class="time-input">
+        <input type="radio" name="callme" id="radio1" class="callback-input" checked>
+        <label for="radio1" class="callback-label">Сейчас</label>
+      </div>
+      <div class="time-input">  
+        <input type="radio" name="callme" id="radio2" class="callback-input">
+        <label for="radio2" class="callback-label">В указанное время</label>
+        <input type="time" name="callme" class="callback-input-time">
+      </div>      
+      <div class="input-submit callback-submit d-flex align-items-center">
+        <input type="submit" class="input-btn callback-btn input-btn_red" value="отправить">
+        <span class="input-polici input-polici_red">Нажимая кнопку, я соглашаюсь с <span>условиями</span>
+          обработки персональных данных</span>
+      </div>
+    </form>
+  </div>
+  <!-- /Модальное окно "Обратный звонок" -->
+
 
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/typed.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
   <script src="js/main.js"></script>
 </body>
 

@@ -1,0 +1,131 @@
+.footer
+  padding: 112px 0 0
+  &-title
+    margin-bottom: 48px
+  &-tabs 
+    list-style: none
+    margin-bottom: 28px
+    &-info      
+    &-icon
+      padding: 26px 48px 28px
+      border-bottom: 1px solid rgba($grey-color, 0.5)
+    &-logo 
+      width: 177px
+      height: 88px
+    &-link 
+      +robot 
+      font-size: 14px
+      line-height: 22px
+      letter-spacing: 0.1px
+      color: $grey-color
+      margin-right: 36px
+      cursor: pointer
+      padding-bottom: 27px
+    &-contacts 
+      padding: 32px 48px 8px
+    &-adress, &-phone, &-boss
+      font-size: 10px
+      line-height: 16px
+      letter-spacing: 1.5px
+      +bold 
+      color: $grey-color 
+      text-transform: uppercase
+      margin-bottom: 4px
+    &-location, &-number
+      font-size: 20px
+      line-height: 24px
+      letter-spacing: 0.15px
+      color: $black-color
+      +bold 
+      margin-bottom: 24px  
+  &-form
+    max-width: 542px
+    margin-bottom: 80px
+  &-map    
+    width: 100%
+    height: 585px 
+    margin-bottom: 90px  
+  &-block
+    position: relative 
+    width: 100%            
+    &-inner
+      display: none
+      position: absolute
+      left: 33px
+      bottom: 236px
+      padding-bottom: 32px
+      max-width: 400px
+      width: 100% 
+      background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F1F5FB;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    &-foto
+      position: relative
+      max-width: 304px    
+      margin: 0 auto 16px
+      &-names 
+        position: absolute
+        left: 24px
+        bottom: 24px
+        &__fullname
+          +bold 
+          font-size: 20px
+          line-height: 24px
+          letter-spacing: 0.15px
+          margin-bottom: 8px
+          color: $main-color
+        &__place
+          +bold 
+          font-size: 10px
+          line-height: 16px
+          letter-spacing: 1.5px
+          color: $grey-color
+  &-copyrights
+    position: relative
+    width: 100%
+    padding: 32px 0
+    background-image: url(../img/footer-cover.jpg)
+    &-btn 
+      position: absolute
+      bottom: 70px
+      right: 24%
+      width: 68px
+      height: 88px
+      cursor: pointer
+    &-button 
+      width: 24px
+      height: 44px  
+  &-link
+    color: #507CDC
+    text-decoration: underline
+    font-size: 14px
+    line-height: 22px
+    letter-spacing: 0.1px
+    +robot
+    margin-right: 32px
+  &-rights  
+    margin-top: 8px
+    &-text, &-webmaster
+      color: rgba($grey-color, 0.87)
+      font-size: 14px
+      line-height: 20px
+      letter-spacing: 0.16px
+      +robot
+    
+    
+    // Табы в футере
+.faded
+  opacity: 0
+  transition: 0.2s
+.faded.in 
+  opacity: 1
+  transition: 0.2s
+.active-block
+  display: flex
+.footer-tabs-link_gr.active-link
+  border-bottom: 4px solid #507CDC
+.footer-tabs-link_dev.active-link
+  border-bottom: 4px solid $red-color
+.footer-tabs-link_ind.active-link
+  border-bottom: 4px solid $green-color
+.footer-tabs-link_etl.active-link
+  border-bottom: 4px solid $blue-color

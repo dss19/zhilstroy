@@ -6,8 +6,9 @@ html, body
 h1, h2, h3, h4, h5, h6, p, span
   margin: 0
   padding: 0
-input, button
-  outline: none  
+input, button, select, option
+  outline: none
+  -webkit-tap-highlight-color: transparent  
 a  
   outline: none
   text-decoration: none
@@ -178,10 +179,157 @@ img
   width: 100%
   height: 8px
   background: $black-color
-            
+.hovered
+  transition: 0.3s
+  &:hover .header-menu__link
+    color: $red-color
+.form  
+  width: 100% 
 
+.input
+  position: relative
+  width: 100%  
+  &__field
+    position: relative
+    height: 67px
+    margin-bottom: 8px
+    padding-top: 35px
+    width: 100%  
+    border: none
+    border-bottom: 1px solid rgba($grey-color, 0.5)
+    outline: none
+    color: $black-color
+    font-size: 16px
+    line-height: 20px
+    +robot
+    background: transparent
+    z-index: 2
+  &__label
+    position: absolute
+    left: 10px
+    top: 41px
+    font-size: 16px
+    +robot
+    color: $grey-color
+    transform-origin: left
+    transition: 0.3s        
+  &__textarea
+    padding: 45px 10px 0    
+    word-wrap: break-word
+    height: 67px
+    overflow: hidden
+    // border: 1px solid rgba($grey-color, 0.5)
+    resize: none
+    outline: none
+  &__file
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    margin-top: 40px
+  &-btn 
+    +bold 
+    font-size: 14px
+    letter-spacing: 0.75px 
+    letter-spacing: 0.75px
+    text-transform: uppercase
+    border-radius: 4px
+    width: 182px
+    height: 48px
+    text-align: center
+    padding: 16px 0
+    color: $main-color
+    border: none
+    cursor: pointer
+    &_light      
+      background: #507CDC
+    &_red      
+      background: $red-color
+    &_green      
+      background: $green-color
+    &_blue      
+      background: $blue-color
+    
+           
+  &-polici
+    display: inline-block
+    margin-left: 26px
+    max-width: 255px 
+    +robot 
+    font-size: 12px
+    line-height: 12px
+    color: $grey-color
+    &_light 
+      span 
+        color: #507CDC
+    &_red
+      span 
+        color: $red-color         
+    &_green
+      span 
+        color: $green-color         
+    &_red
+      span 
+        color: $red-color         
+.file
+  margin: 20px 0 10px   
+  &-label
+    position: absolute
+    top: 0
+    left: 0
+    display: inline-block
+    text-align: center
+    +bold 
+    font-size: 14px
+    letter-spacing: 0.75px
+    color: $black-color
+    text-transform: uppercase
+    border: 1px solid rgba($grey-color, 0.36)
+    border-radius: 4px
+    padding: 16px 0
+    width: 182px
+    outline: none
+    cursor: pointer
+   
+.focused-label
+  
+  transform: translateY(-20px) translateX(-10px) scale(0.75)
+  padding-left: 0
+.select
+  position: relative
+  cursor: pointer
+  &:after
+    position: absolute
+    top: 50%
+    right: 10px
+    content: url(../img/arrow_drop_down.svg)
+    
+  &-label 
+    top: 40px  
 
-
-
-
-     
+  &-company 
+    border: none
+    width: 100%
+    height: 67px
+    border-bottom: 1px solid rgba($grey-color, 0.5)
+    appearance: none
+    -webkit-appearance: none
+    color: $black-color
+    font-size: 16px
+    line-height: 20px
+    +robot
+    padding-top: 36px
+    cursor: pointer  
+  &-option 
+    border: none
+    color: $black-color
+    font-size: 16px
+    line-height: 20px
+    +robot
+.input__textarea::-webkit-scrollbar
+  // width: 4px
+  display: none
+.input__textarea::-webkit-scrollbar-track
+  background: #E4ECF8
+.input__textarea::-webkit-scrollbar-thumb
+  background: #8B919F 
+  border-radius: 10px     

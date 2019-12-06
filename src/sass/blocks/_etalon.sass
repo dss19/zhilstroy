@@ -2,62 +2,51 @@
   background: $blue-color
   &-subtitle
     margin-bottom: 120px
-  &-block
-    position: relative
-    background: #E4ECF8
-    margin-bottom: 64px
-    &:before
-      position: absolute
-      content: ''
-      top: 0
-      right: 100%
-      width: calc(50vw - 50% - 33px)
-      height: 100%
-      background: #E4ECF8
-    &:after
-      position: absolute
-      content: ''
-      top: 0
-      left: 100%
-      width: 88px
-      height: 100%
-      background: #E4ECF8      
+        
   &-img
     transform: translateY(-40px)
     img
       display: block
-  &-numbers
-    padding: 60px 0 0
+  &-block
+    width: 80%
+    height: 488px
+    background-image: url(../img/ind/Beton4.jpg)
+    background-size: cover
+    justify-content: flex-end
+    margin-bottom: 50px
+    &-text 
+      margin-right: 80px
+    &-img 
+      margin-right: 3vw
+      transform: translateY(-57px)
     &__title
+      +robot 
       font-size: 20px
       line-height: 32px
-      +robo
       letter-spacing: 0.16px
-      color: $grey-color
-      margin-bottom: 40px
+      color: $grey-color  
     &-value
-      margin-bottom: 22px 
       &__count
         +reg 
         font-size: 96px
-        line-height: 80px
+        line-height: 112px
         letter-spacing: 2px
         color: $blue-color
-        margin-right: 22px
-      &-info
+        margin-right: 23px
+      &-info 
         &__icon
           +reg 
-          font-size: 48px
           color: $blue-color
+          font-size: 48px          
+          letter-spacing: 2px
         &__text
-          +robo 
+          +robot  
           font-size: 14px
           line-height: 22px
           letter-spacing: 0.1px
-          color: $black-color
         &__svg
           width: 38px
-          height: 41px
+          height: 41px  
   &-works
     &__title
       font-size: 20px

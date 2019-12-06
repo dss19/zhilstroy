@@ -2,27 +2,132 @@
   background: $green-color
   &-subtitle
     margin-bottom: 40px
-  &-img
-    margin-bottom: 56px
+    padding: 0
+  &-img    
     img
       display: block
-  &-numbers
-    &-item 
-      &__count
-        display: block
-        margin-bottom: 16px
+  &-desc
+    margin-bottom: 56px
+    &-text
+      padding: 0 0 0 33px 
+      &__title
+        font-size: 24px
+        line-height: 30px
+        +bold 
+        color: $black-color
+        margin-bottom: 24px
+      &__subtitle
+        +robot
+        font-size: 14px
+        line-height: 22px
+        color: $grey-color
+        margin-bottom: 24px
+      &__arrow
+        width: 40px
+        height: 16px
+  &-detail
+    position: relative
+    margin-bottom: 100px 
+    &-item
+      margin-bottom: 56px       
+      &__value
         +reg 
         font-size: 96px
         line-height: 64px
-        letter-spacing: 2px        
+        letter-spacing: 2px
         color: $green-color
-      &__text
-        display: block
-        +robo
+        margin-right: 24px
+      &__desc
+        +robo 
         font-size: 14px
         line-height: 22px
-        color: $black-color          
-  &-liebherr
-    display: block
-    transform: translateY(-12px)    
-    width: 128px
+        letter-spacing: 0.1px
+        color: $black-color
+    &-area
+      position: absolute
+      top: 0      
+      left: calc(100% + 2px);
+      width: calc(50vw + 39%)
+      background-image: url(../img/dev/beton.jpg)      
+      height: 320px
+      padding: 49px 0 0 81px
+      overflow: hidden
+      &__number
+        display: block
+        font-size: 112px
+        line-height: 112px
+        letter-spacing: 2px
+        +bold
+        color: $green-color
+        margin-bottom: 20px
+      &__text
+        display: inline-block
+        font-size: 27px
+        line-height: 30px
+        color: $grey-color
+        +bold
+        vertical-align: top
+        margin-right: 26px
+      &__index
+        display: inline-block
+        font-size: 344px        
+        letter-spacing: 2px
+        +bold 
+        color: $main-color
+        transform: translateY(-74px)
+        sup 
+          font-size: 58%
+          top: -0.7em
+  &-header
+    margin-bottom: 24px
+  &-subheader
+    margin-bottom: 40px
+  &-items
+    margin-bottom: 110px 
+    &__svg
+      height: 73px
+    &__numbers
+      +bold 
+      font-size: 24px
+      line-height: 30px
+      color: $black-color
+    &__img
+      margin-bottom: 13px
+    &__text
+      +robot
+      font-size: 14px
+      line-height: 22px
+      letter-spacing: 0.1px
+  &-block
+    width: 80%
+    height: 488px
+    background-image: url(../img/ind/Beton4.jpg)
+    background-size: cover
+    justify-content: flex-end
+    margin-bottom: 50px
+    &-text 
+      margin-right: 100px
+    &-img 
+      margin-right: 4.5vw
+    &-value
+      &__count
+        +reg 
+        font-size: 96px
+        line-height: 112px
+        letter-spacing: 2px
+        color: $green-color
+        margin-right: 23px
+      &-info 
+        &__icon
+          +reg 
+          color: $green-color
+          font-size: 48px          
+          letter-spacing: 2px
+        &__text
+          +robot  
+          font-size: 14px
+          line-height: 22px
+          letter-spacing: 0.1px
+
+
+            
