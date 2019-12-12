@@ -65,6 +65,7 @@
       background: rgba(#38589E, 0.8)    
     &-text
       position: absolute
+      align-items: center
       top: 0
       bottom: 0
       left: 26.6%      
@@ -78,7 +79,61 @@
       &__desc
         +bold 
         font-size: 24px
-        line-height: 38px      
+        line-height: 38px
+@media (max-width: 1200px)
+  .about
+    &-old
+      margin-bottom: 16px 
+      padding: 0
+      &-img, &__cover 
+        left: 16px
+        right: 16px 
+      &-element 
+        left: 11% 
+      &-text 
+        left: 15%
+@media (max-width: 767px)
+  .about 
+    &-title 
+      width: auto
+    &-block
+      flex-wrap: wrap
+    &-logo 
+      min-width: 97px
+      width: 161px
+      min-height: 48px
+      height: 80px
+      margin-right: 18px  
+    &-item 
+      border: none
+      height: auto
+      padding: 32px 0 0
+      &:last-child
+        border: none
+      &-inner         
+        display: flex
+        margin: 0
+        width: auto     
+      &__text        
+        width: 100%
+        max-width: 460px
+        margin: 0          
+      &__link         
+        display: block 
+    &-old 
+      &-text
+        flex-direction: column 
+        align-items: flex-start
+      &-img 
+        &__img
+          height: 117%
+          transform: translateY(20px)
+      &-element
+        &__item
+          width: 215px
+          height: 353px         
+     
+                                       
         
 
         

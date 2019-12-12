@@ -3,7 +3,17 @@
   position: relative
   margin-right: 32px
 .callback
-  padding: 50px 81px   
+  padding: 50px 81px
+  overflow: visible
+  &-close
+    position: absolute
+    top: 0
+    left: 100%
+    border: none
+    background: transparent
+    cursor: pointer
+    width: 44px
+    height: 44px   
   &-text 
     +bold 
     font-size: 20px

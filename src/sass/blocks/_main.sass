@@ -72,7 +72,66 @@
       line-height: 56px
       letter-spacing: 0.5px
       color: $main-color
-    
+@media (max-width: 1440px)
+  .main
+    overflow: hidden
+    &-text
+      top: 251px
+      left: 128px
+      &-title, &-typed
+        font-size: 34px
+        line-height: 44px
+      &-title 
+        margin: 0        
+    &-link 
+      right: 128px
+      bottom: 92px
+    &-block 
+      height: 40px
+@media (max-width: 1200px)
+  .main
+    &-video
+      width: 115%
+    &-text 
+      top: 230px
+      left: 60px
+    &-link 
+      right: 60px
+      bottom: 70px
+@media (max-width: 1023px)
+  .main
+    &-text
+      top: 160px
+      left: 20px
+    &-link 
+      right: 20px
+      bottom: 60px
+      width: 284px
+      height: 180px
+      padding: 20px 22px 14px
+@media (max-width: 767px)
+  .main
+    &-video 
+      width: 1520px
+    &-text 
+      left: calc(50% - 160px)
+      top: 262px
+    &-link 
+      width: 100%
+      max-width: 328px
+      height: 136px
+      padding: 12px 32px
+      left: calc(50% - 164px)
+      &__subtitle 
+        margin-bottom: 0
+      &__title
+        margin-bottom: 5px 
+    &-block
+      border-radius: 7px 7px 0px 0px       
+
+
+
+
       
 
 

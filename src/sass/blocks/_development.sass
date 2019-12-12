@@ -1,10 +1,14 @@
 .development
-  background: $red-color          
+  background: $red-color
+      
+              
   &-subtitle
     margin-bottom: 64px
   &-detail
     position: relative
-    margin-bottom: 100px 
+    margin-bottom: 100px
+    flex-direction: column
+    flex-basis: 33.3% 
     &-item
       margin-bottom: 56px       
       &__value
@@ -23,8 +27,8 @@
     &-area
       position: absolute
       top: 0      
-      left: calc(100% + 2px);
-      width: calc(50vw + 39%)
+      left: 100%
+      width: calc(50vw + 39% + 3px)
       background-image: url(../img/dev/beton.jpg)      
       height: 320px
       padding: 49px 0 0 81px
@@ -92,6 +96,8 @@
         margin-bottom: 8px       
       &__place        
         margin-bottom: 16px
+      &__btn
+        margin: 0  
       &__link
         display: flex
         width: 240px
@@ -110,18 +116,18 @@
         margin-bottom: 8px
   
   &-gallery
-    width: 100%   
-    margin-bottom: 112px
-    justify-content: space-between
+    position: relative    
+    width: 100%
+    margin-bottom: 96px 
+    &-rent
+      margin-bottom: 0  
     &-item
       position: relative 
       display: block
-      max-width: 304px
-      margin-right: 16px
+      max-width: 304px      
       overflow: hidden
       transform-style: preserve-3d
-      &:last-child
-        margin-right: 0
+      
       &:hover &__img         
         transform: scale(1.15)
       &:hover &__cover
@@ -146,15 +152,15 @@
         font-size: 24px
         line-height: 30px
         color: $main-color
-
-         
-
-
   &-chapter
     margin-bottom: 40px
   &-sale
-    margin-bottom: 64px 
+    margin-bottom: 64px
+    &-img
+      flex-basis: 50% 
     &-desc
+      flex-basis: 50%
+      padding-left: 48px
       &__title
         font-size: 34px
         line-height: 44px
@@ -190,6 +196,120 @@
         padding: 24px 0
         width: 256px
         text-align: center
+  &-phone 
+    align-self: flex-end
+    &:last-child 
+      position: relative
+      &:after
+        position: absolute
+        content: 'отдел коммерческой недвижимости'
+        left: 0
+        top: -10px
+        width: 248px
+        +reg 
+        font-size: 10px
+        line-height: 16px
+        letter-spacing: 1.5px
+        text-transform: uppercase
+        opacity: 0.8
+   
+
+@media (max-width: 1800px) 
+  .development
+    &-bottom
+      height: 240px
+    &-phones
+      flex-direction: column
+      justify-content: flex-start
+    &-phone 
+      margin-top: 24px
+@media (max-width: 1200px)
+  .development
+    &-detail 
+      &-area
+        width: calc(50vw + 40% + 7px)        
+        &__index
+          font-size: 324px      
+@media (max-width: 1023px)
+  .development
+    &-block 
+      flex-direction: column
+      margin-bottom: 48px
+      &_last
+        margin-bottom: 48px 
+      &-info 
+        padding-left: 0
+    &-numbers 
+      flex-direction: column    
+    &-detail
+      flex-basis: 100%
+      flex-direction: row
+      justify-content: space-between 
+      margin-bottom: 380px
+      &-area
+        left: 0
+        top: 100%
+        width: calc(50vw + 40% + 46px)          
+    &-bottom
+      flex-direction: column 
+      align-items: flex-start
+      height: 300px
+@media (max-width: 767px)
+  .development
+    &-subtitle
+      margin-bottom: 32px
+    &-detail
+      margin-bottom: 244px
+      &-item 
+        flex-direction: column
+        margin-bottom: 40px
+        &__value
+          font-size: 64px
+          line-height: 64px
+          letter-spacing: 2px
+        &__desc 
+          font-size: 13px
+          line-height: 20px
+          
+      &-area
+        width: calc(50vw + 49% + 3px)
+        padding: 30px 0 0 24px
+        height: 188px
+        &__number 
+          font-size: 64px
+          line-height: 64px
+          letter-spacing: 2px
+          margin-bottom: 0
+        &__text 
+          font-size: 20px
+          line-height: 24px
+          letter-spacing: 0.15px
+          margin-right: 0
+        &__index
+          font-size: 160px
+          line-height: 112px
+          transform: translateY(10px)    
+    &-block
+      
+      &-info
+        &__link
+          width: 100%
+              
+    &-sale 
+      flex-direction: column
+      &-img 
+        margin-bottom: 18px
+      &-desc 
+        padding-left: 0 
+        &__btn 
+          width: 100% 
+    &-phones
+      margin-bottom: 24px 
+    &-bottom 
+      height: 450px  
+
+
+
    
     
     

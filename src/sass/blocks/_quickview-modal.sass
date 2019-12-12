@@ -57,10 +57,71 @@
     color: $grey-color
 .fancybox-slide--image
   padding: 24px 0    
+.social-spoiler 
+  margin-bottom: 112px
+.social-prev, .social-next
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute  
+  width: 64px
+  height: 64px
+  border-radius: 50%
+  background: $main-color
+  box-shadow: 0px 4px 8px rgba(9, 21, 40, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.05)  
+  cursor: pointer
+.social-next  
+  top: calc(50% - 32px)
+  left: calc(100% - 45px)
+.social-prev
+  top: calc(50% - 32px)
+  right: calc(100% - 47px)
+  z-index: 2  
+  
+.slick-dots 
+  display: flex  
 
+.social-product.development-block-info__btn
+  max-width: none 
 .social-product
+  max-width: 304px
+  margin: 0 15px
   &-form 
-    padding: 0px 82px         
+    padding: 0px 82px
+  &-bullets
+    display: none
+    list-style: none
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    text-align: center
+    margin: 0
+    padding: 0
+    z-index: 99999
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    li 
+      display: inline-block
+      vertical-align: top
+      a 
+        display: block
+        height: 30px
+        width: 20px
+        position: relative
+        span
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%)
+          width: 8px
+          height: 8px
+          border-radius: 99px
+          text-indent: -99999px
+          overflow: hidden
+          background: #E4ECF8
+          // box-shadow: 0px 0px 2px rgba(0,0,0,0.5)
+.social-product-bullets li.active a span 
+  background: $red-color             
 
 .product
   &-block

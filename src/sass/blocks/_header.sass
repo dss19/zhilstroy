@@ -88,7 +88,8 @@
       top: 0
       right: 200%
       list-style: none
-      transform: translateX(50px)
+      transform: scaleX(0) translateX(50px)
+      transform-origin: right center
       opacity: 0
       transition: 0.3s
       padding-top: 8px
@@ -98,7 +99,9 @@
           cursor: default            
       &_vis
         opacity: 1
-        transform: translateX(0)
+        transform: scaleX(1) translateX(0)
+
+        
         li 
           cursor: pointer
           a
@@ -132,3 +135,64 @@
     transform: scaleY(0)      
   100%
     transform: scaleY(1)
+@media (max-width: 1600px)
+  .header
+    &-menu 
+      &__link
+        font-size: 12px
+        margin-right: 40px
+      &-nav 
+        right: 100%   
+      &-text 
+        font-size: 12px            
+@media (max-width: 1440px)
+  .header
+    padding: 54px 128px 0
+    &-logo
+      width: 267px
+      height: 40px
+@media (max-width: 1200px)
+  .header 
+    padding: 34px 60px 0
+@media (max-width: 1023px)
+  .header
+    padding: 10px 20px 0
+    &-logo
+      width: 199px
+      height: 30px 
+    &-menu
+      height: 30px
+      margin-top: 0
+      &-text 
+        display: none 
+      &-nav 
+      &__link 
+        margin-right: 20px 
+@media (max-width: 767px) and (min-width: 320px)
+  .header 
+    padding: 20px 20px 0
+    &-menu      
+      &-nav 
+        position: fixed
+        flex-direction: column
+        right: 0
+        top: 0
+        height: 100vh 
+        width: 100%
+        padding: 0
+        padding-left: 50%
+        justify-content: center
+        text-align: left
+        color: #151515
+        background: $main-color
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 34%
+          height: 100vh
+          background: rgba(#151515, 0.7)
+
+    
+              

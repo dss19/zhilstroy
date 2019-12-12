@@ -1,9 +1,11 @@
-$(document).ready(function () { 
+$(document).ready(function () {
 
   // Меню
 
   let menu = $('.header-menu');
   $(window).scroll(function () {
+    console.log($(this).scrollTop());
+    
     if ($(this).scrollTop() > 750) {
       menu.addClass('header-menu_scr');
       $('.header-menu-btn').removeClass('header-menu-btn_close');
@@ -39,7 +41,7 @@ $(document).ready(function () {
     startDelay: 1000,
     backSpeed: 30,
     loop: true,
-    showCursor: false,        
+    showCursor: false,
   });
 
 
@@ -65,30 +67,29 @@ $(document).ready(function () {
   $('[data-fancybox^="modal"]').fancybox({
     animationEffect: "fade",
     animationDuration: 300,
-    gutter: 0,    
+    gutter: 0,
     touch: false,
     smallBtn: false,
-    baseTpl:      
-      '<div class="fancybox-container" role="dialog" tabindex="-1">' +
+    baseTpl: '<div class="fancybox-container" role="dialog" tabindex="-1">' +
       '<div class="fancybox-bg"></div>' +
-      '<div class="fancybox-inner modal-inner">' +      
-      '<div class="fancybox-stage modal-stage">' +            
-      '</div>' +     
+      '<div class="fancybox-inner modal-inner">' +
+      '<div class="fancybox-stage modal-stage">' +
+      '</div>' +
       '</div>' +
       '</div>',
-  });    
+  });
 
   $('[data-fancybox^="quick-view"]').fancybox({
     animationEffect: "fade",
     animationDuration: 300,
     gutter: 0,
     loop: true,
-    arrows: true,    
+    arrows: true,
     touch: {
       vertical: false
     },
     baseTpl:
-      
+
       '<div class="fancybox-container" role="dialog" tabindex="-1">' +
       '<div class="fancybox-bg quickview-bg"></div>' +
       '<div class="fancybox-inner quickview-inner">' +
@@ -132,6 +133,40 @@ $(document).ready(function () {
       // .. and move to the container
       instance.$refs.form.appendTo(instance.$refs.container.find('.fancybox-form-wrap'));
 
+      /*
+
+        #2 Create bullet navigation links
+        =================================
+
+      */
+      var list = '',
+        $bullets;
+
+      for (var i = 0; i < instance.group.length; i++) {
+        list += '<li><a data-index="' + i + '" href="javascript:;"><span>' + (i + 1) + '</span></a></li>';
+      }
+
+      $bullets = $('<ul class="social-product-bullets">' + list + '</ul>').on('click touchstart', 'a', function () {
+        var index = $(this).data('index');
+
+        $.fancybox.getInstance(function () {
+          this.jumpTo(index);
+        });
+
+      });
+
+      instance.$refs.bullets = $bullets.appendTo(instance.$refs.stage);
+
+    },
+    beforeShow: function (instance) {
+
+      // Mark current bullet navigation link as active
+      instance.$refs.stage.find('ul:first')
+        .children()
+        .removeClass('active')
+        .eq(instance.currIndex)
+        .addClass('active');
+
     },
 
     afterClose: function (instance, current) {
@@ -143,52 +178,115 @@ $(document).ready(function () {
   });
 
   // Input label scale
-  
-  $('.input', function() {
+
+  $('.input', function () {
     let label;
-    $('.input').focusin(function() {
+    $('.input').focusin(function () {
       label = $(this).children('.input__label');
       label.addClass('focused-label');
     });
-    $('.input').focusout(function() {
+    $('.input').focusout(function () {
       let input = $(this).find('.input__field');
       if (input.val() == '') {
         label.removeClass('focused-label');
       }
-    });    
+    });
   });
-  
-  
+
+
 
   // textarea size
-  
-  $('.input__textarea').on('keyup input', function() {
-    $(this).css('height','auto').css('height',this.scrollHeight+(this.offsetHeight - this.clientHeight));
+
+  $('.input__textarea').on('keyup input', function () {
+    $(this).css('height', 'auto').css('height', this.scrollHeight + (this.offsetHeight - this.clientHeight));
   });
-  
+
   // скролл
-  $('.header-menu__link, .footer-link, .scroll-link').on('click', function(e) {
+  $('.header-menu__link, .footer-link, .scroll-link').on('click', function (e) {
     e.preventDefault();
     let target = $(this).attr('href'),
-        bl_top = $(target).offset().top;
-    $('html, body').animate({scrollTop: bl_top}, 1000);
+      bl_top = $(target).offset().top;
+    $('html, body').animate({
+      scrollTop: bl_top
+    }, 1000);
   });
 
   // Скролл наверх
-  $('.footer-copyrights-btn').click(function() {
-    $('html, body').animate({scrollTop: 0}, 1000);
+  $('.footer-copyrights-btn').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1000);
   });
 
   // Табы в футере
-  $('body').on('click', '.footer-tabs-link', function(e) {
+  $('body').on('click', '.footer-tabs-link', function (e) {
     e.preventDefault();
-    $('.footer-tabs-link').removeClass('active-link');    
+    $('.footer-tabs-link').removeClass('active-link');
     $(this).addClass('active-link');
-    let href = $(this).attr('href');  
+    let href = $(this).attr('href');
     $('.footer-block-inner').removeClass('active-block').removeClass('in');
     $(href).addClass('active-block');
-    setTimeout(function() {
+    setTimeout(function () {
       $(href).addClass('in');
     }, 200)
+  }); 
+
+  // Маска телефона 
+  $('[name="phone"]').mask('+7 (999) 999-99-99');
+
+  // Слайдеры в блоке девелопмент
+
+  $('.development-gallery').slick({
+    dots: false,
+    arrows: true,
+    slidesToShow: 5,    
+    slidesToScroll: 5,
+    infinite: true,
+    centerMode: false,
+    initialSlide: 0,
+    prevArrow: '<div class="social-prev">' +
+    '<svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+    '<path d="M11.835 1.8701L10.055 0.100098L0.165039 10.0001L10.065 19.9001L11.835 18.1301L3.70504 10.0001L11.835 1.8701Z" fill="black" fill-opacity="0.54"/>' +
+    '</svg>' +
+    '</div>',
+    nextArrow: '<div class="social-next">' +
+    '<svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+    '<path d="M0.165039 18.13L1.93504 19.9L11.835 9.99998L1.93504 0.0999756L0.165039 1.86998L8.29504 9.99998L0.165039 18.13H0.165039Z" fill="black" fill-opacity="0.54"/>' +
+    '</svg>' +
+    '</div>',
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {          
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        }          
+      },
+      {
+        breakpoint: 1200,
+        settings: {          
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 1023,
+        settings: {          
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {          
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+    ]    
   });
+    
+
 });
