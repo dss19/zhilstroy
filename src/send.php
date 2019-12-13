@@ -9,6 +9,7 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $text = $_POST['message'];
 $comp = $_POST['company'];
+$time = $_POST['callme']
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
     $msg = "ok";
@@ -47,7 +48,8 @@ if (!empty($_FILES['myfile']['name'][0])) {
         <b>Телефон:</b> $phone<br><br>
         <b>Почта:</b> $email<br><br>
         <b>Хочет обратиться в:</b> $comp<br><br>
-        <b>Сообщение:</b><br>$text";
+        <b>Просит перезвонить:</b> $time<br><br>
+        <b>Сообщение:</b><br> $text";
 // Проверяем отравленность сообщения
 if ($mail->send()) {
     echo "$msg";

@@ -3,9 +3,7 @@ $(document).ready(function () {
   // Меню
 
   let menu = $('.header-menu');
-  $(window).scroll(function () {
-    console.log($(this).scrollTop());
-    
+  $(window).scroll(function () {       
     if ($(this).scrollTop() > 750) {
       menu.addClass('header-menu_scr');
       $('.header-menu-btn').removeClass('header-menu-btn_close');
@@ -233,15 +231,31 @@ $(document).ready(function () {
   
   $('form').each(function() {    
     $(this).validate({
-      rules: {},
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        }                
+      },
+      messages: {
+        name: {
+          required: 'Это поле нужно заполнить',
+          minlength: 'Длина имени должна быть более 2-х символов' 
+        },
+        phone: {
+          required: 'Это поле нужно заполнить'
+        }
+      },      
       submitHandler: function(form) {        
         $.ajax({
-          url: 'mail.php',
+          url: 'send.php',
           type: 'POST',
           contentType: false,
           processData: false,
           data: new FormData(form),
           success: function() {
+            console.log('отправил');
+            $('form').trigger('reset');
                 
           }
         });
