@@ -133,6 +133,8 @@ img
     align-items: center
     height: 200px
   &-call
+    display: flex
+    align-items: center
     justify-content: space-between
     flex-basis: 66% 
     &__name
@@ -387,14 +389,21 @@ img
     &-wrap
       padding: 64px 0 80px
       margin: 0 16px
+    &-buttons
+      &-btn 
+        width: 192px  
          
     
 @media (max-width: 1023px)
   .container-short, .container-large
-    max-width: 735px 
+    max-width: 703px
+  .container-short.about-container, .container-large.about-container
+    max-width: 735px   
   .section-call, .section-buttons
     flex-basis: 0
-  .section-bottom 
+  .section-bottom
+    flex-direction: column 
+    align-items: flex-start 
     justify-content: center      
 @media (max-width: 767px)
   .container-large

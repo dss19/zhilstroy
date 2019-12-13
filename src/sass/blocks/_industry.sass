@@ -3,13 +3,16 @@
   &-subtitle
     margin-bottom: 40px
     padding: 0
-  &-img    
+  &-img 
+    flex-basis: 75%   
     img
       display: block
   &-desc
     margin-bottom: 56px
+        
     &-text
-      padding: 0 0 0 33px 
+      padding: 0 0 0 33px
+      flex-basis: 25% 
       &__title
         font-size: 24px
         line-height: 30px
@@ -26,6 +29,8 @@
         width: 40px
         height: 16px
   &-detail
+    flex-basis: 33.3%
+    flex-direction: column
     position: relative
     margin-bottom: 100px 
     &-item
@@ -86,6 +91,7 @@
     margin-bottom: 110px 
     &__svg
       height: 73px
+      width: 100px
     &__numbers
       +bold 
       font-size: 24px
@@ -105,11 +111,14 @@
     background-size: cover
     justify-content: flex-end
     margin-bottom: 50px
+    &-inner 
+      align-items: center
     &-text 
       margin-right: 100px
     &-img 
       margin-right: 4.5vw
     &-value
+      align-items: center
       &__count
         +reg 
         font-size: 96px
@@ -123,11 +132,147 @@
           color: $green-color
           font-size: 48px          
           letter-spacing: 2px
-        &__text
+        &__text, &__textm
           +robot  
           font-size: 14px
           line-height: 22px
           letter-spacing: 0.1px
+        &__textm
+          display: none  
+  &-phone 
+    margin-right: 15px
+@media (max-width: 1200px)
+  .industry
+    &-detail 
+      &-area 
+        width: calc(50vw + 39% + 8px)
+        padding: 40px 0 0 44px
+        &__index 
+          font-size: 324px
+    &-block
+      width: 95%
+      &-img
+        margin-right: 3vw
+      &-text 
+        margin-left: 16px
+@media (max-width: 1024px)
+  .industry
+    &-wrap 
+      padding: 64px 0 0
+    &-img 
+      flex-basis: 100%
+      margin-bottom: 24px 
+    &-desc 
+      flex-wrap: wrap
+      
+      &-text 
+        flex-basis: 100%
+        padding-left: 0    
+    &-detail 
+      flex-basis: 100%
+      flex-direction: row
+      justify-content: space-between 
+      margin-bottom: 380px
+      &-area        
+        left: 0
+        top: 100%
+        width: calc(50vw + 47% + 4px)
+    &-block
+      width: 100% 
+      margin: 460px 0 0
+      &-inner 
+        flex-direction: column-reverse
+        width: 100%
+      &-img 
+        margin: 0
+        justify-self: center
+        align-self: center
+        margin: 0 16px
+      &-text
+        margin: 0 auto 0 16px
+    &-phone 
+      margin-bottom: 24px
+    &-bottom
+      height: 244px              
+
+@media (max-width: 767px)
+  .industry
+
+    &-wrap 
+      padding-top: 30px
+    &-detail
+      margin-bottom: 292px 
+      &-item 
+        flex-direction: column
+        width: 33.3%
+        &__value 
+          font-size: 64px
+          line-height: 64px
+          letter-spacing: 2px
+          margin-right: 0
+        &__desc 
+          font-size: 13px
+          line-height: 20px
+          word-wrap: break-word
+      &-area
+        padding: 24px 0 0 18px
+        height: 230px 
+        &__number 
+          font-size: 64px
+          line-height: 64px
+          word-spacing: -20px
+          letter-spacing: -0.8px
+        &__text 
+          font-size: 20px
+          line-height: 24px
+        &__index
+          font-size: 160px
+          line-height: 112px
+          transform: translateY(30px) 
+    &-desc 
+      margin-bottom: 48px
+    &-works 
+      flex-direction: column
+    &-items 
+      display: flex
+      align-items: center
+      margin-bottom: 24px
+      &-wrap
+        width: 120px
+      &:first-child
+        img
+          width: 90px
+      &__numbers 
+        font-size: 22px
+        line-height: 24px           
+          
+    &-block
+      height: 484px 
+      &-text 
+      &-value
+        align-items: flex-end
+        flex-wrap: wrap
+        margin-bottom: 24px
+        &__count
+          font-size: 64px
+          line-height: 64px
+          margin-right: 0
+        &-info 
+          &__icon 
+            +bold
+            font-size: 32px
+            line-height: 32px
+            letter-spacing: 2px
+            transform: translateY(-5px)
+          &__text 
+            display: none
+          &__textm
+            display: block 
+            width: 100%                   
+    &-bottom 
+      height: 418px
+      
+
 
 
             
