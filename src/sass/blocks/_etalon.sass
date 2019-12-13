@@ -14,6 +14,8 @@
     background-size: cover
     justify-content: flex-end
     margin-bottom: 50px
+    &-inner 
+      align-items: center
     &-text 
       margin-right: 80px
     &-img 
@@ -26,6 +28,7 @@
       letter-spacing: 0.16px
       color: $grey-color  
     &-value
+      align-items: center
       &__count
         +reg 
         font-size: 96px
@@ -39,11 +42,13 @@
           color: $blue-color
           font-size: 48px          
           letter-spacing: 2px
-        &__text
+        &__text, &__textm
           +robot  
           font-size: 14px
           line-height: 22px
           letter-spacing: 0.1px
+        &__textm 
+          display: none  
         &__svg
           width: 38px
           height: 41px  
@@ -64,5 +69,80 @@
         line-height: 22px
         letter-spacing: 0.1px
         +robo    
+@media (max-width: 1200px)
+  .etalon
+    &-block
+      width: 95%
+      &-img
+        margin-right: 3vw
+      &-text 
+        margin: 0 52px 0 16px
+    &-works 
+      &__title
+        margin-bottom: 15px
+@media (max-width: 1024px)
+  .etalon 
+    &-block
+      width: 100%
+      margin-top: 430px
+      &-inner 
+        flex-direction: column-reverse
+        width: 100%
+      &-img 
+        margin-right: 0  
+      &-text 
+        align-self: flex-start 
+    &-bottom 
+      height: 244px
+    &-phone
+      margin-bottom: 24px
+@media (max-width: 767px)
+  .etalon 
+    &-block
+      margin-top: 328px
+      &-img 
+        margin: 0 16px
+      &-text 
+        margin-right: 0   
+      &-value
+        align-items: flex-end
+        flex-wrap: wrap
+        margin-bottom: 24px 
+        &__count 
+          font-size: 64px
+          line-height: 64px
+          margin-right: 0
+        &-info 
+          &__icon 
+            +bold
+            font-size: 32px
+            line-height: 32px
+            letter-spacing: 2px
+            transform: translateY(-5px)
+          &__svg 
+            transform: translateY(8px) 
+          &__text 
+            display: none
+          &__textm
+            display: block 
+            width: 100%
+    &-works 
+      &-items 
+        flex-direction: column
+      &-item 
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-bottom: 20px
+        &:last-child 
+          margin-bottom: 0
+        &__svg 
+          margin-right: 24px
+          height: 107px
+    &-bottom 
+      height: 338px                  
+
+
+
 
 

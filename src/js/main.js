@@ -229,7 +229,25 @@ $(document).ready(function () {
     setTimeout(function () {
       $(href).addClass('in');
     }, 200)
-  }); 
+  });
+  
+  $('form').each(function() {    
+    $(this).validate({
+      rules: {},
+      submitHandler: function(form) {        
+        $.ajax({
+          url: 'mail.php',
+          type: 'POST',
+          contentType: false,
+          processData: false,
+          data: new FormData(form),
+          success: function() {
+                
+          }
+        });
+      }
+    });  
+  });
 
   // Маска телефона 
   $('[name="phone"]').mask('+7 (999) 999-99-99');
