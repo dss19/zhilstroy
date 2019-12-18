@@ -11,32 +11,43 @@
 </head>
 
 <body>
+
+  <!-- Прелоадер -->
+  <div class="preloader">
+    <svg class="load">
+      <use xlink:href="sprite.svg#logo-long"></use>
+    </svg>
+  </div>
+  <!-- /Прелоадер -->
+
   <!-- Главная -->
-  <main class="main">
+  <main class="main">    
     <div class="main-video">
-      <video autoplay="true" loop="true" muted="muted" playsinline width="100%">
+      <video autoplay loop muted playsinline>
         <source src="img/video/31.mp4" type='video/mp4'>
       </video>
       <div class="main-video-cover">
         <img src="img/video/cover.png" alt="полоски">
       </div>
     </div>
+    <div class="menu-button">        
+      <span class="menu-text">меню</span>
+      <span class="menu-btn"></span>
+    </div>
+    <div class="menu-click"></div>
+    <ul class="menu-nav">
+      <li><a href="#about" class="menu-link">группа<br>компаний</a></li>
+      <li><a href="#development" class="menu-link">жилстрой<br>девелопмент</a></li>
+      <li><a href="#industry" class="menu-link">жилстрой<br>индустрия</a></li>
+      <li><a href="#etalon" class="menu-link">эталон<br>жилстрой</a></li>
+      <li><a href="#contacts" data-click="gr-link" class="menu-link">контакты</a></li>
+    </ul>
+      
+    
     <header class="header d-flex justify-content-between align-items-center">
       <svg class="header-logo">
         <use xlink:href="sprite.svg#logo-long"></use>
       </svg>
-      <div class="header-menu">
-        <span class="header-menu-btn"></span>
-        <div class="header-menu-text">меню</div>
-        <ul class="header-menu-nav d-flex m-0">
-          <li><a href="#about" class="header-menu__link">группа<br>компаний</a></li>
-          <li><a href="#development" class="header-menu__link">жилстрой<br>девелопмент</a></li>
-          <li><a href="#industry" class="header-menu__link">жилстрой<br>индустрия</a></li>
-          <li><a href="#etalon" class="header-menu__link">эталон<br>жилстрой</a></li>
-          <li><a href="#contacts" class="header-menu__link">контакты</a></li>
-        </ul>
-      </div>
-      <div class="cover"></div>
     </header>
     <div class="main-text">
       <h1 class="main-text-title">Создавая основы<br>комфортной жизни,</h1>
@@ -83,7 +94,7 @@
               <div class="d-flex flex-column">
                 <span class="about-item__text">Строительство жилых домов, производственных, административных, торговых
                   зданий и комплексов, объектов социально-бытового и инженерного обеспечения.</span>
-                <a href="#" class="about-item__link">Подробнее</a>
+                <a href="#development" class="about-item__link">Подробнее</a>
               </div>
             </div>
           </div>
@@ -96,7 +107,7 @@
                 <span class="about-item__text">Производство ЖБИ, качественного товарного бетона и строительных растворов
                   для
                   всех видов строительства</span>
-                <a href="#" class="about-item__link">Подробнее</a>
+                <a href="#industry" class="about-item__link">Подробнее</a>
               </div>
             </div>
           </div>
@@ -108,7 +119,7 @@
               <div class="d-flex flex-column">
                 <span class="about-item__text">Решение организационных задач, управление и эксплуатация технического
                   санитарного содержания многоквартирных домов</span>
-                <a href="#" class="about-item__link">Подробнее</a>
+                <a href="#etalon" class="about-item__link">Подробнее</a>
               </div>
             </div>
           </div>
@@ -141,9 +152,10 @@
           <use xlink:href="sprite.svg#logo-dev"></use>
         </svg>
         <div class="container-short">
-          <span class="development-name section-name">надежная девелоперская коспания</span>
+          <span class="development-name section-name">надежная девелоперская компания</span>
           <h2 class="development-title section-title col-12 col-md-10 p-0">Строим и гордимся</h2>
-          <span class="development-subtitle section-subtitle col-12 col-md-10 p-0">«Жилстрой Девелопмент» — крупная девелоперская
+          <span class="development-subtitle section-subtitle col-12 col-md-10 p-0">«Жилстрой Девелопмент» — крупная
+            девелоперская
             компания, работающая на рынке Пензы
             и Пензенской области с 1989 года. Мы специализируемся на строительстве жилых комплексов комфорт-
             и бизнес-класса, а также производственных, административных, торговых зданий и комплексов, объектов
@@ -192,31 +204,33 @@
               <span class="development-block-info__adress">адрес</span>
               <span class="development-block-info__place">г. Пенза, ул. Высокая, 17</span>
               <div class="social-product development-block-info__btn">
-                <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-6" data-type="image"
+                <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-001" data-type="image"
                   class="development-block-info__link">Подробнее</a>
                 <div class="d-none">
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-6" data-type="image"></a>
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-6" data-type="image"></a>
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-6" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary2.jpg" data-fancybox="quick-view-001" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary3.jpg" data-fancybox="quick-view-001" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary4.jpg" data-fancybox="quick-view-001" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary5.jpg" data-fancybox="quick-view-001" data-type="image"></a>
+                  <a href="img/dev/gallery/big/ilmary6.jpg" data-fancybox="quick-view-001" data-type="image"></a>
                   <div class="social-product-form">
-                    <div class="product-block d-flex align-items-center">
+                    <div class="product-block">
                       <span class="product-name">ЖК «Илмари»</span>
                       <span class="product-line"></span>
                       <span class="product-houses">3 жилых дома</span>
                       <span class="product-dot"></span>
-                      <span class="product-numbers">30000 м<sup>2</sup></span>
+                      <span class="product-numbers">6000 м<sup>2</sup></span>
                       <span class="product-slash"></span>
                       <div class="fancybox-infobar">
                         <span class="fancybox-infobar-index" data-fancybox-index></span>
                         <span class="fancybox-infobar-counter" data-fancybox-count></span>
                       </div>
                     </div>
-                    <div class="product-info d-flex justify-content-between">
+                    <div class="product-info">
                       <div class="product-info-about">
                         <span class="development-block-info__time">сроки строительства</span>
                         <span class="development-block-info__year">2018 - 2021</span>
                         <span class="development-block-info__adress">адрес</span>
-                        <span class="development-block-info__place">г. Пенза, ул. Богданова, 14</span>
+                        <span class="development-block-info__place">г. Пенза, ул. Высокая, 17</span>
                       </div>
                       <div class="product-info-text">
                         Уникальный 5-этажный жилой комплекс, спроектированный финским архитектурным бюро №1 в России.
@@ -227,7 +241,7 @@
                   </div>
                 </div>
               </div>
-              <a href="#" class="development-block-info__link">Перейти на сайт</a>
+              <a href="https://www.илмари.рф" target="_blank" class="development-block-info__link">Перейти на сайт</a>
             </div>
           </div>
           <div class="development-block d-flex">
@@ -241,26 +255,25 @@
               <span class="development-block-info__adress">адрес</span>
               <span class="development-block-info__place">г. Пенза, ул. Соборная, 1</span>
               <div class="social-product development-block-info__btn">
-                <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-7" data-type="image"
+                <a href="img/dev/gallery/big/vesna.jpg" data-fancybox="quick-view-002" data-type="image"
                   class="development-block-info__link">Подробнее</a>
                 <div class="d-none">
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-7" data-type="image"></a>
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-7" data-type="image"></a>
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-7" data-type="image"></a>
+                  <a href="img/dev/gallery/big/vesna2.jpg" data-fancybox="quick-view-002" data-type="image"></a>
+                  <a href="img/dev/gallery/big/vesna3.jpg" data-fancybox="quick-view-002" data-type="image"></a>
                   <div class="social-product-form">
-                    <div class="product-block d-flex align-items-center">
+                    <div class="product-block">
                       <span class="product-name">ЖК «Весна»</span>
                       <span class="product-line"></span>
                       <span class="product-houses">3 жилых дома</span>
                       <span class="product-dot"></span>
-                      <span class="product-numbers">30000 м<sup>2</sup></span>
+                      <span class="product-numbers">23000 м<sup>2</sup></span>
                       <span class="product-slash"></span>
                       <div class="fancybox-infobar">
                         <span class="fancybox-infobar-index" data-fancybox-index></span>
                         <span class="fancybox-infobar-counter" data-fancybox-count></span>
                       </div>
                     </div>
-                    <div class="product-info d-flex justify-content-between">
+                    <div class="product-info">
                       <div class="product-info-about">
                         <span class="development-block-info__time">сроки строительства</span>
                         <span class="development-block-info__year">2018 - 2021</span>
@@ -268,15 +281,14 @@
                         <span class="development-block-info__place">г. Пенза, ул. Соборная, 1</span>
                       </div>
                       <div class="product-info-text">
-                        Уникальный 5-этажный жилой комплекс, спроектированный финским архитектурным бюро №1 в России.
-                        1-я очередь, состоящая из 4 домов, строится по новой финансовой схеме эскроу-счетов, что вдвойне
-                        безопасно для дольщиков.
+                        Нет теста
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <a href="#" class="development-block-info__link">Перейти на сайт</a>
+              <a href="https://vesnadompenza.ru" target="_blank" class="development-block-info__link">Перейти на
+                сайт</a>
             </div>
           </div>
           <div class="development-block d-flex">
@@ -290,26 +302,26 @@
               <span class="development-block-info__adress">адрес</span>
               <span class="development-block-info__place">г. Пенза, ул. Рахманинова, 8-8 А</span>
               <div class="social-product development-block-info__btn">
-                <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-8" data-type="image"
+                <a href="img/dev/gallery/big/duet3.jpg" data-fancybox="quick-view-003" data-type="image"
                   class="development-block-info__link">Подробнее</a>
                 <div class="d-none">
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-8" data-type="image"></a>
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-8" data-type="image"></a>
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-8" data-type="image"></a>
+                  <a href="img/dev/gallery/big/duet.jpg" data-fancybox="quick-view-003" data-type="image"></a>
+                  <a href="img/dev/gallery/big/duet2.jpg" data-fancybox="quick-view-003" data-type="image"></a>
+
                   <div class="social-product-form">
-                    <div class="product-block d-flex align-items-center">
+                    <div class="product-block">
                       <span class="product-name">ЖК «Дуэт»</span>
                       <span class="product-line"></span>
-                      <span class="product-houses">5 жилых домов</span>
+                      <span class="product-houses">2 жилых дома</span>
                       <span class="product-dot"></span>
-                      <span class="product-numbers">20000 м<sup>2</sup></span>
+                      <span class="product-numbers">18500 м<sup>2</sup></span>
                       <span class="product-slash"></span>
                       <div class="fancybox-infobar">
                         <span class="fancybox-infobar-index" data-fancybox-index></span>
                         <span class="fancybox-infobar-counter" data-fancybox-count></span>
                       </div>
                     </div>
-                    <div class="product-info d-flex justify-content-between">
+                    <div class="product-info">
                       <div class="product-info-about">
                         <span class="development-block-info__time">сроки строительства</span>
                         <span class="development-block-info__year">2018 - 2021</span>
@@ -317,15 +329,14 @@
                         <span class="development-block-info__place">г. Пенза, ул. Рахманинова, 8-8 А</span>
                       </div>
                       <div class="product-info-text">
-                        Уникальный 5-этажный жилой комплекс, спроектированный финским архитектурным бюро №1 в России.
-                        1-я очередь, состоящая из 4 домов, строится по новой финансовой схеме эскроу-счетов, что вдвойне
-                        безопасно для дольщиков.
+                        Нет текста
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <a href="#" class="development-block-info__link">Перейти на сайт</a>
+              <a href="https://www.duetpenza.ru" target="_blank" class="development-block-info__link">Перейти на
+                сайт</a>
             </div>
           </div>
           <div class="development-block development-block_last d-flex">
@@ -339,26 +350,25 @@
               <span class="development-block-info__adress">адрес</span>
               <span class="development-block-info__place">г. Пенза, ул. Богданова, 14</span>
               <div class="social-product development-block-info__btn">
-                <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-9" data-type="image"
+                <a href="img/dev/gallery/big/vert3.jpg" data-fancybox="quick-view-004" data-type="image"
                   class="development-block-info__link">Подробнее</a>
                 <div class="d-none">
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-9" data-type="image"></a>
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-9" data-type="image"></a>
-                  <a href="img/dev/gallery/big/ilmary.jpg" data-fancybox="quick-view-9" data-type="image"></a>
+                  <a href="img/dev/gallery/big/vert.jpg" data-fancybox="quick-view-004" data-type="image"></a>
+                  <a href="img/dev/gallery/big/vert2.jpg" data-fancybox="quick-view-004" data-type="image"></a>
                   <div class="social-product-form">
-                    <div class="product-block d-flex align-items-center">
+                    <div class="product-block">
                       <span class="product-name">ЖК «Вертикаль»</span>
                       <span class="product-line"></span>
-                      <span class="product-houses">5 жилых домов</span>
+                      <span class="product-houses">1 жилой дом</span>
                       <span class="product-dot"></span>
-                      <span class="product-numbers">20000 м<sup>2</sup></span>
+                      <span class="product-numbers">7000 м<sup>2</sup></span>
                       <span class="product-slash"></span>
                       <div class="fancybox-infobar">
                         <span class="fancybox-infobar-index" data-fancybox-index></span>
                         <span class="fancybox-infobar-counter" data-fancybox-count></span>
                       </div>
                     </div>
-                    <div class="product-info d-flex justify-content-between">
+                    <div class="product-info">
                       <div class="product-info-about">
                         <span class="development-block-info__time">сроки строительства</span>
                         <span class="development-block-info__year">2018 - 2021</span>
@@ -366,9 +376,7 @@
                         <span class="development-block-info__place">г. Пенза, ул. Богданова, 14</span>
                       </div>
                       <div class="product-info-text">
-                        Уникальный 5-этажный жилой комплекс, спроектированный финским архитектурным бюро №1 в России.
-                        1-я очередь, состоящая из 4 домов, строится по новой финансовой схеме эскроу-счетов, что вдвойне
-                        безопасно для дольщиков.
+                        Нет текста
                       </div>
                     </div>
                   </div>
@@ -389,17 +397,18 @@
         </div>
         <div class="development-gallery">
           <div class="social-product">
-            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-1" data-type="image"
+            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-101" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/sobor.jpg" alt="собор">
               <div class="development-gallery-item__cover"></div>
               <span class="development-gallery-item__text">Кафедральный собор</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-1" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-1" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor2.jpg" data-fancybox="quick-view-101" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor3.jpg" data-fancybox="quick-view-101" data-type="image"></a>
+              <a href="img/dev/gallery/big/sobor4.jpg" data-fancybox="quick-view-101" data-type="image"></a>
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">Спасский кафедральный собор</span>
                   <span class="product-line"></span>
                   <span class="product-numbers">20000 м<sup>2</sup></span>
@@ -409,7 +418,7 @@
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__time">сроки строительства</span>
                     <span class="development-block-info__year">2013 - 2020</span>
@@ -425,27 +434,28 @@
             </div>
           </div>
           <div class="social-product">
-            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-2" data-type="image"
+            <a href="img/dev/gallery/big/fil.jpg" data-fancybox="quick-view-102" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/filarmonia.jpg" alt="филармония">
               <div class="development-gallery-item__cover"></div>
               <span class="development-gallery-item__text">Новая филармония</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-2" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-2" data-type="image"></a>
+              <a href="img/dev/gallery/big/fil2.jpg" data-fancybox="quick-view-102" data-type="image"></a>
+              <a href="img/dev/gallery/big/fil3.jpg" data-fancybox="quick-view-102" data-type="image"></a>
+              <a href="img/dev/gallery/big/fil4.jpg" data-fancybox="quick-view-102" data-type="image"></a>
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">Новая филармония</span>
                   <span class="product-line"></span>
-                  <span class="product-numbers">15000 м<sup>2</sup></span>
+                  <span class="product-numbers">20000 м<sup>2</sup></span>
                   <span class="product-slash"></span>
                   <div class="fancybox-infobar">
                     <span class="fancybox-infobar-index" data-fancybox-index></span>
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__time">сроки строительства</span>
                     <span class="development-block-info__year">2014 - 2016</span>
@@ -453,36 +463,35 @@
                     <span class="development-block-info__place">г. Пенза, ул. Суворова, 166</span>
                   </div>
                   <div class="product-info-text">
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
+                    нет текста
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="social-product">
-            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-3" data-type="image"
+            <a href="img/dev/gallery/big/ant.jpg" data-fancybox="quick-view-103" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/antonova.jpg" alt="филармония">
               <div class="development-gallery-item__cover"></div>
               <span class="development-gallery-item__text">ЖК на ул. Антонова, 28</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-3" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-3" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-3" data-type="image"></a>
+              <a href="img/dev/gallery/big/ant2.jpg" data-fancybox="quick-view-103" data-type="image"></a>
+              <a href="img/dev/gallery/big/ant3.jpg" data-fancybox="quick-view-103" data-type="image"></a>
+              <a href="img/dev/gallery/big/ant4.jpg" data-fancybox="quick-view-103" data-type="image"></a>
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">ЖК на ул. Антонова, 28</span>
                   <span class="product-line"></span>
-                  <span class="product-numbers">30000 м<sup>2</sup></span>
+                  <span class="product-numbers">10000 м<sup>2</sup></span>
                   <span class="product-slash"></span>
                   <div class="fancybox-infobar">
                     <span class="fancybox-infobar-index" data-fancybox-index></span>
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__time">сроки строительства</span>
                     <span class="development-block-info__year">2014 - 2016</span>
@@ -490,27 +499,100 @@
                     <span class="development-block-info__place">г. Пенза, ул. Антонова, 28</span>
                   </div>
                   <div class="product-info-text">
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
+                    Нет текста
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="social-product">
-            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"
+            <a href="img/dev/gallery/big/school.jpg" data-fancybox="quick-view-104" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/school.jpg" alt="филармония">
               <div class="development-gallery-item__cover"></div>
               <span class="development-gallery-item__text">Школа №66 в Пензе</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"></a>
+              <a href="img/dev/gallery/big/school2.jpg" data-fancybox="quick-view-104" data-type="image"></a>
+              <a href="img/dev/gallery/big/school3.jpg" data-fancybox="quick-view-104" data-type="image"></a>
+              <a href="img/dev/gallery/big/school4.jpg" data-fancybox="quick-view-104" data-type="image"></a>
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">Школа №66 в Пензе</span>
+                  <span class="product-line"></span>
+                  <span class="product-numbers">11000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <div class="product-info-about">
+                    <span class="development-block-info__time">сроки строительства</span>
+                    <span class="development-block-info__year">2014 - 2016</span>
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">ул. Медицинская, 1а</span>
+                  </div>
+                  <div class="product-info-text">
+                    Нет текста
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/damate.jpg" data-fancybox="quick-view-105" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/zavod.jpg" alt="филармония">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">Завод по убою и переработке индейки в Нижнем Ломове</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/damate.jpg" data-fancybox="quick-view-105" data-type="image"></a>
+              <a href="img/dev/gallery/big/damate.jpg" data-fancybox="quick-view-105" data-type="image"></a>
+              <a href="img/dev/gallery/big/damate.jpg" data-fancybox="quick-view-105" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block">
+                  <span class="product-name">Завод по убою и переработке индейки в Нижнем Ломове</span>
+                  <span class="product-line"></span>
+                  <span class="product-numbers">40000 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <div class="product-info-about">
+                    <span class="development-block-info__time">сроки строительства</span>
+                    <span class="development-block-info__year">2012 - 2016</span>
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">Пензенская обл., с. Нижний ломов</span>
+                  </div>
+                  <div class="product-info-text">
+                    нет текста
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/sz.jpg" data-fancybox="quick-view-106" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/suzumova.jpg" alt="сюзюмова">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">ЖК по ул. Сюзюмова</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/sz2.jpg" data-fancybox="quick-view-106" data-type="image"></a>
+              <a href="img/dev/gallery/big/sz3.jpg" data-fancybox="quick-view-106" data-type="image"></a>
+              <a href="img/dev/gallery/big/sz4.jpg" data-fancybox="quick-view-106" data-type="image"></a>
+              <a href="img/dev/gallery/big/sz5.jpg" data-fancybox="quick-view-106" data-type="image"></a>
+
+              <div class="social-product-form">
+                <div class="product-block">
+                  <span class="product-name">ЖК по ул. Сюзюмова</span>
                   <span class="product-line"></span>
                   <span class="product-numbers">10000 м<sup>2</sup></span>
                   <span class="product-slash"></span>
@@ -519,7 +601,7 @@
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__time">сроки строительства</span>
                     <span class="development-block-info__year">2014 - 2016</span>
@@ -534,7 +616,7 @@
               </div>
             </div>
           </div>
-          <div class="social-product">
+          <!-- <div class="social-product">
             <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/zavod.jpg" alt="филармония">
@@ -546,7 +628,7 @@
               <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"></a>
               <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"></a>
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">Завод по убою и переработке индейки в Нижнем Ломове</span>
                   <span class="product-line"></span>
                   <span class="product-numbers">100000 м<sup>2</sup></span>
@@ -556,7 +638,7 @@
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="d-flex justify-content-between">
                   <div class="product-info-about">
                     <span class="development-block-info__time">сроки строительства</span>
                     <span class="development-block-info__year">2012 - 2016</span>
@@ -570,81 +652,7 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="social-product">
-            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"
-              class="development-gallery-item">
-              <img class="development-gallery-item__img" src="img/dev/gallery/small/school.jpg" alt="филармония">
-              <div class="development-gallery-item__cover"></div>
-              <span class="development-gallery-item__text">Школа №66 в Пензе</span>
-            </a>
-            <div class="d-none">
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-4" data-type="image"></a>
-              <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
-                  <span class="product-name">Школа №66 в Пензе</span>
-                  <span class="product-line"></span>
-                  <span class="product-numbers">10000 м<sup>2</sup></span>
-                  <span class="product-slash"></span>
-                  <div class="fancybox-infobar">
-                    <span class="fancybox-infobar-index" data-fancybox-index></span>
-                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
-                  </div>
-                </div>
-                <div class="product-info d-flex justify-content-between">
-                  <div class="product-info-about">
-                    <span class="development-block-info__time">сроки строительства</span>
-                    <span class="development-block-info__year">2014 - 2016</span>
-                    <span class="development-block-info__adress">адрес</span>
-                    <span class="development-block-info__place">г. Пенза, ул. Антонова, 82</span>
-                  </div>
-                  <div class="product-info-text">
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="social-product">
-            <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"
-              class="development-gallery-item">
-              <img class="development-gallery-item__img" src="img/dev/gallery/small/zavod.jpg" alt="филармония">
-              <div class="development-gallery-item__cover"></div>
-              <span class="development-gallery-item__text">Завод по убою и переработке индейки в Нижнем Ломове</span>
-            </a>
-            <div class="d-none">
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"></a>
-              <a href="img/dev/gallery/big/sobor1.jpg" data-fancybox="quick-view-5" data-type="image"></a>
-              <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
-                  <span class="product-name">Завод по убою и переработке индейки в Нижнем Ломове</span>
-                  <span class="product-line"></span>
-                  <span class="product-numbers">100000 м<sup>2</sup></span>
-                  <span class="product-slash"></span>
-                  <div class="fancybox-infobar">
-                    <span class="fancybox-infobar-index" data-fancybox-index></span>
-                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
-                  </div>
-                </div>
-                <div class="product-info d-flex justify-content-between">
-                  <div class="product-info-about">
-                    <span class="development-block-info__time">сроки строительства</span>
-                    <span class="development-block-info__year">2012 - 2016</span>
-                    <span class="development-block-info__adress">адрес</span>
-                    <span class="development-block-info__place">Пензенская обл., с. Нижний ломов</span>
-                  </div>
-                  <div class="product-info-text">
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
         <div class="container-short">
           <div class="development-header development-social section-header">
@@ -665,7 +673,8 @@
                 1000 кв.м.</div>
               <div class="development-sale-desc__desc">ОПИСАНИЕ</div>
               <div class="development-sale-desc__description">1 этаж ЖК Дуэт в районе Ближнее Арбеково, ул. Рахманинова,
-                под бизнес различного назначения (продуктовый магазин, магазин мебели, магазин зоотоваров, магазин бытовой
+                под бизнес различного назначения (продуктовый магазин, магазин мебели, магазин зоотоваров, магазин
+                бытовой
                 химии, магазин одежды, магазин косметики, аптека, стоматология, косметология, ателье, оптика,
                 кондитерская, кафе)</div>
               <div class="development-sale-desc__prop">ХАРАКТЕРИСТИКИ</div>
@@ -686,56 +695,55 @@
         </div>
         <div class="development-gallery development-gallery-rent d-flex">
           <div class="social-product">
-            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-12" data-type="image"
+            <a href="img/dev/gallery/big/master.jpg" data-fancybox="quick-view-201" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/masterdom.jpg" alt="Мастердом">
               <div class="development-gallery-item__cover"></div>
               <span class="development-gallery-item__text">ТЦ «МастерДом», ул. Совхозная, 15</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-12" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-12" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-12" data-type="image"></a>
+              <a href="img/dev/gallery/big/master2.jpg" data-fancybox="quick-view-201" data-type="image"></a>
+              <a href="img/dev/gallery/big/master3.jpg" data-fancybox="quick-view-201" data-type="image"></a>              
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">ТЦ «МастерДом»</span>
                   <span class="product-line"></span>
                   <span class="product-houses"></span>
                   <span class="product-dot"></span>
-                  <span class="product-numbers">30000 м<sup>2</sup></span>
+                  <span class="product-numbers">2660 м<sup>2</sup></span>
                   <span class="product-slash"></span>
                   <div class="fancybox-infobar">
                     <span class="fancybox-infobar-index" data-fancybox-index></span>
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__adress">адрес</span>
                     <span class="development-block-info__place">г. Пенза, ул. Совхозная, 15</span>
                   </div>
                   <div class="product-info-text">
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
+                    Большая площадь под магазин в отдельно стоящем одноэтажном здании (высота 7 метров, есть
+                    антрессольный этаж, площадью 160 метров), отдельный вход, большая парковка перед магазином,
+                    эстакада, подвключены все коммуникации. Здание находится на одной площадке с Транспортными
+                    компаниями Деловые Линии, GTO.
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="social-product">
-            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-10" data-type="image"
+            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-202" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/dellin.jpg" alt="собор">
               <div class="development-gallery-item__cover"></div>
               <span class="development-gallery-item__text">СК «Деловые линии», ул. Совхозная, 15 з<br>(2 склада)</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-10" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-10" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-202" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-202" data-type="image"></a>
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">СК «Деловые линии»</span>
                   <span class="product-line"></span>
                   <span class="product-houses">2 склада</span>
@@ -747,29 +755,24 @@
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__adress">адрес</span>
                     <span class="development-block-info__place">г. Пенза, ул. Совхозная, 15 з</span>
                   </div>
                   <div class="product-info-text">
-                    Охраняемая территория, круглосуточный доступ в помещение. Удобное территориальное расположение — в
+                    Охраняемая территория, круглосуточный доступ в помещение. Удобное территориальное расположение – в
                     черте города, близость к трассе М5. Отдельно стоящий склад, площадью более 4600 метров со встроенным
-                    двухэтажным АБК (площадью 400 кв. м.), все коммуникакции, высота потолков — 10 м., нагрузка на пол —
-                    5 тонн/кв.м., 13 ворот, из которых 10 оборудованы докшелтерами и докревеллерами. Офисные помещения
-                    (АБК) — отапливаемые. Есть возможность сделать склад отапливаемым. Разворотная площадка — 30 метров.
-                    Охраняемая территория, круглосуточный доступ в помещение. Удобное территориальное расположение — в
-                    черте города, близость к трассе М5. Отдельно стоящий склад, площадью более 4600 метров со встроенным
-                    двухэтажным АБК (площадью 400 кв. м.), все коммуникакции, высота потолков — 10 м., нагрузка на пол —
-                    5 тонн/кв.м., 13 ворот, из которых 10 оборудованы докшелтерами и докревеллерами. Офисные помещения
-                    (АБК) — отапливаемые. Есть возможность сделать склад отапливаемым. Разворотная площадка — 30 метров.
+                    двухэтажным АБК (площадью 400 кв.м.), все коммуникакции, высота потолков 10 м., нагрузка на пол - 5
+                    тонн/кв.м., 13 ворот, из которых 10 оборудованы докшелтерами и докревеллерами.
+                    Разворотная площадка – 30 метров.                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="social-product">
-            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-11" data-type="image"
+            <a href="img/dev/gallery/big/kvm.jpg" data-fancybox="quick-view-203" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/kvmetr.jpg" alt="квадратный метр">
               <div class="development-gallery-item__cover"></div>
@@ -777,157 +780,142 @@
                 магазина)</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-11" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-11" data-type="image"></a>
+              <a href="img/dev/gallery/big/kvm2.jpg" data-fancybox="quick-view-203" data-type="image"></a>
+              
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">«Квадратный метр»</span>
                   <span class="product-line"></span>
                   <span class="product-houses"></span>
                   <span class="product-dot"></span>
-                  <span class="product-numbers">15000 м<sup>2</sup></span>
+                  <span class="product-numbers">2868 м<sup>2</sup></span>
                   <span class="product-slash"></span>
                   <div class="fancybox-infobar">
                     <span class="fancybox-infobar-index" data-fancybox-index></span>
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__adress">адрес</span>
                     <span class="development-block-info__place">г. Пенза, Мира, 7 и пр. Победы, 23</span>
                   </div>
                   <div class="product-info-text">
-                    Охраняемая территория, круглосуточный доступ в помещение. Удобное территориальное расположение — в
-                    черте города, близость к трассе М5. Отдельно стоящий склад, площадью более 4600 метров со встроенным
-                    двухэтажным АБК (площадью 400 кв. м.), все коммуникакции, высота потолков — 10 м., нагрузка на пол —
-                    5 тонн/кв.м., 13 ворот, из которых 10 оборудованы докшелтерами и докревеллерами. Офисные помещения
-                    (АБК) — отапливаемые. Есть возможность сделать склад отапливаемым. Разворотная площадка — 30 метров.
+                    Большая площадь под магазин (первый и цокольный этажи),отдельный вход, парковка, подвключены все
+                    коммуникации. Первая линия, большой пешеходный и автомобильный трафик. Высота 3,4 метра
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="social-product">
-            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-13" data-type="image"
+            <a href="img/dev/gallery/big/eco.jpg" data-fancybox="quick-view-204" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/ekomebel.jpg" alt="«ЭкономМебель»">
               <div class="development-gallery-item__cover"></div>
               <span class="development-gallery-item__text">ТЦ «ЭкономМебель», пр. Строителей, 38</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-13" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-13" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-13" data-type="image"></a>
+              <a href="img/dev/gallery/big/eco.jpg" data-fancybox="quick-view-204" data-type="image"></a>
+              <a href="img/dev/gallery/big/eco.jpg" data-fancybox="quick-view-204" data-type="image"></a>
+              
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">ТЦ «ЭкономМебель»</span>
                   <span class="product-line"></span>
                   <span class="product-houses"></span>
                   <span class="product-dot"></span>
-                  <span class="product-numbers">10000 м<sup>2</sup></span>
+                  <span class="product-numbers">1422 м<sup>2</sup></span>
                   <span class="product-slash"></span>
                   <div class="fancybox-infobar">
                     <span class="fancybox-infobar-index" data-fancybox-index></span>
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__adress">адрес</span>
                     <span class="development-block-info__place">г. Пенза, пр. Строителей, 38</span>
                   </div>
                   <div class="product-info-text">
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
+                    Большая площадь под магазин в отдельно стоящем трехэтажном здании. Парковка перед магазином,
+                    подвключены все коммуникации. Первая линия, большой пешеходный и автомобильный трафик. В 10 метрах
+                    от остановки общественного транспорта «ул. 8 Марта» .
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="social-product">
-            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"
+            <a href="img/dev/gallery/big/atak.jpg" data-fancybox="quick-view-205" data-type="image"
               class="development-gallery-item">
               <img class="development-gallery-item__img" src="img/dev/gallery/small/atak.jpg" alt="Атак">
               <div class="development-gallery-item__cover"></div>
               <span class="development-gallery-item__text">ТЦ «АТАК», пр. Строителей, 67</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"></a>
+              <a href="img/dev/gallery/big/atak2.jpg" data-fancybox="quick-view-205" data-type="image"></a>
+              <!-- <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-205" data-type="image"></a>
+              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-205" data-type="image"></a> -->
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
+                <div class="product-block">
                   <span class="product-name">ТЦ «АТАК»</span>
                   <span class="product-line"></span>
                   <span class="product-houses"></span>
                   <span class="product-dot"></span>
-                  <span class="product-numbers">10000 м<sup>2</sup></span>
+                  <span class="product-numbers">2332 м<sup>2</sup></span>
                   <span class="product-slash"></span>
                   <div class="fancybox-infobar">
                     <span class="fancybox-infobar-index" data-fancybox-index></span>
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__adress">адрес</span>
                     <span class="development-block-info__place">г. Пенза, пр. Строителей, 67</span>
                   </div>
                   <div class="product-info-text">
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
+                    Большая площадь под магазин (1 и цокольный этажи), имеется эскалатор, подъемник, отдельный вход,
+                    парковка, подвключены все коммуникации. Первая линия, большой пешеходный и автомобильный трафик,
+                    большая парковка перед магазином.
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="social-product">
-            <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"
+            <a href="img/dev/gallery/big/diva.jpg" data-fancybox="quick-view-206" data-type="image"
               class="development-gallery-item">
-              <img class="development-gallery-item__img" src="img/dev/gallery/small/atak.jpg" alt="Атак">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/divakeramika.jpg" alt="Атак">
               <div class="development-gallery-item__cover"></div>
-              <span class="development-gallery-item__text">ТЦ «АТАК», пр. Строителей, 67</span>
+              <span class="development-gallery-item__text">ТЦ «Дивакерамика», ул. Мира, 1</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"></a>
-              <a href="img/dev/gallery/big/dellin.jpg" data-fancybox="quick-view-14" data-type="image"></a>
+              <a href="img/dev/gallery/big/diva.jpg" data-fancybox="quick-view-206" data-type="image"></a>
+              <a href="img/dev/gallery/big/diva.jpg" data-fancybox="quick-view-206" data-type="image"></a>
+              <a href="img/dev/gallery/big/diva.jpg" data-fancybox="quick-view-206" data-type="image"></a>
               <div class="social-product-form">
-                <div class="product-block d-flex align-items-center">
-                  <span class="product-name">ТЦ «АТАК»</span>
+                <div class="product-block">
+                  <span class="product-name">ТЦ «Дивакерамика»</span>
                   <span class="product-line"></span>
                   <span class="product-houses"></span>
                   <span class="product-dot"></span>
-                  <span class="product-numbers">10000 м<sup>2</sup></span>
+                  <span class="product-numbers">1260 м<sup>2</sup></span>
                   <span class="product-slash"></span>
                   <div class="fancybox-infobar">
                     <span class="fancybox-infobar-index" data-fancybox-index></span>
                     <span class="fancybox-infobar-counter" data-fancybox-count></span>
                   </div>
                 </div>
-                <div class="product-info d-flex justify-content-between">
+                <div class="product-info">
                   <div class="product-info-about">
                     <span class="development-block-info__adress">адрес</span>
-                    <span class="development-block-info__place">г. Пенза, пр. Строителей, 67</span>
+                    <span class="development-block-info__place">г. Пенза, ул. Мира, 1</span>
                   </div>
                   <div class="product-info-text">
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
-                    Фундамент, стены, своды, алтарная часть. Сделали 50% от всего здания. Поставили 8000 кубов
-                    конструктивного бетона.
+                    Большая площадь под магазин, отдельный вход, подвключены все коммуникации. Первая линия, большой
+                    пешеходный и автомобильный трафик. Высота потолка - 3,4 м.
                   </div>
                 </div>
               </div>
@@ -937,21 +925,21 @@
       </div>
     </div>
     <div class="container-large">
-      <div class="section-bottom development-bottom d-flex">
-        <div class="section-call d-flex p-0">
+      <div class="section-bottom development-bottom">
+        <div class="section-call development-call">
           <div class="d-block">
             <p class="section-call__name">жилстрой девелопмент</p>
             <p class="section-call__text">Свяжитесь с нами</p>
           </div>
-          <div class="development-phones d-flex">
+          <div class="development-phones">
             <a href="tel:+78412233923" class="development-phone section-phone">+7 (8412) 23-39-23</a>
             <a href="tel:+78412233923" class="development-phone section-phone">+7 (8412) 44-86-82</a>
           </div>
         </div>
-        <div class="section-buttons p-0">
+        <div class="section-buttons">
           <a data-fancybox="modal" data-src="#callback-modal" href="javascript:;"
             class="section-buttons-btn section-buttons-btn_red">обратный звонок</a>
-          <a href="#contacts" class="section-buttons-btn section-buttons-btn_white scroll-link">контакты</a>
+          <a href="#contacts" data-click="dev-link" class="section-buttons-btn section-buttons-btn_white scroll-link">контакты</a>
         </div>
       </div>
     </div>
@@ -969,7 +957,8 @@
         <div class="container-short">
           <span class="industry-name section-name">ПРОИЗВОДСТВО БЕТОНА И ЖБИ</span>
           <h2 class="industry-title section-title col-12 col-md-10">Производим бетон и не только...</h2>
-          <span class="industry-subtitle section-subtitle col-12 col-md-10">ООО «Жилстрой Индустрия» — лидер производства
+          <span class="industry-subtitle section-subtitle col-12 col-md-10">ООО «Жилстрой Индустрия» — лидер
+            производства
             товарного
             бетона и строительного раствора в г. Пензе с 1985 года. Неизменной основой политики компании является
             ориентация предприятия на потребителя. Современная установка Liebherr по производству раствора и бетона,
@@ -978,18 +967,30 @@
             подход к ценообразованию и адаптивная кредитная политика дают нашим клиентам возможность оптимизировать свои
             затраты.</span>
           <div class="industry-desc d-flex">
-            <div class="industry-img p-0">
-              <img src="img/ind/ind1.jpg" alt="завод">
+            <div id="ind1" class="industry-img p-0 faded-img in-img active-img">
+              <img src="img/ind/ind.jpg" alt="бетон">
+            </div>
+            <div id="ind2" class="industry-img p-0 faded-img">
+              <img src="img/ind/ind1.jpg" alt="бетон">
+            </div>
+            <div id="ind3" class="industry-img p-0 faded-img">
+              <img src="img/ind/ind2.jpg" alt="бетон">
             </div>
             <div class="industry-desc-text d-flex flex-column">
               <span class="industry-desc-text__title">Наша<br>продукция:</span>
-              <span class="industry-desc-text__subtitle">9 видов сертифицированного товарного бетона, супербетон (по
+              <a href="#ind1" id="text1" class="industry-desc-text__subtitle active-text">9 видов сертифицированного
+                товарного
+                бетона, супербетон (по
                 запатентованной рецептуре завода на основе известнякового щебня), строительные растворы, инертные
-                материалы</span>
-              <span class="industry-desc-text__subtitle">Плиты перекрытий, ФБС, фундаментные сваи, кольца, лотки,
-                днища</span>
-              <span class="industry-desc-text__subtitle">Эксклюзивные ЖБ-изделия любой формы по чертежам заказчика и по
-                ГОСТу</span>
+                материалы</a>
+              <a href="#ind2" id="text2" class="industry-desc-text__subtitle">Плиты перекрытий, ФБС, фундаментные сваи,
+                кольца,
+                лотки,
+                днища</a>
+              <a href="#ind3" id="text3" class="industry-desc-text__subtitle">Эксклюзивные ЖБ-изделия любой формы по
+                чертежам
+                заказчика и по
+                ГОСТу</a>
               <svg class="industry-desc-text__arrow">
                 <use xlink:href="sprite.svg#arrow-right"></use>
               </svg>
@@ -1021,7 +1022,8 @@
             <span class="section-header__text d-block">Масштабное современное производство<br>на высоких
               мощностях</span>
           </div>
-          <div class="industry-subheader section-subheader col-12 col-md-10 p-0">Залог успеха ООО «Жилстрой Индустрия» — это наши
+          <div class="industry-subheader section-subheader col-12 col-md-10 p-0">Залог успеха ООО «Жилстрой Индустрия» —
+            это наши
             люди, опыт и новейшие технологии. Мощности немецкой установки Liebherr по производству раствора и бетона
             позволяют отправлять полностью загруженный автобетоносмеситель каждые 3 минуты. Линия безопалубочного
             формования WiTech производит прочные, легкие, идеальные по геометрии плиты для строительства помещений
@@ -1044,7 +1046,7 @@
                 <svg class="industry-items__svg">
                   <use xlink:href="sprite.svg#witech"></use>
                 </svg>
-                <img src="img/ind/witech.jpg" alt="witech" class="industry-items__img d-block">                
+                <img src="img/ind/witech.jpg" alt="witech" class="industry-items__img d-block">
               </div>
               <span class="industry-items__text">Линия безопалубочного<br>формования WiTech<br>Weiler Italia</span>
             </div>
@@ -1104,18 +1106,19 @@
       </div>
     </div>
     <div class="container-large">
-      <div class="section-bottom industry-bottom d-flex">
-        <div class="section-call p-0">
+      <div class="section-bottom industry-bottom">
+        <div class="section-call">
           <div class="d-block">
             <p class="section-call__name">жилстрой девелопмент</p>
             <p class="section-call__text">Свяжитесь с нами</p>
           </div>
-          <a href="tel:+78412233923" class="section-phone industry-phone p-0">+7 (8412) 23-39-23</a>
-        </div>        
-        <div class="section-buttons p-0">
-          <a data-fancybox="modal1" data-src="#callback-modal" href="javascript:;" class="section-buttons-btn section-buttons-btn_green">обратный звонок</a>
+          <a href="tel:+78412233923" class="section-phone industry-phone">+7 (8412) 23-39-23</a>
+        </div>
+        <div class="section-buttons">
+          <a data-fancybox="modal1" data-src="#callback-modal" href="javascript:;"
+            class="section-buttons-btn section-buttons-btn_green">обратный звонок</a>
           <a href="#" class="section-buttons-btn section-buttons-btn_white site-btn">сайт компании</a>
-          <a href="#contacts" class="section-buttons-btn section-buttons-btn_white scroll-link">контакты</a>
+          <a href="#contacts" data-click="ind-link" class="section-buttons-btn section-buttons-btn_white scroll-link">контакты</a>
         </div>
       </div>
     </div>
@@ -1212,17 +1215,18 @@
       </div>
     </div>
     <div class="container-large">
-      <div class="section-bottom etalon-bottom d-flex">
-        <div class="section-call p-0">
+      <div class="section-bottom etalon-bottom">
+        <div class="section-call">
           <div class="d-block">
             <p class="section-call__name">жилстрой девелопмент</p>
             <p class="section-call__text">Свяжитесь с нами</p>
           </div>
-          <a href="tel:+78412233923" class="section-phone etalon-phone p-0">+7 (8412) 23-39-23</a>
-        </div>        
-        <div class="section-buttons p-0">
-          <a data-fancybox="modal2" data-src="#callback-modal" href="javascript:;" class="section-buttons-btn section-buttons-btn_blue">обратный звонок</a>
-          <a href="#contacts" class="section-buttons-btn section-buttons-btn_white scroll-link">контакты</a>
+          <a href="tel:+78412233923" class="section-phone etalon-phone">+7 (8412) 23-39-23</a>
+        </div>
+        <div class="section-buttons">
+          <a data-fancybox="modal2" data-src="#callback-modal" href="javascript:;"
+            class="section-buttons-btn section-buttons-btn_blue">обратный звонок</a>
+          <a href="#contacts" data-click="etl-link" class="section-buttons-btn section-buttons-btn_white scroll-link">контакты</a>
         </div>
       </div>
     </div>
@@ -1232,164 +1236,168 @@
 
   <!-- Footer -->
   <footer class="footer section" id="contacts">
-    <div class="container-short">
-      <h2 class="footer-title section-title">Контакты</h2>
-      <ul class="footer-tabs d-flex p-0">
-        <li><a class="footer-tabs-link footer-tabs-link_gr active-link" href="#group">Группа компаний</a></li>
-        <li><a class="footer-tabs-link footer-tabs-link_dev" href="#dev">Жилстрой девелопмент</a></li>
-        <li><a class="footer-tabs-link footer-tabs-link_ind" href="#ind">Жилстрой индустрия</a></li>
-        <li><a class="footer-tabs-link footer-tabs-link_etl" href="#etl">Эталон Жилстрой</a></li>
-      </ul>
+    <div class="container-large">
+      <div class="container-short">
+        <h2 class="footer-title section-title">Контакты</h2>
+        <ul class="footer-tabs d-flex p-0">
+          <li><a class="footer-tabs-link footer-tabs-link gr-link active-link" href="#group">Группа компаний</a></li>
+          <li><a class="footer-tabs-link footer-tabs-link dev-link" href="#dev">Жилстрой девелопмент</a></li>
+          <li><a class="footer-tabs-link footer-tabs-link ind-link" href="#ind">Жилстрой индустрия</a></li>
+          <li><a class="footer-tabs-link footer-tabs-link etl-link" href="#etl">Эталон Жилстрой</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-map">
-      <script type="text/javascript" charset="utf-8" async
+      <script async
         src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d275ebc84851a7322ba8600ea095d25f4d7c611487ed49592bfd539e983e9ce&amp;width=100%25&amp;lang=ru_RU&amp;scroll=false">
       </script>
     </div>
-    <div class="container-short">
-      <div class="footer-header section-header">
-        <span class="section-header__lines"></span>
-        <span class="section-header__text d-block">Ответим на все ваши вопросы</span>
-      </div>
-      <div class="footer-wrap d-flex">
-        <div class="form footer-form col-7 p-0">
-          <form id="footer-form">
-            <div class="select">
-              <select  type="text" name="company" class="select-company">
-                <option value="Группа компаний" class="select-option select-company-option">Группа компаний</option>
-                <option value="Жилстрой девелопмент" class="select-option select-company-option">Жилстрой девелопмент
-                </option>
-                <option value="Жилстрой индустрия" class="select-option select-company-option">Жилстрой индустрия
-                </option>
-                <option value="Эталон Жилстрой" class="select-option select-company-option">Эталон Жилстрой</option>
-              </select>
-              <span class="input__label focused-label select-label">К кому выхотите обратиться?</span>
+    <div class="container-large">
+      <div class="container-short">
+        <div class="footer-wrap d-flex">
+          <div class="form footer-form col-12 col-md-6 col-lg-7 p-0">
+            <div class="footer-header section-header">
+              <span class="section-header__lines"></span>
+              <span class="section-header__text d-block">Ответим на все ваши вопросы</span>
             </div>
-            <div class="input">
-              <input type="text" name="name" class="input__field" required>
-              <label for="name" class="input__label">Имя и фамилия</label>
-            </div>
-            <div class="input">
-              <input type="tel" name="phone" class="input__field" required>
-              <label for="phone" class="input__label">Телефон</label>
-            </div>
-            <div class="input">
-              <input type="email" name="email" class="input__field">
-              <label for="email" class="input__label">Электронная почта</label>
-            </div>
-            <div class="input textarea">
-              <textarea name="message" class="input__field input__textarea"></textarea>
-              <label for="message" class="input__label">Ваше сообщение</label>
-            </div>
-            <div class="input file">
-              <input type="file" name="myfile[]" id="file" multiple class="input__file">
-              <label for="file" class="file-label">прикрепить файл</label>
-            </div>
-            <div class="input-submit d-flex align-items-center">
-              <input type="submit" class="input-btn input-btn_light" value="отправить">
-              <span class="input-polici input-polici_light">Нажимая кнопку, я соглашаюсь с <span>условиями</span>
-                обработки персональных данных</span>
-            </div>
-          </form>
-        </div>
-        <div class="footer-block col-5">
-          <div id="group" class="footer-block-inner d-flex flex-column faded in active-block">
-            <div class="footer-tabs-info">
-              <div class="footer-tabs-icon">
-                <svg class="footer-tabs-logo">
-                  <use xlink:href="sprite.svg#logo-group"></use>
-                </svg>
+            <form id="footer-form">
+              <div class="select">
+                <select name="company" class="select-company">
+                  <option value="Группа компаний" class="select-option select-company-option">Группа компаний</option>
+                  <option value="Жилстрой девелопмент" class="select-option select-company-option">Жилстрой девелопмент
+                  </option>
+                  <option value="Жилстрой индустрия" class="select-option select-company-option">Жилстрой индустрия
+                  </option>
+                  <option value="Эталон Жилстрой" class="select-option select-company-option">Эталон Жилстрой</option>
+                </select>
+                <span class="input__label focused-label select-label">К кому выхотите обратиться?</span>
               </div>
-              <div class="footer-tabs-contacts">
-                <p class="footer-tabs-adress">адрес</p>
-                <p class="footer-tabs-location">440007<br>г. Пенза, ул. Измайлова, 34</p>
-                <p class="footer-tabs-phone">телефон</p>
-                <a href="tel:+78412552380" class="footer-tabs-number d-block">+7 (8412) 55-23-80</a>
-                <p class="footer-tabs-boss">руководство</p>
+              <div class="input">
+                <input type="text" name="name" class="input__field" required>
+                <label for="name" class="input__label">Имя и фамилия</label>
               </div>
-            </div>
-            <div class="footer-block-foto">
-              <img src="img/footer/director1.jpg" class="d-block" alt="И.А.Акчурин">
-              <div class="footer-block-foto-names">
-                <p class="footer-block-foto-names__fullname">Ильдар<br>Анвярович<br>Акчурин</p>
-                <p class="footer-block-foto-names__place">управляющий партнер</p>
+              <div class="input">
+                <input type="tel" name="phone" class="input__field" required>
+                <label for="phone" class="input__label">Телефон</label>
               </div>
-            </div>
-            <div class="footer-block-foto">
-              <img src="img/footer/director2.jpg" class="d-block" alt="М.А.Акчурин">
-              <div class="footer-block-foto-names">
-                <p class="footer-block-foto-names__fullname">Марат<br>Анвярович<br>Акчурин</p>
-                <p class="footer-block-foto-names__place">управляющий партнер</p>
+              <div class="input">
+                <input type="email" name="email" class="input__field">
+                <label for="email" class="input__label">Электронная почта</label>
               </div>
-            </div>
+              <div class="input textarea">
+                <textarea name="message" class="input__field input__textarea"></textarea>
+                <label for="message" class="input__label">Ваше сообщение</label>
+              </div>
+              <div class="input file">
+                <input type="file" name="myfile[]" id="file" multiple class="input__file">
+                <label for="file" class="file-label">прикрепить файл</label>
+              </div>
+              <div class="input-submit d-flex">
+                <input type="submit" class="input-btn input-btn_light" value="отправить">
+                <span class="input-polici input-polici_light">Нажимая кнопку, я соглашаюсь с <span>условиями</span>
+                  обработки персональных данных</span>
+              </div>
+            </form>
           </div>
+          <div class="footer-block col-12 col-md-6 col-lg-5">
+            <div id="group" class="footer-block-inner faded in active-block">
+              <div class="footer-tabs-info">
+                <div class="footer-tabs-icon">
+                  <svg class="footer-tabs-logo">
+                    <use xlink:href="sprite.svg#logo-group"></use>
+                  </svg>
+                </div>
+                <div class="footer-tabs-contacts">
+                  <p class="footer-tabs-adress">адрес</p>
+                  <p class="footer-tabs-location">440007<br>г. Пенза, ул. Измайлова, 34</p>
+                  <p class="footer-tabs-phone">телефон</p>
+                  <a href="tel:+78412552380" class="footer-tabs-number d-block">+7 (8412) 55-23-80</a>
+                  <p class="footer-tabs-boss">руководство</p>
+                </div>
+              </div>
+              <div class="footer-block-foto">
+                <img src="img/footer/director1.jpg" class="d-block" alt="И.А.Акчурин">
+                <div class="footer-block-foto-names">
+                  <p class="footer-block-foto-names__fullname">Ильдар<br>Анвярович<br>Акчурин</p>
+                  <p class="footer-block-foto-names__place">управляющий партнер</p>
+                </div>
+              </div>
+              <div class="footer-block-foto">
+                <img src="img/footer/director2.jpg" class="d-block" alt="М.А.Акчурин">
+                <div class="footer-block-foto-names">
+                  <p class="footer-block-foto-names__fullname">Марат<br>Анвярович<br>Акчурин</p>
+                  <p class="footer-block-foto-names__place">управляющий партнер</p>
+                </div>
+              </div>
+            </div>
 
-          <div id="dev" class="footer-block-inner d-flex flex-column faded">
-            <div class="footer-tabs-info">
-              <div class="footer-tabs-icon">
-                <svg class="footer-tabs-logo">
-                  <use xlink:href="sprite.svg#logo-dev"></use>
-                </svg>
+            <div id="dev" class="footer-block-inner faded">
+              <div class="footer-tabs-info">
+                <div class="footer-tabs-icon">
+                  <svg class="footer-tabs-logo">
+                    <use xlink:href="sprite.svg#logo-dev"></use>
+                  </svg>
+                </div>
+                <div class="footer-tabs-contacts">
+                  <p class="footer-tabs-adress">адрес</p>
+                  <p class="footer-tabs-location">440015<br>г. Пенза, ул. Байдукова, 102Б</p>
+                  <p class="footer-tabs-phone">телефон</p>
+                  <a href="tel:+78412233923" class="footer-tabs-number d-block">+7 (8412) 23-39-23</a>
+                  <p class="footer-tabs-boss">руководство</p>
+                </div>
               </div>
-              <div class="footer-tabs-contacts">
-                <p class="footer-tabs-adress">адрес</p>
-                <p class="footer-tabs-location">440015<br>г. Пенза, ул. Байдукова, 102Б</p>
-                <p class="footer-tabs-phone">телефон</p>
-                <a href="tel:+78412233923" class="footer-tabs-number d-block">+7 (8412) 23-39-23</a>
-                <p class="footer-tabs-boss">руководство</p>
-              </div>
-            </div>
-            <div class="footer-block-foto">
-              <img src="img/footer/director5.jpg" class="d-block" alt="С.А.Масляков">
-              <div class="footer-block-foto-names">
-                <p class="footer-block-foto-names__fullname">Станислав<br>Анатольевич<br>Масляков</p>
-                <p class="footer-block-foto-names__place">Директор</p>
-              </div>
-            </div>
-          </div>
-          <div id="ind" class="footer-block-inner d-flex flex-column faded">
-            <div class="footer-tabs-info">
-              <div class="footer-tabs-icon">
-                <svg class="footer-tabs-logo">
-                  <use xlink:href="sprite.svg#logo-ind"></use>
-                </svg>
-              </div>
-              <div class="footer-tabs-contacts">
-                <p class="footer-tabs-adress">адрес</p>
-                <p class="footer-tabs-location">440015<br>г. Пенза, ул. Байдукова, 102Б</p>
-                <p class="footer-tabs-phone">телефон</p>
-                <a href="tel:+78412237723" class="footer-tabs-number d-block">+7 (8412) 23-77-23</a>
-                <p class="footer-tabs-boss">руководство</p>
+              <div class="footer-block-foto">
+                <img src="img/footer/director5.jpg" class="d-block" alt="С.А.Масляков">
+                <div class="footer-block-foto-names">
+                  <p class="footer-block-foto-names__fullname">Станислав<br>Анатольевич<br>Масляков</p>
+                  <p class="footer-block-foto-names__place">Директор</p>
+                </div>
               </div>
             </div>
-            <div class="footer-block-foto">
-              <img src="img/footer/director4.jpg" class="d-block" alt="Д.А.Колгушкин">
-              <div class="footer-block-foto-names">
-                <p class="footer-block-foto-names__fullname">Дмитрий<br>Александрович<br>Колгушкин</p>
-                <p class="footer-block-foto-names__place">Директор</p>
+            <div id="ind" class="footer-block-inner faded">
+              <div class="footer-tabs-info">
+                <div class="footer-tabs-icon">
+                  <svg class="footer-tabs-logo">
+                    <use xlink:href="sprite.svg#logo-ind"></use>
+                  </svg>
+                </div>
+                <div class="footer-tabs-contacts">
+                  <p class="footer-tabs-adress">адрес</p>
+                  <p class="footer-tabs-location">440015<br>г. Пенза, ул. Байдукова, 102Б</p>
+                  <p class="footer-tabs-phone">телефон</p>
+                  <a href="tel:+78412237723" class="footer-tabs-number d-block">+7 (8412) 23-77-23</a>
+                  <p class="footer-tabs-boss">руководство</p>
+                </div>
+              </div>
+              <div class="footer-block-foto">
+                <img src="img/footer/director4.jpg" class="d-block" alt="Д.А.Колгушкин">
+                <div class="footer-block-foto-names">
+                  <p class="footer-block-foto-names__fullname">Дмитрий<br>Александрович<br>Колгушкин</p>
+                  <p class="footer-block-foto-names__place">Директор</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div id="etl" class="footer-block-inner d-flex flex-column faded">
-            <div class="footer-tabs-info">
-              <div class="footer-tabs-icon">
-                <svg class="footer-tabs-logo">
-                  <use xlink:href="sprite.svg#logo-etl"></use>
-                </svg>
+            <div id="etl" class="footer-block-inner faded">
+              <div class="footer-tabs-info">
+                <div class="footer-tabs-icon">
+                  <svg class="footer-tabs-logo">
+                    <use xlink:href="sprite.svg#logo-etl"></use>
+                  </svg>
+                </div>
+                <div class="footer-tabs-contacts">
+                  <p class="footer-tabs-adress">адрес</p>
+                  <p class="footer-tabs-location">440060<br>г. Пенза, пр-т. Строителей, 38</p>
+                  <p class="footer-tabs-phone">телефон</p>
+                  <a href="tel:+79022088787" class="footer-tabs-number d-block">+7 (902) 208-87-87</a>
+                  <p class="footer-tabs-boss">руководство</p>
+                </div>
               </div>
-              <div class="footer-tabs-contacts">
-                <p class="footer-tabs-adress">адрес</p>
-                <p class="footer-tabs-location">440060<br>г. Пенза, пр-т. Строителей, 38</p>
-                <p class="footer-tabs-phone">телефон</p>
-                <a href="tel:+79022088787" class="footer-tabs-number d-block">+7 (902) 208-87-87</a>
-                <p class="footer-tabs-boss">руководство</p>
-              </div>
-            </div>
-            <div class="footer-block-foto">
-              <img src="img/footer/director3.jpg" class="d-block" alt="К.А.Соколовский">
-              <div class="footer-block-foto-names">
-                <p class="footer-block-foto-names__fullname">Кирилл<br>Александрович<br>Соколовский</p>
-                <p class="footer-block-foto-names__place">Директор</p>
+              <div class="footer-block-foto">
+                <img src="img/footer/director3.jpg" class="d-block" alt="К.А.Соколовский">
+                <div class="footer-block-foto-names">
+                  <p class="footer-block-foto-names__fullname">Кирилл<br>Александрович<br>Соколовский</p>
+                  <p class="footer-block-foto-names__place">Директор</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1402,15 +1410,17 @@
           <use xlink:href="sprite.svg#top-btn"></use>
         </svg>
       </div>
-      <div class="container-short">
-        <div class="footer-links d-flex">
-          <a href="#development" class="footer-link d-block">Жилстрой Девелопмент</a>
-          <a href="#industry" class="footer-link d-block">Жилстрой Индустрия</a>
-          <a href="#etalon" class="footer-link d-block">Эталон Жилстрой</a>
-        </div>
-        <div class="footer-rights d-flex justify-content-between">
-          <span class="footer-rights-text">© Группа компаний «Жилстрой»</span>
-          <a href="https://7pap.ru/" target="_blank" class="footer-rights-webmaster">Сделано в студии СЕМЬ ПАП!</a>
+      <div class="container-large">
+        <div class="container-short">
+          <div class="footer-links d-flex">
+            <a href="#development" class="footer-link d-block">Жилстрой Девелопмент</a>
+            <a href="#industry" class="footer-link d-block">Жилстрой Индустрия</a>
+            <a href="#etalon" class="footer-link d-block">Эталон Жилстрой</a>
+          </div>
+          <div class="footer-rights d-flex justify-content-between">
+            <span class="footer-rights-text">© Группа компаний «Жилстрой»</span>
+            <a href="https://7pap.ru/" target="_blank" class="footer-rights-webmaster">Сделано в студии СЕМЬ ПАП!</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1431,7 +1441,7 @@
     </div>
     <form id="callback-form">
       <div class="select">
-        <select name="company" class="select-company">
+        <select class="select-company">
           <option value="Группа компаний" class="select-option select-company-option">Группа компаний</option>
           <option value="Жилстрой девелопмент" class="select-option select-company-option">Жилстрой девелопмент
           </option>
@@ -1450,7 +1460,7 @@
         <label for="phone" class="input__label">Телефон</label>
       </div>
       <p class="callback-text">Мы работаем: пн-пт, с 10:00 до 19:00.<br>Когда вам позвонить?</p>
-      <div class="time-input">
+      <div class="time-input now-time-input">
         <input type="radio" name="callme" id="radio1" class="callback-input" checked>
         <label for="radio1" class="callback-label">Сейчас</label>
       </div>
@@ -1461,7 +1471,8 @@
       </div>
       <div class="input-submit callback-submit d-flex align-items-center">
         <input type="submit" class="input-btn callback-btn input-btn_red" value="отправить">
-        <span class="input-polici input-polici_red">Нажимая кнопку, я соглашаюсь с <span>условиями</span>
+        <span class="input-polici input-polici_red callback-polici">Нажимая кнопку, я соглашаюсь с
+          <span>условиями</span>
           обработки персональных данных</span>
       </div>
     </form>
@@ -1508,8 +1519,9 @@
         <label for="message" class="input__label">Ваше сообщение</label>
       </div>
       <div class="input-submit getprice-input-submit d-flex align-items-center">
-        <input type="submit" class="input-btn input-btn_red" value="отправить">
-        <span class="input-polici input-polici_red">Нажимая кнопку, я соглашаюсь с <span>условиями</span>
+        <input type="submit" class="input-btn callback-btn input-btn_red" value="отправить">
+        <span class="input-polici input-polici_red callback-polici">Нажимая кнопку, я соглашаюсь с
+          <span>условиями</span>
           обработки персональных данных</span>
       </div>
     </form>
@@ -1517,7 +1529,20 @@
   <!-- /Модальное окно "Узнать цены" -->
 
   <!-- Модальное окно Спасибо -->
-
+  <div id="thanks-modal" class="callback" style="display: none;">
+    <button data-fancybox-close class="callback-close close-modal">
+      <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="22.6279" y="0.979248" width="2" height="32" transform="rotate(45 22.6279 0.979248)" fill="#C4C4C4" />
+        <rect y="2.39355" width="2" height="32" transform="rotate(-45 0 2.39355)" fill="#C4C4C4" />
+      </svg>
+    </button>
+    <div class="thanks-header section-header">
+      <span class="section-header__lines"></span>
+      <span class="section-header__text d-block">Спасибо за заявку</span>
+    </div>
+    <p class="thanks-text">Наш специалист свяжется с вами в указанное время.</p>
+    <button data-fancybox-close class="thanks-close">понятно</button>
+  </div>
   <!-- /Модальное окно Спасибо -->
 
 
@@ -1527,6 +1552,7 @@
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/iphone-inline-video.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>

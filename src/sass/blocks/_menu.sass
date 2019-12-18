@@ -1,0 +1,209 @@
+// .menu
+//   width: 100%
+//   height: 107px
+//   position: absolute
+//   top: 32px
+//   right: 0
+//   color: $main-color
+//   z-index: 3
+//   overflow: hidden  
+
+  // &-container
+  //   width: 100%
+  //   height: 100%
+  //   position: relative
+.menu     
+  &-button
+    position: absolute
+    top: 32px
+    right: 210px
+    display: flex
+    align-items: center    
+    width: 107px
+    height: 107px
+    z-index: 30
+  &-click 
+    position: absolute
+    top: 32px
+    right: 210px
+    width: 107px
+    height: 107px    
+    z-index: 31
+    cursor: pointer
+  &-text 
+    +bold 
+    font-size: 14px
+    letter-spacing: 0.75px
+    text-transform: uppercase
+    color: $main-color
+    &_fixed
+      display: none    
+    &_hide
+      display: none
+  &-btn
+    position: relative
+    display: block
+    background: $main-color
+    width: 40px        
+    height: 6px 
+    margin-left: auto
+    &:before
+      content: ''
+      position: absolute
+      bottom: 12px
+      left: 0
+      width: 40px
+      height: 6px
+      background: $main-color
+      transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1)
+    &:after
+      content: ''
+      position: absolute
+      top: 12px
+      left: 0
+      width: 40px
+      height: 6px
+      background: $main-color
+      transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1)
+    &_close      
+      height: 0
+      &:before
+        bottom: -3px
+        transform: rotate(-45deg)
+        transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1)
+      &:after            
+        top: -3px
+        transform: rotate(45deg)
+        transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1)
+  &-nav
+    position: absolute
+    top: 32px
+    right: 0
+    width: 100%
+    height: 107px
+    display: flex
+    align-items: center
+    list-style: none
+    margin: 0
+    padding: 0 317px 0 0    
+    justify-content: flex-end
+    transition: 0.3s 
+    transform-origin: right center
+    transform: translateX(50px)
+    visibility: hidden
+    z-index: 29
+    &_visible
+      visibility: visible      
+      transform: translateX(0px)
+      opacity: 1     
+  &-link 
+    display: block
+    color: $main-color  
+    +bold
+    text-transform: uppercase
+    font-size: 14px
+    margin-left: 56px
+    letter-spacing: 0.75px
+    cursor: pointer
+.menu-button.fixed
+  position: fixed
+  top: 0
+  right: 210px
+  color: $black-color
+  
+.menu-click.fixed
+  position: fixed
+  top: 0
+  right: 210px  
+.menu-text.fixed 
+  display: none
+.menu-btn.fixed
+  background: $black-color
+  
+  &:after, &:before 
+    background: $black-color
+.menu-nav.fixed
+  position: fixed
+  top: 0
+  right: 0
+  background: $main-color
+  box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14)
+  
+.menu-link.fixed
+  color: $black-color 
+
+@media (max-width: 1600px) 
+  .menu 
+    &-link
+      font-size: 12px
+      margin-left: 35px            
+    &-text 
+      font-size: 12px
+@media (max-width: 1440px)
+  .menu   
+    &-button, &-click, &-button.fixed, &-click.fixed 
+      right: 128px
+    &-nav 
+      padding: 0 235px 0 0
+@media (max-width: 1200px)
+  .menu     
+    &-button, &-click, &-button.fixed, &-click.fixed 
+      right: 60px
+      top: 7px
+    &-nav
+      top: 7px 
+      padding: 0 168px 0 0 
+@media (max-width: 1024px)
+  .menu     
+    &-button, &-click, &-nav
+      height: 61px
+    &-button, &-click, &-button.fixed, &-click.fixed
+      top: 0   
+      right: 30px 
+    &-nav 
+      top: 0
+      padding: 0 138px 0 0
+@media (max-width: 767px)
+  .menu    
+    &-text 
+      display: none
+    &-button, &-click 
+      height: 70px
+      width: 80px
+    &-button, &-click, &-button.fixed, &-click.fixed
+      right: 0      
+    &-btn 
+      margin: auto
+    &-nav
+      position: fixed      
+      height: 100%     
+      flex-direction: column
+      background: $main-color
+      padding-right: 0
+      padding-left: 40%
+      justify-content: center
+      align-items: flex-start
+      margin-left: 0
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        width: 33%
+        height: 100%
+        content: ''
+        background: rgba(#151515, 0.7)
+      li 
+        margin-bottom: 24px     
+    &-link 
+      color: $black-color
+      margin-left: 0
+      font-size: 20px
+      line-height: 24px
+  .menu-btn.menu-btn_close
+    background: $black-color
+    &:after, &:before
+      background: $black-color
+      z-index: 1        
+
+
+                  

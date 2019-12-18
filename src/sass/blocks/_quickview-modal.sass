@@ -125,6 +125,9 @@
 
 .product
   &-block
+    display: flex
+    align-items: center
+
     position: relative
     margin-bottom: 16px  
   &-name 
@@ -160,6 +163,8 @@
     line-height: 24px
     letter-spacing: 0.15px
   &-info
+    display: flex
+    justify-content: space-between
     height: 96px
     overflow-y: overlay         
     &-text      
@@ -175,4 +180,45 @@
   background: #E4ECF8
 .product-info::-webkit-scrollbar-thumb
   background: #8B919F 
-  border-radius: 10px 
+  border-radius: 10px
+
+@media (max-width: 1024px)
+  .quickview-arrow-left, .quickview-arrow-right, .fancybox-infobar, .product-slash
+    display: none
+  .fancybox-slide--image
+    padding: 0
+  .quickview-inner
+    max-width: 700px 
+  .social-product-bullets
+    display: flex
+    justify-content: center
+  .social-product-form 
+    padding: 0 24px  
+@media (max-width: 768px)
+  .quickview-inner
+    max-width: 98%    
+    height: 95%    
+    max-height: 95vh
+  
+  .quickview-inner
+    margin-top: 50px
+  .quickview-button-close
+    bottom: 100%
+    right: 0
+    left: auto
+    top: auto 
+@media (max-width: 576px)
+  .product
+    &-block, &-name 
+      display: block
+    &-houses, &-dot, &-numbers
+      display: inline-block  
+    &-line
+      display: none
+    &-info 
+      display: block
+      height: 28vh  
+  .quickview-stage 
+    height: 42vh
+  .fancybox-form-wrap 
+    top: 42vh               

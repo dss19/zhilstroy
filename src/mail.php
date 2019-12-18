@@ -9,7 +9,7 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $text = $_POST['message'];
 $comp = $_POST['company'];
-$time = $_POST['callme']
+$time = $_POST['callme'];
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
     $msg = "ok";
@@ -22,7 +22,7 @@ try {
     $mail->Password   = 'Continent58'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('cbr058@yandex.ru', 'YOUR NAME'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('cbr058@yandex.ru', 'Сайт Жилстрой'); // Адрес самой почты и имя отправителя
     // Получатель письма
     $mail->addAddress('samoylov82@gmail.com');  
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен

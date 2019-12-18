@@ -1,5 +1,5 @@
 .footer
-  padding: 112px 0 0
+  padding: 100px 0 0
   &-title
     margin-bottom: 48px
   &-tabs 
@@ -49,7 +49,7 @@
     position: relative 
     width: 100%            
     &-inner
-      display: none
+      display: none      
       position: absolute
       left: 33px
       bottom: 236px
@@ -114,18 +114,87 @@
     
     // Табы в футере
 .faded
-  opacity: 0
+  opacity: 0  
   transition: 0.2s
 .faded.in 
   opacity: 1
   transition: 0.2s
 .active-block
   display: flex
-.footer-tabs-link_gr.active-link
+  flex-direction: column
+.footer-tabs-link.gr-link.active-link
   border-bottom: 4px solid #507CDC
-.footer-tabs-link_dev.active-link
+.footer-tabs-link.dev-link.active-link
   border-bottom: 4px solid $red-color
-.footer-tabs-link_ind.active-link
+.footer-tabs-link.ind-link.active-link
   border-bottom: 4px solid $green-color
-.footer-tabs-link_etl.active-link
+.footer-tabs-link.etl-link.active-link
   border-bottom: 4px solid $blue-color
+
+@media (max-width: 1200px)
+  .footer 
+    padding: 50px 0 0
+@media (max-width: 1024px)
+  .footer 
+    &-block 
+      &-inner 
+        left: 14px
+@media (max-width: 767px)
+  .footer 
+    &-tabs 
+      flex-direction: column 
+      li 
+        margin-bottom: 12px
+      &-contacts
+        padding: 24px 0px 18px 13px
+      &-link 
+        padding: 6px 15px
+        
+      &-boss 
+        margin-bottom: 18px  
+    &-map 
+      height: 380px
+      margin-bottom: 0
+    &-wrap 
+      flex-direction: column-reverse
+    &-block
+      padding: 0 
+      &-inner
+        position: relative
+        left: 0
+        bottom: 0 
+        box-shadow: none
+        margin-bottom: 24px
+        padding-bottom: 0
+      &-foto 
+        // transform: scale(1.14)
+        margin: 0 auto 26px 
+    &-form 
+      margin-bottom: 42px
+    &-links 
+      flex-direction: column
+      padding-left: 22px
+    &-link  
+      margin: 0 0 13px
+    &-copyrights-btn
+      right: 0
+      bottom: 185px  
+    &-rights 
+      flex-direction: column
+      padding-left: 22px
+      &-text 
+        margin-bottom: 10px            
+
+  .footer-tabs-link.gr-link.active-link
+    border: none 
+    border-left: 4px solid #507CDC
+  .footer-tabs-link.dev-link.active-link
+    border: none
+    border-left: 4px solid $red-color
+  .footer-tabs-link.ind-link.active-link
+    border: none
+    border-left: 4px solid $green-color
+  .footer-tabs-link.etl-link.active-link
+    border: none
+    border-left: 4px solid $blue-color                   
+

@@ -4,11 +4,11 @@
     margin-bottom: 40px
     padding: 0
   &-img 
-    flex-basis: 75%   
+    display: none   
     img
       display: block
   &-desc
-    margin-bottom: 56px
+    margin-bottom: 66px
         
     &-text
       padding: 0 0 0 33px
@@ -28,6 +28,7 @@
       &__arrow
         width: 40px
         height: 16px
+        cursor: pointer
   &-detail
     flex-basis: 33.3%
     flex-direction: column
@@ -141,6 +142,19 @@
           display: none  
   &-phone 
     margin-right: 15px
+.faded-img
+  opacity: 0  
+  transition: 0.2s
+.faded-img.in-img 
+  opacity: 1
+  transition: 0.2s
+.active-img
+  display: block
+  flex-basis: 75%
+.active-text
+  color: $green-color
+  
+
 @media (max-width: 1200px)
   .industry
     &-detail 
@@ -247,7 +261,7 @@
         line-height: 24px           
           
     &-block
-      height: 484px 
+      height: 515px 
       &-text 
       &-value
         align-items: flex-end

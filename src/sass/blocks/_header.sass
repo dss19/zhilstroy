@@ -8,143 +8,8 @@
   &-logo
     width: 396px
     height: 60px
-  &-menu
-    position: relative
-    width: 40px 
-    height: 50px
-    display: flex
-    align-items: center
-    margin-top: 16px
-    cursor: pointer
-    color: $main-color
-    &_scr
-      position: fixed
-      top: 10px
-      right: 210px
-      color: $black-color
-      z-index: 10
-      transform: scaleY(0)
-      transform-origin: top center      
-      animation: abc 1s forwards                           
-    &-btn
-      position: relative
-      display: block
-      background: $main-color
-      width: 40px        
-      height: 6px              
-      // transition: all 0ms 100ms
-      &:before
-        content: ''
-        position: absolute
-        bottom: 12px
-        left: 0
-        width: 40px
-        height: 6px
-        background: $main-color
-        transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1)
-      &:after
-        content: ''
-        position: absolute
-        top: 12px
-        left: 0
-        width: 40px
-        height: 6px
-        background: $main-color
-        transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1)
-      &_close      
-        height: 0
-        &:before
-          bottom: -3px
-          transform: rotate(-45deg)
-          transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1)
-        &:after            
-          top: -3px
-          transform: rotate(45deg)
-          transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1)
-      &_scr
-        background: $black-color        
-        &:after, &:before
-          background: $black-color       
-    &-text
-      position: absolute
-      top: 0
-      right: 100%
-      margin-right: 21px
-      height: 50px
-      display: flex
-      align-items: center
-      +bold 
-      font-size: 14px
-      letter-spacing: 0.75px
-      text-transform: uppercase
-      color: inherit      
-      &_vis
-        opacity: 0
-        display: none
-      &_scr
-        display: none  
-    &-nav
-      position: absolute
-      top: 0
-      right: 200%
-      list-style: none
-      transform: scaleX(0) translateX(50px)
-      transform-origin: right center
-      opacity: 0
-      transition: 0.3s
-      padding-top: 8px
-      li
-        cursor: default
-        a 
-          cursor: default            
-      &_vis
-        opacity: 1
-        transform: scaleX(1) translateX(0)
-
-        
-        li 
-          cursor: pointer
-          a
-            cursor: pointer                  
-    &__link
-      color: inherit
-      +bold
-      text-transform: uppercase
-      font-size: 14px
-      margin-right: 56px
-      letter-spacing: 0.75px      
-.cover 
-  width: 100%
-  height: 100px
-  background: $main-color
-  box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14)
-  z-index: -1
-  position: fixed
-  top: 0
-  left: 0
-  transform: translateX(50px)
-  transition: 0.3s
-  opacity: 0
-  &_vis
-    transform: translateX(0)
-    opacity: 1
-    z-index: 9
-          
-@keyframes abc  
-  0%
-    transform: scaleY(0)      
-  100%
-    transform: scaleY(1)
-@media (max-width: 1600px)
-  .header
-    &-menu 
-      &__link
-        font-size: 12px
-        margin-right: 40px
-      &-nav 
-        right: 100%   
-      &-text 
-        font-size: 12px            
+  
+            
 @media (max-width: 1440px)
   .header
     padding: 54px 128px 0
@@ -154,45 +19,19 @@
 @media (max-width: 1200px)
   .header 
     padding: 34px 60px 0
+    
 @media (max-width: 1024px)
   .header
     padding: 10px 20px 0
     &-logo
       width: 199px
       height: 30px 
-    &-menu
-      height: 30px
-      margin-top: 0
-      &-text 
-        display: none 
-      &-nav 
-      &__link 
-        margin-right: 20px 
+     
 @media (max-width: 767px) and (min-width: 320px)
   .header 
     padding: 20px 20px 0
-    &-menu      
-      &-nav 
-        position: fixed
-        flex-direction: column
-        right: 0
-        top: 0
-        height: 100vh 
-        width: 100%
-        padding: 0
-        padding-left: 50%
-        justify-content: center
-        text-align: left
-        color: #151515
-        background: $main-color
-        &:before
-          content: ''
-          position: absolute
-          top: 0
-          left: 0
-          width: 34%
-          height: 100vh
-          background: rgba(#151515, 0.7)
+    
+         
 
     
               

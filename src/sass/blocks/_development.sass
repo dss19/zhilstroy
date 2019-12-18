@@ -196,8 +196,10 @@
         padding: 24px 0
         width: 256px
         text-align: center
-  &-phone 
-    align-self: flex-end
+          
+  &-phones
+    display: flex
+  &-phone    
     &:last-child 
       position: relative
       &:after
@@ -219,8 +221,7 @@
     &-bottom
       height: 240px
     &-phones
-      flex-direction: column
-      justify-content: flex-start
+      display: block
     &-phone 
       margin-top: 24px
 @media (max-width: 1200px)
@@ -250,9 +251,8 @@
         left: 0
         top: 100%
         width: calc(50vw + 40% + 46px)          
-    &-bottom
-      
-      height: 300px
+    &-bottom   
+      height: 300px      
 @media (max-width: 767px)
   .development
     &-subtitle
@@ -288,12 +288,10 @@
           font-size: 160px
           line-height: 112px
           transform: translateY(10px)    
-    &-block
-      
+    &-block      
       &-info
         &__link
-          width: 100%
-              
+          width: 100%              
     &-sale 
       flex-direction: column
       &-img 
@@ -305,7 +303,8 @@
     &-phones
       margin-bottom: 24px 
     &-bottom 
-      height: 450px  
+      height: 450px
+      padding-top: 50px  
 
 
 
