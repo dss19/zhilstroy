@@ -347,7 +347,7 @@ $(document).ready(function () {
     dots: false,
     arrows: true,
     slidesToShow: 5,    
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     infinite: true,
     centerMode: false,
     initialSlide: 0,
@@ -366,21 +366,21 @@ $(document).ready(function () {
         breakpoint: 1440,
         settings: {          
           slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToScroll: 1,
         }          
       },
       {
         breakpoint: 1200,
         settings: {          
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         }
       },
       {
         breakpoint: 1023,
         settings: {          
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           arrows: false
         }
       },
