@@ -5702,6 +5702,16 @@ html {
         -ms-flex-align: start;
             align-items: flex-start;
     margin-left: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu-nav_visible {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .menu-nav:before {
     position: absolute;

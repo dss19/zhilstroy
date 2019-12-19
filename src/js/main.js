@@ -1,11 +1,15 @@
- // Прелоадер 
+// Прелоадер 
 
- setTimeout(function() {
+setTimeout(function() {
   $('.preloader').addClass('done');
 }, 3000);
 
-$(document).ready(function () { 
+// Воспроизведение видео на Iphone
 
+var video = $('video').get(0);
+enableInlineVideo(video);
+
+$(document).ready(function () { 
 
   // Меню
 
@@ -28,6 +32,11 @@ $(document).ready(function () {
     $('.menu-nav').toggleClass('menu-nav_visible');    
   });
 
+  $('.menu-link').click(function() {
+    $('.menu-nav').removeClass('menu-nav_visible');
+  });
+
+
   // Typed JS (Печатающийся текст)
 
   var typed = new Typed('.main-text-typed', {
@@ -41,7 +50,7 @@ $(document).ready(function () {
 
 
   $(document).scroll(function () {
-    let pos = +$(this).scrollTop(),
+    var pos = +$(this).scrollTop(),
       city = $('.about-old-img__img'),
       union = $('.about-old-element__item'),
       indCity = (pos - 800) / 10,
@@ -175,13 +184,13 @@ $(document).ready(function () {
   // Input label scale
 
   $('.input', function () {
-    let label;
+    var label;
     $('.input').focusin(function () {
       label = $(this).children('.input__label');
       label.addClass('focused-label');
     });
     $('.input').focusout(function () {
-      let input = $(this).find('.input__field');
+      var input = $(this).find('.input__field');
       if (input.val() == '') {
         label.removeClass('focused-label');
       }
@@ -199,7 +208,7 @@ $(document).ready(function () {
   // скролл
   $('.menu-link, .footer-link, .scroll-link, .about-item__link').on('click', function (e) {
     e.preventDefault();
-    let target = $(this).attr('href'),
+    var target = $(this).attr('href'),
       bl_top = $(target).offset().top;
     $('html, body').animate({
       scrollTop: bl_top
@@ -272,11 +281,14 @@ $(document).ready(function () {
   });
   
   // Табы в футере
+
+    
+
   $('body').on('click', '.footer-tabs-link', function (e) {
     e.preventDefault();
     $('.footer-tabs-link').removeClass('active-link');
     $(this).addClass('active-link');
-    let href = $(this).attr('href');
+    var href = $(this).attr('href');
     $('.footer-block-inner').removeClass('active-block').removeClass('in');
     $(href).addClass('active-block');
     setTimeout(function () {
@@ -383,8 +395,76 @@ $(document).ready(function () {
     ]    
   });
 
-  // Воспроизведение видео на Iphone
+  ymaps.ready(function() {    
+    var myMap = new ymaps.Map('map', {
+      center: [53.187312460901715,45.04434658332824],
+      zoom: 15
+      }),
+      myPlacemark = new ymaps.Placemark([53.187312460901715,45.04434658332824], null, {
+        iconLayout: 'default#image',
+        iconImageHref: './img/1.svg'
+      });
+    myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');  
+    $('.footer-tabs-link').click(function() {
+      myMap.geoObjects.remove(myPlacemark);
+      var X = $(this).attr('data-ya-x');
+      var Y = $(this).attr('data-ya-y');    
+      var icon = $(this).attr('data-icon');
+      myMap.setCenter([X,Y]);
+      myPlacemark = new ymaps.Placemark([X,Y], null, {
+        iconLayout: 'default#image',
+        iconImageHref: icon
+      });
+      myMap.geoObjects.add(myPlacemark);      
+    });
 
-  var video = $('video').get(0);
-  enableInlineVideo(video);
+        
+  });
+
+  // ymaps.ready(function() {       
+  //   var myMap = new ymaps.Map('map', {
+  //     center: [53.21850370548725,45.02088618455506],
+  //     zoom: 12,     
+  //     }),
+  //     myPlacemark = new ymaps.Placemark([53.18727057303403,45.044539702377314], {
+  //       id: 'mark1'
+  //     }, {
+  //       iconLayout: 'default#image',
+  //       iconImageHref: './img/1.svg',
+  //       iconImageSize: [48, 60],
+  //       // visible: false
+  //     }),      
+  //     myPlacemark2 = new ymaps.Placemark([53.23882157321547,45.00140511904898], {
+  //       id: 'mark2'
+  //     }, {
+  //       iconLayout: 'default#image',
+  //       iconImageHref: './img/2.svg',
+  //       iconImageSize: [48, 60],
+  //       // visible: false
+  //     }),      
+  //     myPlacemark3 = new ymaps.Placemark([53.238837664471404,45.0010081521148], {
+  //       id: 'mark3'
+  //     }, {
+  //       iconLayout: 'default#image',
+  //       iconImageHref: './img/3.svg',
+  //       iconImageSize: [48, 60],
+  //       // visible: false
+  //     }),      
+  //     myPlacemark4 = new ymaps.Placemark([53.22138853668967,44.928875686508185], {
+  //       id: 'mark4'
+  //     }, {
+  //       iconLayout: 'default#image',
+  //       iconImageHref: './img/4.svg',
+  //       iconImageSize: [48, 60],
+  //       // visible: false
+  //     });           
+  //   myMap.geoObjects.add(myPlacemark)
+  //                   .add(myPlacemark2)
+  //                   .add(myPlacemark3)
+  //                   .add(myPlacemark4);                    
+  //   myMap.behaviors.disable('scrollZoom');
+    
+    
+  // });  
 });

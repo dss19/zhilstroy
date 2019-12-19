@@ -6,18 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">  
   <title>Компания "Жилстрой"</title>
 </head>
 
 <body>
 
   <!-- Прелоадер -->
-  <div class="preloader">
+  <!-- <div class="preloader">
     <svg class="load">
       <use xlink:href="sprite.svg#logo-long"></use>
     </svg>
-  </div>
+  </div> -->
   <!-- /Прелоадер -->
 
   <!-- Главная -->
@@ -1240,18 +1240,16 @@
       <div class="container-short">
         <h2 class="footer-title section-title">Контакты</h2>
         <ul class="footer-tabs d-flex p-0">
-          <li><a class="footer-tabs-link footer-tabs-link gr-link active-link" href="#group">Группа компаний</a></li>
-          <li><a class="footer-tabs-link footer-tabs-link dev-link" href="#dev">Жилстрой девелопмент</a></li>
-          <li><a class="footer-tabs-link footer-tabs-link ind-link" href="#ind">Жилстрой индустрия</a></li>
-          <li><a class="footer-tabs-link footer-tabs-link etl-link" href="#etl">Эталон Жилстрой</a></li>
+          <li><a data-ya-x="53.187312460901715" data-ya-y="45.04434658332824" data-icon="./img/1.svg" class="footer-tabs-link gr-link active-link" href="#group">Группа компаний</a></li>
+          <li><a data-ya-x="53.23876876274577" data-ya-y="45.00100715854308" data-icon="./img/2.svg" class="footer-tabs-link dev-link" href="#dev">Жилстрой девелопмент</a></li>
+          <li><a data-ya-x="53.23876876274577" data-ya-y="45.00142558314942" data-icon="./img/3.svg" class="footer-tabs-link ind-link" href="#ind">Жилстрой индустрия</a></li>
+          <li><a data-ya-x="53.221452928015665" data-ya-y="44.9285538214264" data-icon="./img/4.svg" class="footer-tabs-link etl-link" href="#etl">Эталон Жилстрой</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-map">
-      <script async
-        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6d275ebc84851a7322ba8600ea095d25f4d7c611487ed49592bfd539e983e9ce&amp;width=100%25&amp;lang=ru_RU&amp;scroll=false">
-      </script>
-    </div>
+    <!-- Карта -->
+    <div class="footer-map" id="map"></div>
+    <!-- /Карта -->
     <div class="container-large">
       <div class="container-short">
         <div class="footer-wrap d-flex">
@@ -1548,11 +1546,12 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/typed.min.js"></script>
-  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/iphone-inline-video.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=c894f359-adae-45c4-b930-8a86e08d2dc0&lang=ru_RU"></script>
   <script src="js/main.js"></script>
 
 </body>

@@ -184,6 +184,13 @@
       justify-content: center
       align-items: flex-start
       margin-left: 0
+      transition: 0.5s
+      transform: translateX(100%)
+      visibility: visible
+      opacity: 1
+      &_visible
+        transform: translateX(0) 
+      
       &:before
         position: absolute
         top: 0
