@@ -417,54 +417,7 @@ $(document).ready(function () {
         iconImageHref: icon
       });
       myMap.geoObjects.add(myPlacemark);      
-    });
-
-        
+    });        
   });
-
-  // ymaps.ready(function() {       
-  //   var myMap = new ymaps.Map('map', {
-  //     center: [53.21850370548725,45.02088618455506],
-  //     zoom: 12,     
-  //     }),
-  //     myPlacemark = new ymaps.Placemark([53.18727057303403,45.044539702377314], {
-  //       id: 'mark1'
-  //     }, {
-  //       iconLayout: 'default#image',
-  //       iconImageHref: './img/1.svg',
-  //       iconImageSize: [48, 60],
-  //       // visible: false
-  //     }),      
-  //     myPlacemark2 = new ymaps.Placemark([53.23882157321547,45.00140511904898], {
-  //       id: 'mark2'
-  //     }, {
-  //       iconLayout: 'default#image',
-  //       iconImageHref: './img/2.svg',
-  //       iconImageSize: [48, 60],
-  //       // visible: false
-  //     }),      
-  //     myPlacemark3 = new ymaps.Placemark([53.238837664471404,45.0010081521148], {
-  //       id: 'mark3'
-  //     }, {
-  //       iconLayout: 'default#image',
-  //       iconImageHref: './img/3.svg',
-  //       iconImageSize: [48, 60],
-  //       // visible: false
-  //     }),      
-  //     myPlacemark4 = new ymaps.Placemark([53.22138853668967,44.928875686508185], {
-  //       id: 'mark4'
-  //     }, {
-  //       iconLayout: 'default#image',
-  //       iconImageHref: './img/4.svg',
-  //       iconImageSize: [48, 60],
-  //       // visible: false
-  //     });           
-  //   myMap.geoObjects.add(myPlacemark)
-  //                   .add(myPlacemark2)
-  //                   .add(myPlacemark3)
-  //                   .add(myPlacemark4);                    
-  //   myMap.behaviors.disable('scrollZoom');
-    
-    
-  // });  
+      
 });
