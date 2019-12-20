@@ -44,12 +44,12 @@ if (!empty($_FILES['myfile']['name'][0])) {
         $mail->isHTML(true);
     
         $mail->Subject = 'Заявка с сайта';
-        $mail->Body    = "<b>Имя Фамилия:</b> $name <br>
+        $mail->Body    = "<b>Имя Фамилия:</b> $name <br><br>
         <b>Телефон:</b> $phone<br><br>
         <b>Почта:</b> $email<br><br>
         <b>Хочет обратиться в:</b> $comp<br><br>
         <b>Просит перезвонить:</b> $time<br><br>
-        <b>Сообщение:</b><br> $text";
+        <b>Сообщение:</b> $text";
 // Проверяем отравленность сообщения
 if ($mail->send()) {
     echo "$msg";

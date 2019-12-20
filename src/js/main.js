@@ -9,12 +9,11 @@ setTimeout(function() {
 var video = $('video').get(0);
 enableInlineVideo(video);
 
-$(document).ready(function () { 
+$(document).ready(function () {
+  
 
   // Меню
-
-  var fixMenu = $('#about').offset().top;
-  
+  var fixMenu = $('#about').offset().top;  
   $(document).on('scroll load', function() {
     if ($(this).scrollTop() >= fixMenu) {
       $('.menu-btn').removeClass('menu-btn_close');
@@ -24,21 +23,17 @@ $(document).ready(function () {
       $('.menu-button, .menu-click, .menu-text, .menu-btn, .menu-nav, .menu-link').removeClass('fixed');
       $('.menu-text').removeClass('menu-text_hide');
     }
-  });  
-
+  });
   $('.menu-click').click(function () {
     $('.menu-btn').toggleClass('menu-btn_close');
     $('.menu-text').toggleClass('menu-text_hide');
     $('.menu-nav').toggleClass('menu-nav_visible');    
   });
-
   $('.menu-link').click(function() {
     $('.menu-nav').removeClass('menu-nav_visible');
   });
 
-
   // Typed JS (Печатающийся текст)
-
   var typed = new Typed('.main-text-typed', {
     strings: ["<text style='background:#A90F3D'>строим здания&#160;&#160;</text>", "<text style='background:#009944'>производим бетон и ЖБИ&#160;&#160;</text>", "<text style='background:#2F2482'>обслуживаем дома&#160;&#160;</text>"],
     typeSpeed: 50,
@@ -51,9 +46,7 @@ $(document).ready(function () {
   // Паралакс в блоке 30 лет
   $(document).scroll(function () {
     var pos = +$(this).scrollTop(),      
-      union = $('.about-old-element__item');
-    console.log(pos);
-      
+      union = $('.about-old-element__item');    
     if ($(window).width() >= 768) {            
       indUnion = (pos - 800) / 5;      
       if ($(this).scrollTop() > 800 && $(this).scrollTop() < 1650) {      
@@ -94,7 +87,6 @@ $(document).ready(function () {
       vertical: false
     },
     baseTpl:
-
       '<div class="fancybox-container" role="dialog" tabindex="-1">' +
       '<div class="fancybox-bg quickview-bg"></div>' +
       '<div class="fancybox-inner quickview-inner">' +
@@ -146,22 +138,16 @@ $(document).ready(function () {
       */
       var list = '',
         $bullets;
-
       for (var i = 0; i < instance.group.length; i++) {
         list += '<li><a data-index="' + i + '" href="javascript:;"><span>' + (i + 1) + '</span></a></li>';
       }
-
       $bullets = $('<ul class="social-product-bullets">' + list + '</ul>').on('click touchstart', 'a', function () {
         var index = $(this).data('index');
-
         $.fancybox.getInstance(function () {
           this.jumpTo(index);
         });
-
       });
-
       instance.$refs.bullets = $bullets.appendTo(instance.$refs.stage);
-
     },
     beforeShow: function (instance) {
 
@@ -171,19 +157,14 @@ $(document).ready(function () {
         .removeClass('active')
         .eq(instance.currIndex)
         .addClass('active');
-
     },
-
     afterClose: function (instance, current) {
-
       // Move form back to the place
       instance.$refs.form.appendTo(current.opts.$orig.parents('.social-product:first').children('.d-none'));
-
     }
   });
 
   // Input label scale
-
   $('.input', function () {
     var label;
     $('.input').focusin(function () {
@@ -198,10 +179,7 @@ $(document).ready(function () {
     });
   });
 
-
-
   // textarea size
-
   $('.input__textarea').on('keyup input', function () {
     $(this).css('height', 'auto').css('height', this.scrollHeight + (this.offsetHeight - this.clientHeight));
   });
@@ -254,9 +232,7 @@ $(document).ready(function () {
         $('.industry-img.active-img').addClass('in-img');
       }, 200);
     }    
-  });
-
-  
+  });  
   $('.industry-desc-text__btn').click(function() {    
     var firstText = $('#text1');
     var secondText = $('#text2');
@@ -273,18 +249,13 @@ $(document).ready(function () {
     }     
   });
 
-  // Открытие табов по кнопкам навигации 
-
+  // Открытие табов футера в зависимости от нажактой кнопки "Контакты" в блоках сайта
   $('.scroll-link').click(function() {
     var trg = $(this).attr('data-click');
-    $('.' + trg).trigger('click');
-    
+    $('.' + trg).trigger('click');    
   });
   
   // Табы в футере
-
-    
-
   $('body').on('click', '.footer-tabs-link', function (e) {
     e.preventDefault();
     $('.footer-tabs-link').removeClass('active-link');
@@ -343,7 +314,6 @@ $(document).ready(function () {
   $('[name="phone"]').mask('+7 (999) 999-99-99');
 
   // Слайдеры в блоке девелопмент
-
   $('.development-gallery').slick({
     dots: false,
     arrows: true,
@@ -396,6 +366,7 @@ $(document).ready(function () {
     ]    
   });
 
+  // Яндекс карта
   ymaps.ready(function() {    
     var myMap = new ymaps.Map('map', {
       center: [53.187312460901715,45.04434658332824],
@@ -420,5 +391,22 @@ $(document).ready(function () {
       myMap.geoObjects.add(myPlacemark);      
     });        
   });
-      
+  
+  // Прикрепить файл 
+  $('.file').each(function() {
+    var hold = $(this);
+    var file = hold.find('.input__file');
+    var text = hold.find('.file-choisen__name');
+    var close = hold.find('.file-choisen__close');
+    var block = hold.find('.file-choisen');
+    file.change(function(inpfil) {
+      block.addClass('visible-file');
+      var filename = inpfil.target.value.split('\\').pop();
+      text.text(filename);
+    });
+    close.click(function() {
+      file.val('');
+      block.removeClass('visible-file');
+    });
+  });
 });

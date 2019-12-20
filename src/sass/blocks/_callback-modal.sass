@@ -1,7 +1,11 @@
 .time-input
-  display: inline-block
-  position: relative
-  margin-right: 32px
+  display: flex
+  position: relative  
+  height: 24px
+  align-items: center
+.now-time-input 
+  margin-bottom: 10px  
+
 .callback
   padding: 50px 81px
   overflow: visible
@@ -25,7 +29,8 @@
     appearance: none
     -webkit-appearance: none
   &-input
-    height: 20px 
+    opacity: 0
+    z-index: -1 
     &-time
       +robot
       font-size: 15px
@@ -48,7 +53,7 @@
       content: ''
       position: absolute
       left: 0
-      top: 2px
+      top: 0px
       width: 24px
       height: 24px
       border-radius: 50%
@@ -57,7 +62,7 @@
       content: ''
       position: absolute
       left: 8px
-      top: 10px
+      top: 8px
       width: 8px
       height: 8px
       border-radius: 50%
@@ -93,5 +98,4 @@
       width: 100% 
     &-polici 
       max-width: none
-  .now-time-input 
-    margin-bottom: 8px                
+                  

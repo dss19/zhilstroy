@@ -509,4 +509,9 @@
         <path d="M4 12L5.41 13.41L11 7.83L11 44L13 44L13 7.83L18.58 13.42L20 12L12 4L4 12Z" fill="#507CDC"/>
     </symbol>
 
+    <symbol id="close-file" viewBox="0 0 16 16">
+        <rect x="15.0586" width="1.331" height="21.2959" transform="rotate(45 15.0586 0)" fill="#FF0000"/>
+        <rect y="0.941406" width="1.331" height="21.2959" transform="rotate(-45 0 0.941406)" fill="#FF0000"/>        
+    </symbol>
+
 </svg>

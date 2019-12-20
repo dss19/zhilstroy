@@ -1,0 +1,217 @@
+.form  
+  width: 100% 
+
+.input
+  position: relative
+  width: 100%    
+  &__field
+    position: relative
+    height: 67px
+    margin-bottom: 8px
+    padding-top: 35px
+    width: 100%  
+    border: none
+    border-bottom: 1px solid rgba($grey-color, 0.5)
+    outline: none
+    color: $black-color
+    font-size: 16px
+    line-height: 20px
+    +robot
+    background: transparent
+    z-index: 2
+    transition: 0.3s
+    
+  &__label
+    position: absolute
+    left: 10px
+    top: 41px
+    font-size: 16px
+    +robot
+    color: $grey-color
+    transform-origin: left
+    transition: 0.3s        
+  &__textarea
+    padding: 45px 10px 0    
+    word-wrap: break-word
+    height: 67px
+    overflow: hidden
+    // border: 1px solid rgba($grey-color, 0.5)
+    resize: none
+    outline: none
+  &__file
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    margin-top: 40px
+  &-btn 
+    +bold 
+    font-size: 14px
+    letter-spacing: 0.75px 
+    letter-spacing: 0.75px
+    text-transform: uppercase
+    border-radius: 4px
+    min-width: 182px
+    height: 48px
+    text-align: center
+    padding: 16px 0
+    color: $main-color
+    border: none
+    cursor: pointer
+    &_light      
+      background: #507CDC
+    &_red      
+      background: $red-color
+    &_green      
+      background: $green-color
+    &_blue      
+      background: $blue-color
+  &-submit 
+    align-items: center  
+           
+  &-polici
+    display: inline-block
+    margin-left: 26px
+    max-width: 255px 
+    +robot 
+    font-size: 12px
+    line-height: 12px
+    color: $grey-color
+    &_light 
+      span 
+        color: #507CDC
+    &_red
+      span 
+        color: $red-color         
+    &_green
+      span 
+        color: $green-color         
+    &_red
+      span 
+        color: $red-color         
+.file
+  display: flex
+  align-items: center
+  margin: 20px 0    
+  &-label
+    position: absolute
+    top: 0
+    left: 0
+    display: inline-block
+    text-align: center
+    +bold 
+    font-size: 14px
+    letter-spacing: 0.75px
+    color: $black-color
+    text-transform: uppercase
+    border: 1px solid rgba($grey-color, 0.36)
+    border-radius: 4px
+    padding: 16px 0
+    min-width: 182px
+    outline: none
+    cursor: pointer
+  &-choisen
+    margin: 7px 0 0 200px
+    transition: 0.3s
+    display: none
+    &__close 
+      width: 30px
+      height: 30px
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+    &__name
+      +robot 
+      font-size: 15px
+      line-height: 20px
+      letter-spacing: 0.16px
+      color: $black-color    
+.close-file
+  width: 16px
+  height: 16px
+.file-choisen.visible-file
+  display: flex
+  align-items: center      
+
+
+
+.focused-label  
+  transform: translateY(-20px) translateX(-10px) scale(0.75)
+  padding-left: 0
+
+
+.select
+  position: relative
+  cursor: pointer
+  &:after
+    position: absolute
+    top: 50%
+    right: 10px
+    content: url(../img/arrow_drop_down.svg)
+    
+  &-label 
+    top: 40px  
+
+  &-company 
+    border: none
+    width: 100%
+    height: 67px
+    border-bottom: 1px solid rgba($grey-color, 0.5)
+    appearance: none
+    -webkit-appearance: none
+    color: $black-color
+    font-size: 16px
+    line-height: 20px
+    +robot
+    padding-top: 36px
+    cursor: pointer  
+  &-option 
+    border: none
+    color: $black-color
+    font-size: 16px
+    line-height: 20px
+    +robot
+.input__textarea::-webkit-scrollbar
+  // width: 4px
+  display: none
+.input__textarea::-webkit-scrollbar-track
+  background: #E4ECF8
+.input__textarea::-webkit-scrollbar-thumb
+  background: #8B919F 
+  border-radius: 10px
+.input__field.error
+  border-bottom: 1px solid rgba(#FF004C, 0.87)
+  color: $black-color
+  font-size: 16px
+.error
+  font-size: 12px
+  line-height: 12px
+  +robot 
+  opacity: 0.87
+  color: rgba(#FF004C, 0.87)
+@media (max-width: 1024px)
+  .file
+    &-choisen
+      &__name
+        font-size: 13px
+        line-height: 17px
+        padding-left: 5px
+@media (max-width: 767px)
+  .form 
+    margin: 0 auto
+  .file-label 
+    width: 100%
+  .input
+    &-submit
+      flex-direction: column
+      align-items: flex-start
+    &-btn 
+      width: 100%
+      margin-bottom: 16px
+    &-polici 
+      margin-left: 0 
+  .file
+    flex-direction: column
+    align-items: flex-start
+    &-choisen
+      margin: 28px 0 0     
