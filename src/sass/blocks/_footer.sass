@@ -95,13 +95,24 @@
       width: 24px
       height: 44px  
   &-link
-    color: #507CDC
-    text-decoration: underline
+    position: relative
+    color: #507CDC    
     font-size: 14px
     line-height: 22px
     letter-spacing: 0.1px
     +robot
     margin-right: 32px
+    &:after
+      position: absolute
+      top: 100%
+      left: 0
+      width: 100%
+      height: 0.5px
+      content: ''
+      background: #2A7EF9
+      transform-origin: left center
+      transform: scaleX(0)
+      transition: 0.3s
   &-rights  
     margin-top: 8px
     &-text, &-webmaster
@@ -139,6 +150,8 @@
     &-block 
       &-inner 
         left: 14px
+    &-link
+      text-decoration: underline    
 @media (max-width: 767px)
   .footer 
     &-tabs 

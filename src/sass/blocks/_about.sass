@@ -25,11 +25,23 @@
       line-height: 20px
       letter-spacing: 0.16px
       color: $grey-color
-    &__link            
+    &__link
+      position: relative            
       font-size: 15px
       letter-spacing: 0.16px
       +robo
       color: #2A7EF9
+      &:after
+        position: absolute
+        top: calc(100% + 5px)
+        left: 0
+        width: 80px
+        height: 0.5px
+        content: ''
+        background: #2A7EF9
+        transform-origin: left center
+        transform: scaleX(0)
+        transition: 0.3s
   &-old 
     position: relative   
     width: 100%        
@@ -43,9 +55,9 @@
       right: 24px
       height: 100%
       overflow: hidden
-      
-      &__img 
-        transform: translateY(-125px)      
+      background-image: url(../img/city.jpg)
+      background-repeat: no-repeat
+      background-size: cover           
     &-element
       position: absolute
       left: 24.2%
@@ -55,7 +67,7 @@
       &__item
         width: 296px
         height: 487px
-        transform: translateY(-124px)
+        transform: translateY(-224px)
     &__cover
       position: absolute
       top: 0
@@ -132,7 +144,8 @@
       &-element
         &__item
           width: 215px
-          height: 353px         
+          height: 353px
+                  
      
                                        
         

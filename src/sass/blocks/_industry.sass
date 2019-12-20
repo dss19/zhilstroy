@@ -25,10 +25,19 @@
         line-height: 22px
         color: $grey-color
         margin-bottom: 24px
+        &:last-of-type 
+          margin-bottom: 0
+      &__btn 
+        display: flex
+        align-items: center
+        height: 50px 
+        cursor: pointer 
       &__arrow
+        transition: 0.3s
         width: 40px
         height: 16px
         cursor: pointer
+        fill: #8B919F
   &-detail
     flex-basis: 33.3%
     flex-direction: column

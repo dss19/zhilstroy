@@ -48,21 +48,22 @@ $(document).ready(function () {
     showCursor: false,
   });
 
-
+  // Паралакс в блоке 30 лет
   $(document).scroll(function () {
-    var pos = +$(this).scrollTop(),
-      city = $('.about-old-img__img'),
-      union = $('.about-old-element__item'),
-      indCity = (pos - 800) / 10,
-      indUnion = (pos - 800) / 5;
-    // console.log(pos);
-
-    if ($(this).scrollTop() > 800 && $(this).scrollTop() < 1650) {
-      city.css({
-        'transform': 'translateY(' + -indCity + 'px)'
-      });
+    var pos = +$(this).scrollTop(),      
+      union = $('.about-old-element__item');
+    console.log(pos);
+      
+    if ($(window).width() >= 768) {            
+      indUnion = (pos - 800) / 5;      
+      if ($(this).scrollTop() > 800 && $(this).scrollTop() < 1650) {      
+        union.css({
+          'transform': 'translateY(' + -indUnion + 'px)'
+        });
+      }
+    } else {
       union.css({
-        'transform': 'translateY(' + -indUnion + 'px)'
+        'transform': 'translateY(' + -50 + 'px)'
       });
     }
   });
@@ -187,12 +188,12 @@ $(document).ready(function () {
     var label;
     $('.input').focusin(function () {
       label = $(this).children('.input__label');
-      label.addClass('focused-label');
+      label.addClass('focused-label');      
     });
     $('.input').focusout(function () {
       var input = $(this).find('.input__field');
       if (input.val() == '') {
-        label.removeClass('focused-label');
+        label.removeClass('focused-label');        
       }
     });
   });
@@ -235,7 +236,7 @@ $(document).ready(function () {
     }, 200);
   });
 
-  $('.industry-desc-text__arrow').click(function() {    
+  $('.industry-desc-text__btn').click(function() {    
     var firstImg = $('.industry-img').eq(0);
     var currImg = $('.industry-img.active-img');    
     var currImgIndex = $('.industry-img.active-img').index();    
@@ -256,7 +257,7 @@ $(document).ready(function () {
   });
 
   
-  $('.industry-desc-text__arrow').click(function() {    
+  $('.industry-desc-text__btn').click(function() {    
     var firstText = $('#text1');
     var secondText = $('#text2');
     var lastText = $('#text3');   

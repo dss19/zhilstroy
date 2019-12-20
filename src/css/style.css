@@ -339,15 +339,6 @@ img {
   background: #000000;
 }
 
-.hovered {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.hovered:hover .header-menu__link {
-  color: #A90F3D;
-}
-
 .form {
   width: 100%;
 }
@@ -374,6 +365,8 @@ img {
   -webkit-font-smoothing: antialiased;
   background: transparent;
   z-index: 2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .input__label {
@@ -719,6 +712,88 @@ img {
   }
   .input-polici {
     margin-left: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .menu-link.fixed {
+    -webkit-transition: hover 0.3s;
+    transition: hover 0.3s;
+  }
+  .menu-link.fixed:hover {
+    color: #A90F3D;
+  }
+  .main-link__btn {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .main-link__btn:hover {
+    background: #5877BA;
+  }
+  .about-item__link:hover:after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .section-buttons-btn {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .section-buttons-btn_red:hover, .section-buttons-btn_blue:hover, .section-buttons-btn_green:hover, .section-buttons-btn_white:hover {
+    background: rgba(255, 255, 255, 0.85);
+  }
+  .dev-section-btn:hover {
+    color: #A90F3D;
+  }
+  .ind-section-btn:hover {
+    color: #009944;
+  }
+  .etl-section-btn:hover {
+    color: #2F2482;
+  }
+  .development-gallery-item:hover .development-gallery-item__img {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  .development-gallery-item:hover .development-gallery-item__cover {
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .development-block-info__link:hover {
+    color: #ffffff;
+    background: #A90F3D;
+    border: 1px solid #A90F3D;
+  }
+  .development-sale-desc__btn:hover {
+    background: rgba(169, 15, 61, 0.85);
+  }
+  .industry-desc-text__btn:hover .industry-desc-text__arrow {
+    -webkit-transform: translateX(16px);
+            transform: translateX(16px);
+    fill: #009944;
+  }
+  .footer-copyrights-btn:hover svg {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .footer-rights-webmaster:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #507CDC;
+  }
+  .footer-link:hover:after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .input-btn:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background: rgba(80, 124, 220, 0.85);
+  }
+  .input-btn_red:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background: rgba(169, 15, 61, 0.85);
   }
 }
 
@@ -4952,10 +5027,6 @@ html {
   transition: opacity 0.15s;
 }
 
-.fancybox-close-small:hover {
-  opacity: 1;
-}
-
 @media (max-width: 767px) {
   .callback {
     margin-top: 50px;
@@ -5978,12 +6049,29 @@ html {
 }
 
 .about-item__link {
+  position: relative;
   font-size: 15px;
   letter-spacing: 0.16px;
   font-family: 'Roboto Regular', sans-serif;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   color: #2A7EF9;
+}
+
+.about-item__link:after {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 80px;
+  height: 0.5px;
+  content: '';
+  background: #2A7EF9;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .about-old {
@@ -6001,11 +6089,9 @@ html {
   right: 24px;
   height: 100%;
   overflow: hidden;
-}
-
-.about-old-img__img {
-  -webkit-transform: translateY(-125px);
-          transform: translateY(-125px);
+  background-image: url(../img/city.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about-old-element {
@@ -6019,8 +6105,8 @@ html {
 .about-old-element__item {
   width: 296px;
   height: 487px;
-  -webkit-transform: translateY(-124px);
-          transform: translateY(-124px);
+  -webkit-transform: translateY(-224px);
+          transform: translateY(-224px);
 }
 
 .about-old__cover {
@@ -6325,6 +6411,8 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 8px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .development-gallery {
@@ -6344,15 +6432,6 @@ html {
   overflow: hidden;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-}
-
-.development-gallery-item:hover .development-gallery-item__img {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
-}
-
-.development-gallery-item:hover .development-gallery-item__cover {
-  background: rgba(0, 0, 0, 0.15);
 }
 
 .development-gallery-item__img {
@@ -6457,6 +6536,8 @@ html {
   padding: 24px 0;
   width: 256px;
   text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .development-phones {
@@ -6668,10 +6749,28 @@ html {
   margin-bottom: 24px;
 }
 
+.industry-desc-text__subtitle:last-of-type {
+  margin-bottom: 0;
+}
+
+.industry-desc-text__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  cursor: pointer;
+}
+
 .industry-desc-text__arrow {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   width: 40px;
   height: 16px;
   cursor: pointer;
+  fill: #8B919F;
 }
 
 .industry-detail {
@@ -7475,8 +7574,8 @@ html {
 }
 
 .footer-link {
+  position: relative;
   color: #507CDC;
-  text-decoration: underline;
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.1px;
@@ -7484,6 +7583,22 @@ html {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   margin-right: 32px;
+}
+
+.footer-link:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0.5px;
+  content: '';
+  background: #2A7EF9;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .footer-rights {
@@ -7547,6 +7662,9 @@ html {
 @media (max-width: 1024px) {
   .footer-block-inner {
     left: 14px;
+  }
+  .footer-link {
+    text-decoration: underline;
   }
 }
 

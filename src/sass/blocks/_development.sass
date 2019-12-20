@@ -114,6 +114,7 @@
         justify-content: center
         align-items: center
         margin-bottom: 8px
+        transition: 0.3s
   
   &-gallery
     position: relative    
@@ -126,12 +127,11 @@
       display: block
       max-width: 304px      
       overflow: hidden
-      transform-style: preserve-3d
-      
-      &:hover &__img         
-        transform: scale(1.15)
-      &:hover &__cover
-        background: rgba(0, 0, 0, 0.15)    
+      transform-style: preserve-3d      
+      // &:hover &__img         
+      //   transform: scale(1.15)
+      // &:hover &__cover
+      //   background: rgba(0, 0, 0, 0.15)    
       &__img        
         display: block
         transition: 0.5s       
@@ -183,7 +183,8 @@
         line-height: 20px
         +robo
         letter-spacing: 0.16px
-        margin-bottom: 24px                
+        margin-bottom: 24px  
+                     
       &__btn
         +bold 
         font-size: 14px
@@ -196,6 +197,7 @@
         padding: 24px 0
         width: 256px
         text-align: center
+        transition: 0.3s 
           
   &-phones
     display: flex
@@ -304,10 +306,7 @@
       margin-bottom: 24px 
     &-bottom 
       height: 450px
-      padding-top: 50px  
+      padding-top: 50px 
 
 
-
-   
-    
-    
+  
