@@ -6,31 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="css/style.css">  
+  <link rel="stylesheet" href="css/style.css">
   <title>Компания "Жилстрой"</title>
 </head>
 
 <body>
-
-  <!-- Прелоадер -->
-  <!-- <div class="preloader">
-    <svg class="load">
-      <use xlink:href="sprite.svg#logo-long"></use>
-    </svg>
-  </div> -->
-  <!-- /Прелоадер -->
-
   <!-- Главная -->
-  <main class="main">    
+  <main class="main">
     <div class="main-video">
       <video autoplay loop muted playsinline>
         <source src="img/video/31.mp4" type='video/mp4'>
       </video>
       <div class="main-video-cover">
-        <img src="img/video/cover.png" alt="полоски">
+        <img src="img/cover.png" alt="полоски">
       </div>
     </div>
-    <div class="menu-button">        
+    <div class="main-mobile-cover">
+      <svg class="main-mobile-cover__element">
+        <use xlink:href="img/sprite.svg#union"></use>
+      </svg>      
+    </div>
+    <div class="menu-button">
       <span class="menu-text">меню</span>
       <span class="menu-btn"></span>
     </div>
@@ -42,11 +38,9 @@
       <li><a href="#etalon" class="menu-link">эталон<br>жилстрой</a></li>
       <li><a href="#contacts" data-click="gr-link" class="menu-link">контакты</a></li>
     </ul>
-      
-    
     <header class="header d-flex justify-content-between align-items-center">
       <svg class="header-logo">
-        <use xlink:href="sprite.svg#logo-long"></use>
+        <use xlink:href="img/sprite.svg#logo-long"></use>
       </svg>
     </header>
     <div class="main-text">
@@ -59,7 +53,7 @@
       <a data-fancybox href="https://www.youtube.com/watch?v=nlaeyW9QK0U"
         class="main-link__btn d-flex align-items-center">
         <svg class="play">
-          <use xlink:href="sprite.svg#play"></use>
+          <use xlink:href="img/sprite.svg#play"></use>
         </svg>
         <span>Смотреть видео</span>
       </a>
@@ -89,7 +83,7 @@
           <div class="about-item col-12 col-md-4 m-0">
             <div class="about-item-inner">
               <svg class="about-logo">
-                <use xlink:href="sprite.svg#logo-dev"></use>
+                <use xlink:href="img/sprite.svg#logo-dev"></use>
               </svg>
               <div class="d-flex flex-column">
                 <span class="about-item__text">Строительство жилых домов, производственных, административных, торговых
@@ -101,7 +95,7 @@
           <div class="about-item col-12 col-md-4 m-0">
             <div class="about-item-inner">
               <svg class="about-logo">
-                <use xlink:href="sprite.svg#logo-ind"></use>
+                <use xlink:href="img/sprite.svg#logo-ind"></use>
               </svg>
               <div class="d-flex flex-column">
                 <span class="about-item__text">Производство ЖБИ, качественного товарного бетона и строительных растворов
@@ -114,7 +108,7 @@
           <div class="about-item col-12 col-md-4 m-0">
             <div class="about-item-inner">
               <svg class="about-logo">
-                <use xlink:href="sprite.svg#logo-etl"></use>
+                <use xlink:href="img/sprite.svg#logo-etl"></use>
               </svg>
               <div class="d-flex flex-column">
                 <span class="about-item__text">Решение организационных задач, управление и эксплуатация технического
@@ -128,11 +122,11 @@
     </div>
     <div class="about-old">
       <div class="about-old-img">
-        
+
       </div>
       <div class="about-old-element">
         <svg class="about-old-element__item">
-          <use xlink:href="sprite.svg#union"></use>
+          <use xlink:href="img/sprite.svg#union"></use>
         </svg>
       </div>
       <div class="about-old__cover"></div>
@@ -149,7 +143,7 @@
     <div class="development-wrap section-wrap">
       <div class="container-large">
         <svg class="container-large__logo">
-          <use xlink:href="sprite.svg#logo-dev"></use>
+          <use xlink:href="img/sprite.svg#logo-dev"></use>
         </svg>
         <div class="container-short">
           <span class="development-name section-name">надежная девелоперская компания</span>
@@ -703,11 +697,11 @@
             </a>
             <div class="d-none">
               <a href="img/dev/gallery/big/master2.jpg" data-fancybox="quick-view-201" data-type="image"></a>
-              <a href="img/dev/gallery/big/master3.jpg" data-fancybox="quick-view-201" data-type="image"></a>              
+              <a href="img/dev/gallery/big/master3.jpg" data-fancybox="quick-view-201" data-type="image"></a>
               <div class="social-product-form">
                 <div class="product-block">
                   <span class="product-name">ТЦ «МастерДом»</span>
-                  
+
                   <span class="product-dot"></span>
                   <span class="product-numbers">2660 м<sup>2</sup></span>
                   <span class="product-slash"></span>
@@ -764,7 +758,7 @@
                     черте города, близость к трассе М5. Отдельно стоящий склад, площадью более 4600 метров со встроенным
                     двухэтажным АБК (площадью 400 кв.м.), все коммуникакции, высота потолков 10 м., нагрузка на пол - 5
                     тонн/кв.м., 13 ворот, из которых 10 оборудованы докшелтерами и докревеллерами.
-                    Разворотная площадка – 30 метров.                    
+                    Разворотная площадка – 30 метров.
                   </div>
                 </div>
               </div>
@@ -783,7 +777,7 @@
               <a href="img/dev/gallery/big/kvm3.jpg" data-fancybox="quick-view-203" data-type="image"></a>
               <a href="img/dev/gallery/big/kvm4.jpg" data-fancybox="quick-view-203" data-type="image"></a>
               <a href="img/dev/gallery/big/kvm5.jpg" data-fancybox="quick-view-203" data-type="image"></a>
-              
+
               <div class="social-product-form">
                 <div class="product-block">
                   <span class="product-name">«Квадратный метр»</span>
@@ -819,11 +813,11 @@
             </a>
             <div class="d-none">
               <a href="img/dev/gallery/big/eco2.jpg" data-fancybox="quick-view-204" data-type="image"></a>
-              <a href="img/dev/gallery/big/eco3.jpg" data-fancybox="quick-view-204" data-type="image"></a>              
+              <a href="img/dev/gallery/big/eco3.jpg" data-fancybox="quick-view-204" data-type="image"></a>
               <div class="social-product-form">
                 <div class="product-block">
                   <span class="product-name">ТЦ «ЭкономМебель»</span>
-                  
+
                   <span class="product-dot"></span>
                   <span class="product-numbers">1422 м<sup>2</sup></span>
                   <span class="product-slash"></span>
@@ -890,7 +884,7 @@
             </a>
             <div class="d-none">
               <a href="img/dev/gallery/big/diva2.jpg" data-fancybox="quick-view-206" data-type="image"></a>
-              <a href="img/dev/gallery/big/diva3.jpg" data-fancybox="quick-view-206" data-type="image"></a>              
+              <a href="img/dev/gallery/big/diva3.jpg" data-fancybox="quick-view-206" data-type="image"></a>
               <div class="social-product-form">
                 <div class="product-block">
                   <span class="product-name">ТЦ «Дивакерамика»</span>
@@ -923,7 +917,7 @@
               <span class="development-gallery-item__text">Магазин «Эконом», ул. 8 Марта, 7Б</span>
             </a>
             <div class="d-none">
-              <a href="img/dev/gallery/big/econom2.jpg" data-fancybox="quick-view-207" data-type="image"></a>             
+              <a href="img/dev/gallery/big/econom2.jpg" data-fancybox="quick-view-207" data-type="image"></a>
               <div class="social-product-form">
                 <div class="product-block">
                   <span class="product-name">Магазин «Эконом»</span>
@@ -941,7 +935,45 @@
                     <span class="development-block-info__place">г. Пенза, ул. 8 Марта, 7Б</span>
                   </div>
                   <div class="product-info-text">
-                    Большая площадь под магазин в отдельно стоящем трехэтажном здании. Парковка перед магазином, подвключены все коммуникации. Первая линия, большой пешеходный и автомобильный трафик. В 10 метрах от остановки общественного транспорта «ул. 8 Марта»
+                    Большая площадь под магазин в отдельно стоящем трехэтажном здании. Парковка перед магазином,
+                    подвключены все коммуникации. Первая линия, большой пешеходный и автомобильный трафик. В 10 метрах
+                    от остановки общественного транспорта «ул. 8 Марта»
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social-product">
+            <a href="img/dev/gallery/big/sharya.jpg" data-fancybox="quick-view-208" data-type="image"
+              class="development-gallery-item">
+              <img class="development-gallery-item__img" src="img/dev/gallery/small/sharya.jpg" alt="Шарья">
+              <div class="development-gallery-item__cover"></div>
+              <span class="development-gallery-item__text">ТК «Шарья», ул. Совхозная, 15</span>
+            </a>
+            <div class="d-none">
+              <a href="img/dev/gallery/big/sharya2.jpg" data-fancybox="quick-view-208" data-type="image"></a>
+              <a href="img/dev/gallery/big/sharya3.jpg" data-fancybox="quick-view-208" data-type="image"></a>
+              <div class="social-product-form">
+                <div class="product-block">
+                  <span class="product-name">ТК «Шарья»</span>
+                  <span class="product-dot"></span>
+                  <span class="product-numbers">1510 м<sup>2</sup></span>
+                  <span class="product-slash"></span>
+                  <div class="fancybox-infobar">
+                    <span class="fancybox-infobar-index" data-fancybox-index></span>
+                    <span class="fancybox-infobar-counter" data-fancybox-count></span>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <div class="product-info-about">
+                    <span class="development-block-info__adress">адрес</span>
+                    <span class="development-block-info__place">г. Пенза, ул. Совхозная, 15</span>
+                  </div>
+                  <div class="product-info-text">
+                    Отапливаемые склады площадью от 400 кв.м, высота потолка - 6 метров. Охраняемая
+                    территория,круглосуточный доступ в помещение. Возможность разгрузки фуры, без эстакады. Удобное
+                    территориальное расположение – в черте города, близость к трассе М5. Здание находится на одной
+                    площадке с Транспортными компаниями Деловые Линии, GTO. Коммуникации: отопление, свет.
                   </div>
                 </div>
               </div>
@@ -965,7 +997,8 @@
         <div class="section-buttons">
           <a data-fancybox="modal" data-src="#callback-modal" href="javascript:;"
             class="section-buttons-btn section-buttons-btn_red">обратный звонок</a>
-          <a href="#contacts" data-click="dev-link" class="section-buttons-btn section-buttons-btn_white dev-section-btn scroll-link">контакты</a>
+          <a href="#contacts" data-click="dev-link"
+            class="section-buttons-btn section-buttons-btn_white dev-section-btn scroll-link">контакты</a>
         </div>
       </div>
     </div>
@@ -978,7 +1011,7 @@
     <div class="industry-wrap section-wrap">
       <div class="container-large">
         <svg class="container-large__logo">
-          <use xlink:href="sprite.svg#logo-ind"></use>
+          <use xlink:href="img/sprite.svg#logo-ind"></use>
         </svg>
         <div class="container-short">
           <span class="industry-name section-name">ПРОИЗВОДСТВО БЕТОНА И ЖБИ</span>
@@ -1019,7 +1052,7 @@
                 ГОСТу</a>
               <div class="industry-desc-text__btn">
                 <svg class="industry-desc-text__arrow">
-                  <use xlink:href="sprite.svg#arrow-right"></use>
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
                 </svg>
               </div>
             </div>
@@ -1063,7 +1096,7 @@
             <div class="industry-items col-12 col-md-4 p-0">
               <div class="industry-items-wrap">
                 <svg class="industry-items__svg">
-                  <use xlink:href="sprite.svg#lieb"></use>
+                  <use xlink:href="img/sprite.svg#lieb"></use>
                 </svg>
                 <img src="img/ind/lieb.jpg" alt="liebherr" class="industry-items__img d-block">
               </div>
@@ -1072,7 +1105,7 @@
             <div class="industry-items col-12 col-md-4 p-0">
               <div class="industry-items-wrap">
                 <svg class="industry-items__svg">
-                  <use xlink:href="sprite.svg#witech"></use>
+                  <use xlink:href="img/sprite.svg#witech"></use>
                 </svg>
                 <img src="img/ind/witech.jpg" alt="witech" class="industry-items__img d-block">
               </div>
@@ -1081,7 +1114,7 @@
             <div class="industry-items col-12 col-md-4 p-0">
               <div class="industry-items-wrap">
                 <svg class="industry-items__svg">
-                  <use xlink:href="sprite.svg#zavod"></use>
+                  <use xlink:href="img/sprite.svg#zavod"></use>
                 </svg>
                 <span class="industry-items__numbers d-block">14000т ЦЕМЕНТА</span>
               </div>
@@ -1145,8 +1178,10 @@
         <div class="section-buttons">
           <a data-fancybox="modal1" data-src="#callback-modal" href="javascript:;"
             class="section-buttons-btn section-buttons-btn_green">обратный звонок</a>
-          <a href="http://zhilstroy-pnz.ru/" target="_blank" class="section-buttons-btn section-buttons-btn_white site-btn ind-section-btn">сайт компании</a>
-          <a href="#contacts" data-click="ind-link" class="section-buttons-btn section-buttons-btn_white ind-section-btn scroll-link">контакты</a>
+          <a href="http://zhilstroy-pnz.ru/" target="_blank"
+            class="section-buttons-btn section-buttons-btn_white site-btn ind-section-btn">сайт компании</a>
+          <a href="#contacts" data-click="ind-link"
+            class="section-buttons-btn section-buttons-btn_white ind-section-btn scroll-link">контакты</a>
         </div>
       </div>
     </div>
@@ -1159,7 +1194,7 @@
     <div class="section-wrap">
       <div class="container-large">
         <svg class="container-large__logo">
-          <use xlink:href="sprite.svg#logo-etl"></use>
+          <use xlink:href="img/sprite.svg#logo-etl"></use>
         </svg>
         <div class="container-short">
           <span class="etalon-name section-name">УПРАВЛЯЮЩАЯ КОМПАНИЯ ЖКХ</span>
@@ -1198,7 +1233,7 @@
               <div class="etalon-block-value-info">
                 <div class="etalon-block-value-info__icon">
                   <svg class="etalon-block-value-info__svg">
-                    <use xlink:href="sprite.svg#family"></use>
+                    <use xlink:href="img/sprite.svg#family"></use>
                   </svg>
                 </div>
                 <div class="etalon-block-value-info__text">счастливых семей</div>
@@ -1219,20 +1254,20 @@
             <div class="etalon-works-items d-flex">
               <div class="etalon-works-item col-12 col-md-4 p-0">
                 <svg class="etalon-works-item__svg">
-                  <use xlink:href="sprite.svg#house"></use>
+                  <use xlink:href="img/sprite.svg#house"></use>
                 </svg>
                 <span class="etalon-works-item__text">Работы по содержанию<br>несущих и ненесущих<br>конструкций</span>
               </div>
               <div class="etalon-works-item col-12 col-md-4 p-0">
                 <svg class="etalon-works-item__svg">
-                  <use xlink:href="sprite.svg#pipe"></use>
+                  <use xlink:href="img/sprite.svg#pipe"></use>
                 </svg>
                 <span class="etalon-works-item__text">Работы по содержанию<br>оборудования и
                   систем<br>инженерно-технического<br>обеспечения</span>
               </div>
               <div class="etalon-works-item col-12 col-md-4 p-0">
                 <svg class="etalon-works-item__svg">
-                  <use xlink:href="sprite.svg#sport"></use>
+                  <use xlink:href="img/sprite.svg#sport"></use>
                 </svg>
                 <span class="etalon-works-item__text">Работы и услуги<br>по содержанию иного<br>общедомового
                   имущества</span>
@@ -1254,7 +1289,8 @@
         <div class="section-buttons">
           <a data-fancybox="modal2" data-src="#callback-modal" href="javascript:;"
             class="section-buttons-btn section-buttons-btn_blue">обратный звонок</a>
-          <a href="#contacts" data-click="etl-link" class="section-buttons-btn section-buttons-btn_white etl-section-btn scroll-link">контакты</a>
+          <a href="#contacts" data-click="etl-link"
+            class="section-buttons-btn section-buttons-btn_white etl-section-btn scroll-link">контакты</a>
         </div>
       </div>
     </div>
@@ -1268,10 +1304,14 @@
       <div class="container-short">
         <h2 class="footer-title section-title">Контакты</h2>
         <ul class="footer-tabs d-flex p-0">
-          <li><a data-ya-x="53.187312460901715" data-ya-y="45.04434658332824" data-icon="./img/1.svg" class="footer-tabs-link gr-link active-link" href="#group">Группа компаний</a></li>
-          <li><a data-ya-x="53.23876876274577" data-ya-y="45.00100715854308" data-icon="./img/2.svg" class="footer-tabs-link dev-link" href="#dev">Жилстрой девелопмент</a></li>
-          <li><a data-ya-x="53.23876876274577" data-ya-y="45.00142558314942" data-icon="./img/3.svg" class="footer-tabs-link ind-link" href="#ind">Жилстрой индустрия</a></li>
-          <li><a data-ya-x="53.221452928015665" data-ya-y="44.9285538214264" data-icon="./img/4.svg" class="footer-tabs-link etl-link" href="#etl">Эталон Жилстрой</a></li>
+          <li><a data-ya-x="53.187312460901715" data-ya-y="45.04434658332824" data-icon="./img/1.svg"
+              class="footer-tabs-link gr-link active-link" href="#group">Группа компаний</a></li>
+          <li><a data-ya-x="53.23876876274577" data-ya-y="45.00100715854308" data-icon="./img/2.svg"
+              class="footer-tabs-link dev-link" href="#dev">Жилстрой девелопмент</a></li>
+          <li><a data-ya-x="53.23876876274577" data-ya-y="45.00142558314942" data-icon="./img/3.svg"
+              class="footer-tabs-link ind-link" href="#ind">Жилстрой индустрия</a></li>
+          <li><a data-ya-x="53.221452928015665" data-ya-y="44.9285538214264" data-icon="./img/4.svg"
+              class="footer-tabs-link etl-link" href="#etl">Эталон Жилстрой</a></li>
         </ul>
       </div>
     </div>
@@ -1320,7 +1360,7 @@
                 <div class="file-choisen">
                   <div class="file-choisen__close">
                     <svg class="close-file">
-                      <use xlink:href="sprite.svg#close-file"></use>
+                      <use xlink:href="img/sprite.svg#close-file"></use>
                     </svg>
                   </div>
                   <span class="file-choisen__name">выбранный файл</span>
@@ -1338,7 +1378,7 @@
               <div class="footer-tabs-info">
                 <div class="footer-tabs-icon">
                   <svg class="footer-tabs-logo">
-                    <use xlink:href="sprite.svg#logo-group"></use>
+                    <use xlink:href="img/sprite.svg#logo-group"></use>
                   </svg>
                 </div>
                 <div class="footer-tabs-contacts">
@@ -1369,7 +1409,7 @@
               <div class="footer-tabs-info">
                 <div class="footer-tabs-icon">
                   <svg class="footer-tabs-logo">
-                    <use xlink:href="sprite.svg#logo-dev"></use>
+                    <use xlink:href="img/sprite.svg#logo-dev"></use>
                   </svg>
                 </div>
                 <div class="footer-tabs-contacts">
@@ -1392,7 +1432,7 @@
               <div class="footer-tabs-info">
                 <div class="footer-tabs-icon">
                   <svg class="footer-tabs-logo">
-                    <use xlink:href="sprite.svg#logo-ind"></use>
+                    <use xlink:href="img/sprite.svg#logo-ind"></use>
                   </svg>
                 </div>
                 <div class="footer-tabs-contacts">
@@ -1415,7 +1455,7 @@
               <div class="footer-tabs-info">
                 <div class="footer-tabs-icon">
                   <svg class="footer-tabs-logo">
-                    <use xlink:href="sprite.svg#logo-etl"></use>
+                    <use xlink:href="img/sprite.svg#logo-etl"></use>
                   </svg>
                 </div>
                 <div class="footer-tabs-contacts">
@@ -1441,7 +1481,7 @@
     <div class="footer-copyrights">
       <div class="footer-copyrights-btn d-flex justify-content-center align-items-center">
         <svg class="footer-copyrights-button">
-          <use xlink:href="sprite.svg#top-btn"></use>
+          <use xlink:href="img/sprite.svg#top-btn"></use>
         </svg>
       </div>
       <div class="container-large">
@@ -1586,7 +1626,7 @@
   <script src="js/jquery.fancybox.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
-  <script src="js/jquery.maskedinput.min.js"></script>  
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/select2.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=c894f359-adae-45c4-b930-8a86e08d2dc0&lang=ru_RU"></script>
   <script src="js/main.js"></script>

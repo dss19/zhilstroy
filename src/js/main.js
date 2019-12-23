@@ -1,16 +1,7 @@
-// Прелоадер 
-
-setTimeout(function() {
-  $('.preloader').addClass('done');
-}, 3000);
-
-// Воспроизведение видео на Iphone
-
-var video = $('video').get(0);
-enableInlineVideo(video);
-
 $(document).ready(function () {
-  
+  // Воспроизведение видео на Iphone
+  var video = $('video').get(0);
+  enableInlineVideo(video);
 
   // Меню
   var fixMenu = $('#about').offset().top;  
@@ -35,7 +26,7 @@ $(document).ready(function () {
 
   // Typed JS (Печатающийся текст)
   var typed = new Typed('.main-text-typed', {
-    strings: ["<text style='background:#A90F3D'>строим здания&#160;&#160;</text>", "<text style='background:#009944'>производим бетон и ЖБИ&#160;&#160;</text>", "<text style='background:#2F2482'>обслуживаем дома&#160;&#160;</text>"],
+    strings: ["<text style='background:#A90F3D'>строим здания&#160;&#160;</text>", "<text style='background:#009944'>производим бетон и&nbsp;ЖБИ&#160;&#160;</text>", "<text style='background:#2F2482'>обслуживаем дома&#160;&#160;</text>"],
     typeSpeed: 50,
     startDelay: 1000,
     backSpeed: 30,

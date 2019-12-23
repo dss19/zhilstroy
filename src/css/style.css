@@ -533,14 +533,18 @@ img {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  .input-btn:hover {
+  .input-btn {
     -webkit-transition: 0.3s;
     transition: 0.3s;
+  }
+  .input-btn:hover {
     background: rgba(80, 124, 220, 0.85);
   }
-  .input-btn_red:hover {
+  .input-btn_red {
     -webkit-transition: 0.3s;
     transition: 0.3s;
+  }
+  .input-btn_red:hover {
     background: rgba(169, 15, 61, 0.85);
   }
 }
@@ -5581,6 +5585,7 @@ html {
 
 .main-video video {
   width: 100%;
+  display: block;
 }
 
 .main-video-cover {
@@ -5595,7 +5600,9 @@ html {
 }
 
 .main-video-cover img {
+  display: block;
   width: 100%;
+  height: 100%;
   overflow: hidden;
   opacity: 0.2;
 }
@@ -5682,6 +5689,24 @@ html {
   color: #ffffff;
 }
 
+.main-mobile-cover {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 370px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#232323), to(#232323)), -webkit-gradient(linear, left top, left bottom, from(rgba(21, 21, 21, 0)), to(#151515));
+  background: linear-gradient(0deg, #232323, #232323), linear-gradient(180deg, rgba(21, 21, 21, 0) 0%, #151515 100%);
+}
+
+.main-mobile-cover__element {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 160px);
+  width: 215px;
+  height: 353px;
+  opacity: 0.1;
+}
+
 @media (max-width: 1440px) {
   .main {
     overflow: hidden;
@@ -5736,7 +5761,10 @@ html {
 
 @media (max-width: 767px) {
   .main-video {
-    width: 1520px;
+    width: 100%;
+  }
+  .main-mobile-cover {
+    display: block;
   }
   .main-text {
     left: calc(50% - 160px);
@@ -5757,6 +5785,12 @@ html {
   }
   .main-block {
     border-radius: 7px 7px 0px 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-video video {
+    min-width: 585px;
   }
 }
 
@@ -5808,6 +5842,7 @@ html {
 
 .about-item__link {
   position: relative;
+  display: block;
   font-size: 15px;
   letter-spacing: 0.16px;
   font-family: 'Roboto Regular', sans-serif;
@@ -5818,10 +5853,11 @@ html {
 
 .about-item__link:after {
   position: absolute;
+  display: block;
   top: calc(100% + 5px);
   left: 0;
   width: 80px;
-  height: 0.5px;
+  height: 1px;
   content: '';
   background: #2A7EF9;
   -webkit-transform-origin: left center;
@@ -6032,7 +6068,7 @@ html {
   top: 0;
   left: 100%;
   width: calc(50vw + 39% + 3px);
-  background-image: url(../img/dev/beton.jpg);
+  background-image: url(../img/dev/Beton.jpg);
   height: 320px;
   padding: 49px 0 0 81px;
   overflow: hidden;
