@@ -133,28 +133,38 @@
 @media (max-width: 767px)
   .main
     &-video 
-      width: 100%
+      width: 100%      
     &-mobile-cover
       display: block  
     &-text 
       left: calc(50% - 160px)
       top: 262px
     &-link 
-      width: 100%
-      max-width: 328px
-      height: 136px
-      padding: 12px 32px
-      left: calc(50% - 164px)
-      &__subtitle 
-        margin-bottom: 0
-      &__title
-        margin-bottom: 5px 
+      width: 100% 
+      margin: 0 16px    
+      padding: 0 32px 0 0
+      height: auto
+      left: auto
+      right: auto
+      border: none
+      background: rgba($black-color, 0)
+      &__subtitle, &__title 
+        display: none
+      &__btn
+        width: 100%
+        justify-content: center
+        background: rgba($black-color, 0)
+        border: 1px solid #CBCBCB
+         
+       
     &-block
       border-radius: 7px 7px 0px 0px
 @media (max-width: 576px)
-  .main-video
-    video 
-      min-width: 585px             
+  .main
+    &-video
+      video 
+        min-width: 585px
+
 
 
 

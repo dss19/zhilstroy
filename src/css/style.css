@@ -5772,16 +5772,24 @@ html {
   }
   .main-link {
     width: 100%;
-    max-width: 328px;
-    height: 136px;
-    padding: 12px 32px;
-    left: calc(50% - 164px);
+    margin: 0 16px;
+    padding: 0 32px 0 0;
+    height: auto;
+    left: auto;
+    right: auto;
+    border: none;
+    background: rgba(0, 0, 0, 0);
   }
-  .main-link__subtitle {
-    margin-bottom: 0;
+  .main-link__subtitle, .main-link__title {
+    display: none;
   }
-  .main-link__title {
-    margin-bottom: 5px;
+  .main-link__btn {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #CBCBCB;
   }
   .main-block {
     border-radius: 7px 7px 0px 0px;
