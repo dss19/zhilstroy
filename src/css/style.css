@@ -6703,28 +6703,42 @@ html {
 }
 
 .industry-block {
-  width: 80%;
+  position: relative;
+  width: 100%;
   height: 488px;
-  background-image: url(../img/ind/Beton4.jpg);
-  background-size: cover;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   margin-bottom: 50px;
 }
 
+.industry-block-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  min-width: 1300px;
+  height: 100%;
+  background-image: url(../img/ind/Beton4.jpg);
+  background-size: cover;
+}
+
 .industry-block-inner {
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .industry-block-text {
+  z-index: 0;
   margin-right: 100px;
 }
 
 .industry-block-img {
-  margin-right: 4.5vw;
+  z-index: 0;
+}
+
+.industry-block-img img {
+  display: block;
+  width: 100%;
 }
 
 .industry-block-value {
@@ -6792,6 +6806,13 @@ html {
   color: #009944;
 }
 
+@media (max-width: 1440px) {
+  .industry-block-wrapper {
+    width: 90%;
+    min-width: 1078px;
+  }
+}
+
 @media (max-width: 1200px) {
   .industry-detail-area {
     width: calc(50vw + 39% + 8px);
@@ -6800,8 +6821,9 @@ html {
   .industry-detail-area__index {
     font-size: 324px;
   }
-  .industry-block {
-    width: 95%;
+  .industry-block-wrapper {
+    width: 96%;
+    min-width: 940px;
   }
   .industry-block-img {
     margin-right: 3vw;
@@ -6849,6 +6871,10 @@ html {
   .industry-block {
     width: 100%;
     margin: 460px 0 0;
+  }
+  .industry-block-wrapper {
+    width: 100%;
+    min-width: 0;
   }
   .industry-block-inner {
     -webkit-box-orient: vertical;
@@ -7006,28 +7032,37 @@ html {
 }
 
 .etalon-block {
-  width: 80%;
+  position: relative;
+  width: 100%;
   height: 488px;
-  background-image: url(../img/ind/Beton4.jpg);
-  background-size: cover;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   margin-bottom: 50px;
 }
 
+.etalon-block-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  min-width: 1300px;
+  height: 100%;
+  background-image: url(../img/ind/Beton4.jpg);
+  background-size: cover;
+}
+
 .etalon-block-inner {
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .etalon-block-text {
+  z-index: 0;
   margin-right: 80px;
 }
 
 .etalon-block-img {
-  margin-right: 3vw;
+  z-index: 0;
   -webkit-transform: translateY(-57px);
           transform: translateY(-57px);
 }
@@ -7111,9 +7146,17 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+@media (max-width: 1440px) {
+  .etalon-block-wrapper {
+    width: 90%;
+    min-width: 1078px;
+  }
+}
+
 @media (max-width: 1200px) {
-  .etalon-block {
-    width: 95%;
+  .etalon-block-wrapper {
+    width: 96%;
+    min-width: 940px;
   }
   .etalon-block-img {
     margin-right: 3vw;
@@ -7128,8 +7171,11 @@ html {
 
 @media (max-width: 1024px) {
   .etalon-block {
-    width: 100%;
     margin-top: 430px;
+  }
+  .etalon-block-wrapper {
+    width: 100%;
+    min-width: 0;
   }
   .etalon-block-inner {
     -webkit-box-orient: vertical;
@@ -7154,9 +7200,6 @@ html {
 }
 
 @media (max-width: 767px) {
-  .etalon-block {
-    margin-top: 328px;
-  }
   .etalon-block-img {
     margin: 0 16px;
   }
@@ -7225,6 +7268,24 @@ html {
   }
   .etalon-bottom {
     height: 338px;
+  }
+}
+
+@media (max-width: 420px) {
+  .etalon-block {
+    margin-top: 390px;
+  }
+}
+
+@media (max-width: 380px) {
+  .etalon-block {
+    margin-top: 346px;
+  }
+}
+
+@media (max-width: 340px) {
+  .etalon-block {
+    margin-top: 300px;
   }
 }
 
