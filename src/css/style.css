@@ -4864,13 +4864,13 @@ html {
           flex-direction: column;
   width: 100%;
   height: 100%;
-  max-width: 944px;
-  max-height: 90%;
+  max-width: 920px;
+  max-height: 95%;
 }
 
 .quickview-stage {
   width: 100%;
-  height: 72%;
+  height: 500px;
   background: #fff;
 }
 
@@ -4900,7 +4900,7 @@ html {
 
 .fancybox-form-wrap {
   position: absolute;
-  top: 72%;
+  top: 500px;
   right: 0;
   width: 100%;
   background: #fff;
@@ -4991,7 +4991,7 @@ html {
 }
 
 .social-product-form {
-  padding: 0px 82px;
+  padding: 0px 66px;
 }
 
 .social-product-bullets {
@@ -5102,8 +5102,6 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 96px;
-  overflow-y: overlay;
 }
 
 .product-info-text {
@@ -5114,7 +5112,7 @@ html {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   color: #8B919F;
-  max-width: 460px;
+  max-width: 544px;
 }
 
 .product-info::-webkit-scrollbar {
@@ -5130,7 +5128,34 @@ html {
   border-radius: 10px;
 }
 
+@media (max-width: 1440px) {
+  .quickview-container {
+    overflow-y: scroll;
+  }
+  .quickview-bg {
+    height: 120%;
+  }
+  .quickview-arrow-left {
+    left: 30px !important;
+  }
+  .quickview-arrow-right {
+    right: 30px !important;
+  }
+  .quickview-stage {
+    height: 450px;
+  }
+  .fancybox-form-wrap {
+    top: 450px;
+  }
+}
+
 @media (max-width: 1024px) {
+  .quickview-stage {
+    height: 434px;
+  }
+  .fancybox-form-wrap {
+    top: 434px;
+  }
   .quickview-arrow-left, .quickview-arrow-right, .fancybox-infobar, .product-slash {
     display: none;
   }
@@ -5156,8 +5181,6 @@ html {
 @media (max-width: 768px) {
   .quickview-inner {
     max-width: 98%;
-    height: 95%;
-    max-height: 95vh;
     margin-top: 50px;
   }
   .quickview-button-close {
@@ -5180,7 +5203,6 @@ html {
   }
   .product-info {
     display: block;
-    height: 28vh;
   }
   .quickview-stage {
     height: 42vh;
@@ -6453,7 +6475,7 @@ html {
     line-height: 20px;
   }
   .development-detail-area {
-    width: calc(50vw + 49% + 3px);
+    width: 100%;
     padding: 30px 0 0 24px;
     height: 188px;
   }
@@ -6927,6 +6949,7 @@ html {
     word-wrap: break-word;
   }
   .industry-detail-area {
+    width: 100%;
     padding: 24px 0 0 18px;
     height: 230px;
   }

@@ -74,9 +74,9 @@ $(document).ready(function () {
     gutter: 0,
     loop: true,
     arrows: true,
-    touch: {
-      vertical: false
-    },
+    // touch: {
+    //   vertical: false
+    // },
     baseTpl:
       '<div class="fancybox-container" role="dialog" tabindex="-1">' +
       '<div class="fancybox-bg quickview-bg"></div>' +
