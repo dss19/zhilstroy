@@ -400,4 +400,9 @@ $(document).ready(function () {
       block.removeClass('visible-file');
     });
   });
+
+      
+  $('.count-num').rCounter({
+    duration: 30    
+  });
 });
